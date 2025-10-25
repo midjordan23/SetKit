@@ -1683,3 +1683,235 @@ header h1 {
         padding-bottom: 100px;
     }
 }
+
+/* ========================================
+   HOMEPAGE STYLES
+   ======================================== */
+
+.homepage {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    border-radius: 12px;
+    margin-bottom: 48px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #171717;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: #525252;
+    margin-bottom: 12px;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: #737373;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #171717;
+    margin-bottom: 24px;
+}
+
+/* Quick Actions */
+.quick-actions {
+    margin-bottom: 48px;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.action-card {
+    background: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-card:hover {
+    border-color: #171717;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.action-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.action-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #171717;
+    margin-bottom: 8px;
+}
+
+.action-card p {
+    font-size: 14px;
+    color: #737373;
+    line-height: 1.5;
+}
+
+/* Features Section */
+.features-section {
+    margin-bottom: 48px;
+    padding: 48px 24px;
+    background: #fafafa;
+    border-radius: 12px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.feature-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #171717;
+    margin-bottom: 8px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #737373;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 48px 24px;
+    background: #171717;
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 48px;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.cta-section p {
+    font-size: 16px;
+    color: #d4d4d4;
+    margin-bottom: 32px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-cta-primary,
+.btn-cta-secondary {
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-cta-primary {
+    background: #fff;
+    color: #171717;
+}
+
+.btn-cta-primary:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+.btn-cta-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .cta-section h2 {
+        font-size: 24px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn-cta-primary,
+    .btn-cta-secondary {
+        width: 100%;
+    }
+}

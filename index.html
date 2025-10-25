@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List - Cinema Equipment Database</title>
+    <title>SetKit - Cinema Equipment Database</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,12 +11,14 @@
         <!-- SIDEBAR NAVIGATION -->
         <div class="sidebar">
             <div class="logo">
-                <h1>List</h1>
+                <h1>SetKit</h1>
                 <p>Cinema Equipment Database</p>
             </div>
 
             <div class="nav">
-                <div class="nav-item active" data-tab="cameras">Cameras</div>
+                <div class="nav-item active" data-tab="home">Home</div>
+                <div class="nav-separator"></div>
+                <div class="nav-item" data-tab="cameras">Cameras</div>
                 <div class="nav-item" data-tab="search">Lenses</div>
                 <div class="nav-item" data-tab="accessories">Accessories</div>
                 <div class="nav-separator"></div>
@@ -51,6 +53,98 @@
             <section id="globalSearchResults" class="tab-content">
                 <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Search Results</h2>
                 <div id="globalResultsContainer"></div>
+            </section>
+
+            <!-- Home Tab -->
+            <section id="home" class="tab-content active">
+                <div class="homepage">
+                    <div class="hero-section">
+                        <h1 class="hero-title">Welcome to SetKit</h1>
+                        <p class="hero-subtitle">Your complete cinema equipment database and list builder</p>
+                        <p class="hero-description">Browse cameras, lenses, and accessories. Build custom equipment lists. Save templates for recurring projects.</p>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h2 class="section-title">Quick Actions</h2>
+                        <div class="action-grid">
+                            <div class="action-card" onclick="document.querySelector('.nav-item[data-tab=cameras]').click()">
+                                <div class="action-icon">📷</div>
+                                <h3>Browse Cameras</h3>
+                                <p>Explore our database of cinema cameras with detailed specs</p>
+                            </div>
+                            <div class="action-card" onclick="document.querySelector('.nav-item[data-tab=search]').click()">
+                                <div class="action-icon">🎥</div>
+                                <h3>Find Lenses</h3>
+                                <p>Search and filter lenses by mount, format, and more</p>
+                            </div>
+                            <div class="action-card" onclick="document.querySelector('.nav-item[data-tab=accessories]').click()">
+                                <div class="action-icon">⚙️</div>
+                                <h3>Accessories</h3>
+                                <p>Browse lighting, audio, and support equipment</p>
+                            </div>
+                            <div class="action-card" onclick="document.querySelector('.nav-item[data-tab=package]').click()">
+                                <div class="action-icon">📋</div>
+                                <h3>Your List</h3>
+                                <p>Build and manage your equipment package</p>
+                            </div>
+                            <div class="action-card" onclick="document.querySelector('.nav-item[data-tab=templates]').click()">
+                                <div class="action-icon">💾</div>
+                                <h3>Templates</h3>
+                                <p>Save and reuse equipment lists for recurring projects</p>
+                            </div>
+                            <div class="action-card" onclick="document.querySelector('.nav-item[data-tab=recommend]').click()">
+                                <div class="action-icon">✨</div>
+                                <h3>Recommendations</h3>
+                                <p>Get lens suggestions based on your camera selection</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="features-section">
+                        <h2 class="section-title">Features</h2>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">🔍</div>
+                                <h4>Smart Search</h4>
+                                <p>Quickly find equipment across cameras, lenses, and accessories with our global search</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">📊</div>
+                                <h4>Compare Equipment</h4>
+                                <p>Side-by-side lens comparisons to help you make informed decisions</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🎯</div>
+                                <h4>Project Tracking</h4>
+                                <p>Add dates, contacts, and notes to your equipment lists</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🏷️</div>
+                                <h4>Categorized Templates</h4>
+                                <p>Organize templates by Single Cam, Multi-Cam, Lighting, and more</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">📱</div>
+                                <h4>Mobile Friendly</h4>
+                                <p>Access your equipment lists on any device, anywhere</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">💾</div>
+                                <h4>Export Lists</h4>
+                                <p>Download formatted equipment lists for sharing and reference</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-section">
+                        <h2>Ready to build your kit?</h2>
+                        <p>Start by browsing equipment or load a saved template</p>
+                        <div class="cta-buttons">
+                            <button class="btn-cta-primary" onclick="document.querySelector('.nav-item[data-tab=cameras]').click()">Browse Equipment</button>
+                            <button class="btn-cta-secondary" onclick="document.querySelector('.nav-item[data-tab=templates]').click()">View Templates</button>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- Search & Filter Tab -->
@@ -296,7 +390,7 @@
             </section>
 
             <!-- Cameras Tab -->
-            <section id="cameras" class="tab-content active">
+            <section id="cameras" class="tab-content">
                 <div class="filters">
                     <h2>Find Cameras</h2>
                     <div class="filter-grid">
@@ -462,6 +556,7 @@
 
                 // Update header title
                 const titles = {
+                    'home': 'Home',
                     'search': 'Lenses',
                     'cameras': 'Cameras',
                     'accessories': 'Accessories',
@@ -470,7 +565,7 @@
                     'package': 'Your List',
                     'templates': 'Templates'
                 };
-                document.querySelector('header h1').textContent = titles[tab] || 'List';
+                document.querySelector('header h1').textContent = titles[tab] || 'SetKit';
             });
         });
     </script>
