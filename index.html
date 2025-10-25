@@ -36,8 +36,18 @@
             <header>
                 <div class="header-content">
                     <h1>Cameras</h1>
+                    <div class="global-search">
+                        <input type="text" id="globalSearch" placeholder="Search cameras, lenses, accessories..." onkeyup="handleGlobalSearch(event)">
+                        <button onclick="performGlobalSearch()">Search</button>
+                    </div>
                 </div>
             </header>
+
+            <!-- Global Search Results -->
+            <section id="globalSearchResults" class="tab-content">
+                <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Search Results</h2>
+                <div id="globalResultsContainer"></div>
+            </section>
 
             <!-- Search & Filter Tab -->
             <section id="search" class="tab-content">

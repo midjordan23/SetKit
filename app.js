@@ -1053,6 +1053,229 @@ function exportPackage() {
 window.addEventListener('DOMContentLoaded', loadAllData);
 
 // ========================================
+// GLOBAL SEARCH FUNCTIONS
+// ========================================
+
+// Handle Enter key in global search
+function handleGlobalSearch(event) {
+    if (event.key === 'Enter') {
+        performGlobalSearch();
+    }
+}
+
+// Perform global search across all categories
+function performGlobalSearch() {
+    const searchText = document.getElementById('globalSearch').value.toLowerCase().trim();
+
+    if (!searchText) {
+        alert('Please enter a search term');
+        return;
+    }
+
+    // Search across all data
+    const cameraResults = allCameras.filter(camera => {
+        const brand = (camera.brand || '').toLowerCase();
+        const model = (camera.model || '').toLowerCase();
+        const mount = (camera.native_mount || '').toLowerCase();
+        return brand.includes(searchText) ||
+               model.includes(searchText) ||
+               mount.includes(searchText);
+    });
+
+    const lensResults = allLenses.filter(lens => {
+        const manufacturer = (lens.manufacturer || '').toLowerCase();
+        const name = (lens.name || '').toLowerCase();
+        const focal = (lens['focal length'] || '').toLowerCase();
+        const category = (lens.category || '').toLowerCase();
+        return manufacturer.includes(searchText) ||
+               name.includes(searchText) ||
+               focal.includes(searchText) ||
+               category.includes(searchText);
+    });
+
+    const accessoryResults = allAccessories.filter(acc => {
+        const brand = (acc.brand || '').toLowerCase();
+        const model = (acc.model || '').toLowerCase();
+        const category = (acc.category || '').toLowerCase();
+        const subtype = (acc.subtype || '').toLowerCase();
+        return brand.includes(searchText) ||
+               model.includes(searchText) ||
+               category.includes(searchText) ||
+               subtype.includes(searchText);
+    });
+
+    // Display results
+    displayGlobalSearchResults(searchText, cameraResults, lensResults, accessoryResults);
+
+    // Switch to search results view
+    showGlobalSearchResults();
+}
+
+// Display global search results
+function displayGlobalSearchResults(searchText, cameras, lenses, accessories) {
+    const container = document.getElementById('globalResultsContainer');
+    const totalResults = cameras.length + lenses.length + accessories.length;
+
+    if (totalResults === 0) {
+        container.innerHTML = `
+            <div class="empty-state">
+                No results found for "${searchText}"
+            </div>
+        `;
+        return;
+    }
+
+    let html = `
+        <div style="margin-bottom: 24px;">
+            <p style="color: #737373; font-size: 14px;">
+                Found <strong style="color: #171717;">${totalResults}</strong> results for
+                <strong style="color: #171717;">"${searchText}"</strong>
+            </p>
+        </div>
+    `;
+
+    // Display Cameras
+    if (cameras.length > 0) {
+        html += `
+            <div class="search-category-section">
+                <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 16px; color: #171717;">
+                    Cameras (${cameras.length})
+                </h3>
+                <div class="lens-grid">
+                    ${cameras.map(camera => `
+                        <div class="lens-card camera-card">
+                            <div class="lens-card-header">
+                                <div class="lens-manufacturer">${camera.brand}</div>
+                                <div class="lens-name">${camera.model}</div>
+                            </div>
+                            <div class="lens-details">
+                                <div class="lens-detail-row">
+                                    <span class="lens-detail-label">Mount:</span>
+                                    <span class="lens-detail-value">${camera.native_mount}</span>
+                                </div>
+                                ${camera.sensor_modes && camera.sensor_modes[0] ? `
+                                    <div class="lens-detail-row">
+                                        <span class="lens-detail-label">Sensor:</span>
+                                        <span class="lens-detail-value">${camera.sensor_modes[0].crop_class}</span>
+                                    </div>
+                                ` : ''}
+                            </div>
+                            <div class="lens-card-actions">
+                                <button class="btn-add-package" onclick="addCameraToPackage('${camera.id}', event)">
+                                    Add to Package
+                                </button>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    // Display Lenses
+    if (lenses.length > 0) {
+        html += `
+            <div class="search-category-section" style="margin-top: 40px;">
+                <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 16px; color: #171717;">
+                    Lenses (${lenses.length})
+                </h3>
+                <div class="lens-grid">
+                    ${lenses.map(lens => `
+                        <div class="lens-card">
+                            <div class="lens-card-header">
+                                <div class="lens-manufacturer">${lens.manufacturer || 'Unknown'}</div>
+                                <div class="lens-name">${lens.name || 'Unnamed'}</div>
+                                <div class="lens-focal">${lens['focal length'] || 'N/A'}</div>
+                            </div>
+                            <div class="lens-details">
+                                ${lens['max aperture (T)'] ? `
+                                    <div class="lens-detail-row">
+                                        <span class="lens-detail-label">Max Aperture:</span>
+                                        <span class="lens-detail-value">T${lens['max aperture (T)']}</span>
+                                    </div>
+                                ` : ''}
+                                ${lens['original mount'] ? `
+                                    <div class="lens-detail-row">
+                                        <span class="lens-detail-label">Mount:</span>
+                                        <span class="lens-detail-value">${lens['original mount']}</span>
+                                    </div>
+                                ` : ''}
+                            </div>
+                            <div class="lens-category">${lens.category}</div>
+                            <div class="lens-card-actions">
+                                <button class="btn-add-package" onclick='addToPackage(${JSON.stringify(lens).replace(/'/g, "&apos;")}, "lens", event.target)'>
+                                    Add to Package
+                                </button>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    // Display Accessories
+    if (accessories.length > 0) {
+        html += `
+            <div class="search-category-section" style="margin-top: 40px;">
+                <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 16px; color: #171717;">
+                    Accessories (${accessories.length})
+                </h3>
+                <div class="lens-grid">
+                    ${accessories.map(acc => {
+                        const specsHtml = acc.specs ? Object.entries(acc.specs).slice(0, 3).map(([key, value]) => `
+                            <div class="lens-detail-row">
+                                <span class="lens-detail-label">${key.replace(/_/g, ' ')}:</span>
+                                <span class="lens-detail-value">${value}</span>
+                            </div>
+                        `).join('') : '';
+
+                        return `
+                            <div class="lens-card accessory-card">
+                                <div class="lens-card-header">
+                                    <div class="lens-manufacturer">${acc.brand}</div>
+                                    <div class="lens-name">${acc.model}</div>
+                                </div>
+                                <div class="lens-details">
+                                    ${specsHtml}
+                                </div>
+                                <div class="lens-category">${acc.category.replace(/_/g, ' ')}</div>
+                                <div class="lens-card-actions">
+                                    <button class="btn-add-package" onclick="addAccessoryToPackage('${acc.id}', event)">
+                                        Add to Package
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    container.innerHTML = html;
+}
+
+// Show global search results section
+function showGlobalSearchResults() {
+    // Hide all tabs
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
+
+    // Remove active from all nav items
+    document.querySelectorAll('.nav-item').forEach(nav => {
+        nav.classList.remove('active');
+    });
+
+    // Show search results
+    document.getElementById('globalSearchResults').classList.add('active');
+
+    // Update header
+    document.querySelector('header h1').textContent = 'Search Results';
+}
+
+// ========================================
 // MINI CART FUNCTIONS
 // ========================================
 
