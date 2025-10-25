@@ -1967,7 +1967,19 @@ function closeMiniCart() {
 // Navigate to Your List tab and close mini cart
 function goToList() {
     closeMiniCart();
-    switchTab('package');
+
+    // Update active state on nav items
+    document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+    document.querySelector('.nav-item[data-tab="package"]').classList.add('active');
+
+    // Update active tab content
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
+    document.getElementById('package').classList.add('active');
+
+    // Update header title
+    document.querySelector('header h1').textContent = 'Your List';
 }
 
 // Update mini cart display
