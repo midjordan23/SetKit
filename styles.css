@@ -1076,18 +1076,6 @@ header h1 {
     transition: all 0.15s ease;
 }
 
-.mini-cart-view {
-    background: #fff;
-    color: #171717;
-    border: 1px solid #e5e5e5;
-    margin-bottom: 10px;
-}
-
-.mini-cart-view:hover {
-    background: #fafafa;
-    border-color: #d4d4d4;
-}
-
 .mini-cart-checkout {
     background: #171717;
     color: #fff;
