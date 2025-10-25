@@ -1,0 +1,153 @@
+camera accessory
+
+camera_id,accessory_id,compatible,reason
+C-ARRI-A35,A-MATTEBOX-ARRI-LW,True,Lens-front universal accessory
+C-ARRI-A35,A-FILTER-NDSET,True,Lens-front universal accessory
+C-ARRI-A35,A-FILTER-ROTA-POLA,True,Lens-front universal accessory
+C-ARRI-A35,A-FILTER-DIOPTER,True,Lens-front universal accessory
+C-ARRI-A35,A-FF-ARRI-HI5,True,Standard accessory
+C-ARRI-A35,A-MOTOR-CFORCE,True,Standard accessory
+C-ARRI-A35,A-WIRELESS-TERADEK-3000,True,Universal SDI accessory
+C-ARRI-A35,A-MONITOR-SMALLHD-703,True,Universal SDI accessory
+C-ARRI-A35,A-MONITOR-SMALLHD-13,True,Universal SDI accessory
+C-ARRI-A35,A-MONITOR-SMALLHD-24,True,Universal SDI accessory
+C-ARRI-A35,A-POWER-26V-GOLD,True,Standard accessory
+C-ARRI-A35,A-POWER-V150,True,Standard accessory
+C-ARRI-A35,A-POWER-SHARKFIN,True,Standard accessory
+C-ARRI-A35,A-CABLE-DTAP,True,Universal D-Tap power cable
+C-ARRI-A35,A-COMMS-HOLLYLANDER,True,Universal intercom
+C-ARRI-MLF,A-MATTEBOX-ARRI-LW,True,Lens-front universal accessory
+C-ARRI-MLF,A-FILTER-NDSET,True,Lens-front universal accessory
+C-ARRI-MLF,A-FILTER-ROTA-POLA,True,Lens-front universal accessory
+C-ARRI-MLF,A-FILTER-DIOPTER,True,Lens-front universal accessory
+C-ARRI-MLF,A-FF-ARRI-HI5,True,Standard accessory
+C-ARRI-MLF,A-MOTOR-CFORCE,True,Standard accessory
+C-ARRI-MLF,A-WIRELESS-TERADEK-3000,True,Universal SDI accessory
+C-ARRI-MLF,A-MONITOR-SMALLHD-703,True,Universal SDI accessory
+C-ARRI-MLF,A-MONITOR-SMALLHD-13,True,Universal SDI accessory
+C-ARRI-MLF,A-MONITOR-SMALLHD-24,True,Universal SDI accessory
+C-ARRI-MLF,A-POWER-26V-GOLD,True,Standard accessory
+C-ARRI-MLF,A-POWER-V150,True,Standard accessory
+C-ARRI-MLF,A-POWER-SHARKFIN,False,ARRI 35-specific adapter
+C-ARRI-MLF,A-CABLE-DTAP,True,Universal D-Tap power cable
+C-ARRI-MLF,A-COMMS-HOLLYLANDER,True,Universal intercom
+C-ARRI-LF,A-MATTEBOX-ARRI-LW,True,Lens-front universal accessory
+C-ARRI-LF,A-FILTER-NDSET,True,Lens-front universal accessory
+C-ARRI-LF,A-FILTER-ROTA-POLA,True,Lens-front universal accessory
+C-ARRI-LF,A-FILTER-DIOPTER,True,Lens-front universal accessory
+C-ARRI-LF,A-FF-ARRI-HI5,True,Standard accessory
+C-ARRI-LF,A-MOTOR-CFORCE,True,Standard accessory
+C-ARRI-LF,A-WIRELESS-TERADEK-3000,True,Universal SDI accessory
+C-ARRI-LF,A-MONITOR-SMALLHD-703,True,Universal SDI accessory
+C-ARRI-LF,A-MONITOR-SMALLHD-13,True,Universal SDI accessory
+C-ARRI-LF,A-MONITOR-SMALLHD-24,True,Universal SDI accessory
+C-ARRI-LF,A-POWER-26V-GOLD,True,Standard accessory
+C-ARRI-LF,A-POWER-V150,True,Standard accessory
+C-ARRI-LF,A-POWER-SHARKFIN,False,ARRI 35-specific adapter
+C-ARRI-LF,A-CABLE-DTAP,True,Universal D-Tap power cable
+C-ARRI-LF,A-COMMS-HOLLYLANDER,True,Universal intercom
+C-ARRI-MINI,A-MATTEBOX-ARRI-LW,True,Lens-front universal accessory
+C-ARRI-MINI,A-FILTER-NDSET,True,Lens-front universal accessory
+C-ARRI-MINI,A-FILTER-ROTA-POLA,True,Lens-front universal accessory
+C-ARRI-MINI,A-FILTER-DIOPTER,True,Lens-front universal accessory
+C-ARRI-MINI,A-FF-ARRI-HI5,True,Standard accessory
+C-ARRI-MINI,A-MOTOR-CFORCE,True,Standard accessory
+C-ARRI-MINI,A-WIRELESS-TERADEK-3000,True,Universal SDI accessory
+C-ARRI-MINI,A-MONITOR-SMALLHD-703,True,Universal SDI accessory
+C-ARRI-MINI,A-MONITOR-SMALLHD-13,True,Universal SDI accessory
+C-ARRI-MINI,A-MONITOR-SMALLHD-24,True,Universal SDI accessory
+C-ARRI-MINI,A-POWER-26V-GOLD,False,Requires 24V-compatible system
+C-ARRI-MINI,A-POWER-V150,True,Standard accessory
+C-ARRI-MINI,A-POWER-SHARKFIN,False,ARRI 35-specific adapter
+C-ARRI-MINI,A-CABLE-DTAP,True,Universal D-Tap power cable
+C-ARRI-MINI,A-COMMS-HOLLYLANDER,True,Universal intercom
+C-ARRI-SXT,A-MATTEBOX-ARRI-LW,True,Lens-front universal accessory
+C-ARRI-SXT,A-FILTER-NDSET,True,Lens-front universal accessory
+C-ARRI-SXT,A-FILTER-ROTA-POLA,True,Lens-front universal accessory
+C-ARRI-SXT,A-FILTER-DIOPTER,True,Lens-front universal accessory
+C-ARRI-SXT,A-FF-ARRI-HI5,True,Standard accessory
+C-ARRI-SXT,A-MOTOR-CFORCE,True,Standard accessory
+C-ARRI-SXT,A-WIRELESS-TERADEK-3000,True,Universal SDI accessory
+C-ARRI-SXT,A-MONITOR-SMALLHD-703,True,Universal SDI accessory
+C-ARRI-SXT,A-MONITOR-SMALLHD-13,True,Universal SDI accessory
+C-ARRI-SXT,A-MONITOR-SMALLHD-24,True,Universal SDI accessory
+C-ARRI-SXT,A-POWER-26V-GOLD,False,Requires 24V-compatible system
+C-ARRI-SXT,A-POWER-V150,True,Standard accessory
+C-ARRI-SXT,A-POWER-SHARKFIN,False,ARRI 35-specific adapter
+C-ARRI-SXT,A-CABLE-DTAP,True,Universal D-Tap power cable
+C-ARRI-SXT,A-COMMS-HOLLYLANDER,True,Universal intercom
+C-ARRI-65,A-MATTEBOX-ARRI-LW,True,Lens-front universal accessory
+C-ARRI-65,A-FILTER-NDSET,True,Lens-front universal accessory
+C-ARRI-65,A-FILTER-ROTA-POLA,True,Lens-front universal accessory
+C-ARRI-65,A-FILTER-DIOPTER,True,Lens-front universal accessory
+C-ARRI-65,A-FF-ARRI-HI5,True,Standard accessory
+C-ARRI-65,A-MOTOR-CFORCE,True,Standard accessory
+C-ARRI-65,A-WIRELESS-TERADEK-3000,True,Universal SDI accessory
+C-ARRI-65,A-MONITOR-SMALLHD-703,True,Universal SDI accessory
+C-ARRI-65,A-MONITOR-SMALLHD-13,True,Universal SDI accessory
+C-ARRI-65,A-MONITOR-SMALLHD-24,True,Universal SDI accessory
+C-ARRI-65,A-POWER-26V-GOLD,False,Requires 24V-compatible system
+C-ARRI-65,A-POWER-V150,False,ARRI 65 requires 24V blocks/high-draw
+C-ARRI-65,A-POWER-SHARKFIN,False,ARRI 35-specific adapter
+C-ARRI-65,A-CABLE-DTAP,True,Universal D-Tap power cable
+C-ARRI-65,A-COMMS-HOLLYLANDER,True,Universal intercom
+C-ARRI-AMIRA,A-MATTEBOX-ARRI-LW,True,Lens-front universal accessory
+C-ARRI-AMIRA,A-FILTER-NDSET,True,Lens-front universal accessory
+C-ARRI-AMIRA,A-FILTER-ROTA-POLA,True,Lens-front universal accessory
+C-ARRI-AMIRA,A-FILTER-DIOPTER,True,Lens-front universal accessory
+C-ARRI-AMIRA,A-FF-ARRI-HI5,True,Standard accessory
+C-ARRI-AMIRA,A-MOTOR-CFORCE,True,Standard accessory
+C-ARRI-AMIRA,A-WIRELESS-TERADEK-3000,True,Universal SDI accessory
+C-ARRI-AMIRA,A-MONITOR-SMALLHD-703,True,Universal SDI accessory
+C-ARRI-AMIRA,A-MONITOR-SMALLHD-13,True,Universal SDI accessory
+C-ARRI-AMIRA,A-MONITOR-SMALLHD-24,True,Universal SDI accessory
+C-ARRI-AMIRA,A-POWER-26V-GOLD,False,Requires 24V-compatible system
+C-ARRI-AMIRA,A-POWER-V150,True,Standard accessory
+C-ARRI-AMIRA,A-POWER-SHARKFIN,False,ARRI 35-specific adapter
+C-ARRI-AMIRA,A-CABLE-DTAP,True,Universal D-Tap power cable
+C-ARRI-AMIRA,A-COMMS-HOLLYLANDER,True,Universal intercom
+C-PANA-DXL2,A-MATTEBOX-ARRI-LW,True,Lens-front universal accessory
+C-PANA-DXL2,A-FILTER-NDSET,True,Lens-front universal accessory
+C-PANA-DXL2,A-FILTER-ROTA-POLA,True,Lens-front universal accessory
+C-PANA-DXL2,A-FILTER-DIOPTER,True,Lens-front universal accessory
+C-PANA-DXL2,A-FF-ARRI-HI5,False,ARRI L-BUS ecosystem only
+C-PANA-DXL2,A-MOTOR-CFORCE,False,ARRI L-BUS ecosystem only
+C-PANA-DXL2,A-WIRELESS-TERADEK-3000,True,Universal SDI accessory
+C-PANA-DXL2,A-MONITOR-SMALLHD-703,True,Universal SDI accessory
+C-PANA-DXL2,A-MONITOR-SMALLHD-13,True,Universal SDI accessory
+C-PANA-DXL2,A-MONITOR-SMALLHD-24,True,Universal SDI accessory
+C-PANA-DXL2,A-POWER-26V-GOLD,False,Requires 24V-compatible system
+C-PANA-DXL2,A-POWER-V150,True,Standard accessory
+C-PANA-DXL2,A-POWER-SHARKFIN,False,ARRI 35-specific adapter
+C-PANA-DXL2,A-CABLE-DTAP,True,Universal D-Tap power cable
+C-PANA-DXL2,A-COMMS-HOLLYLANDER,True,Universal intercom
+C-SONY-VENICE,A-MATTEBOX-ARRI-LW,True,Lens-front universal accessory
+C-SONY-VENICE,A-FILTER-NDSET,True,Lens-front universal accessory
+C-SONY-VENICE,A-FILTER-ROTA-POLA,True,Lens-front universal accessory
+C-SONY-VENICE,A-FILTER-DIOPTER,True,Lens-front universal accessory
+C-SONY-VENICE,A-FF-ARRI-HI5,False,ARRI L-BUS ecosystem only
+C-SONY-VENICE,A-MOTOR-CFORCE,False,ARRI L-BUS ecosystem only
+C-SONY-VENICE,A-WIRELESS-TERADEK-3000,True,Universal SDI accessory
+C-SONY-VENICE,A-MONITOR-SMALLHD-703,True,Universal SDI accessory
+C-SONY-VENICE,A-MONITOR-SMALLHD-13,True,Universal SDI accessory
+C-SONY-VENICE,A-MONITOR-SMALLHD-24,True,Universal SDI accessory
+C-SONY-VENICE,A-POWER-26V-GOLD,True,Standard accessory
+C-SONY-VENICE,A-POWER-V150,True,Standard accessory
+C-SONY-VENICE,A-POWER-SHARKFIN,False,ARRI 35-specific adapter
+C-SONY-VENICE,A-CABLE-DTAP,True,Universal D-Tap power cable
+C-SONY-VENICE,A-COMMS-HOLLYLANDER,True,Universal intercom
+C-SONY-VENICE2,A-MATTEBOX-ARRI-LW,True,Lens-front universal accessory
+C-SONY-VENICE2,A-FILTER-NDSET,True,Lens-front universal accessory
+C-SONY-VENICE2,A-FILTER-ROTA-POLA,True,Lens-front universal accessory
+C-SONY-VENICE2,A-FILTER-DIOPTER,True,Lens-front universal accessory
+C-SONY-VENICE2,A-FF-ARRI-HI5,False,ARRI L-BUS ecosystem only
+C-SONY-VENICE2,A-MOTOR-CFORCE,False,ARRI L-BUS ecosystem only
+C-SONY-VENICE2,A-WIRELESS-TERADEK-3000,True,Universal SDI accessory
+C-SONY-VENICE2,A-MONITOR-SMALLHD-703,True,Universal SDI accessory
+C-SONY-VENICE2,A-MONITOR-SMALLHD-13,True,Universal SDI accessory
+C-SONY-VENICE2,A-MONITOR-SMALLHD-24,True,Universal SDI accessory
+C-SONY-VENICE2,A-POWER-26V-GOLD,True,Standard accessory
+C-SONY-VENICE2,A-POWER-V150,True,Standard accessory
+C-SONY-VENICE2,A-POWER-SHARKFIN,False,ARRI 35-specific adapter
+C-SONY-VENICE2,A-CABLE-DTAP,True,Universal D-Tap power cable
+C-SONY-VENICE2,A-COMMS-HOLLYLANDER,True,Universal intercom

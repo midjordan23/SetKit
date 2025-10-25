@@ -1,0 +1,949 @@
+[
+  {
+    "id": "A-SUPPORT-OCONNOR-2575D",
+    "brand": "OConnor",
+    "model": "Ultimate 2575D Fluid Head & Tripod",
+    "category": "Support",
+    "subtype": "Fluid Head & Tripod",
+    "specs": {
+      "payload": "90 lb",
+      "head_weight": "22.9 lb",
+      "mount": "Mitchell-base"
+    },
+    "compatible_with": "ARRI, Panavision, RED with large lens packages",
+    "notes": "Industry-standard film tripod head"
+  },
+  {
+    "id": "A-SUPPORT-OCONNOR-2060",
+    "brand": "OConnor",
+    "model": "2060 Fluid Head",
+    "category": "Support",
+    "subtype": "Fluid Head & Tripod",
+    "specs": {
+      "payload": "60 lb",
+      "head_weight": "16.3 lb",
+      "mount": "Mitchell-base"
+    },
+    "compatible_with": "ARRI, RED, Sony VENICE with mid-weight packages",
+    "notes": "Mid-weight cinema head with stepless drag"
+  },
+  {
+    "id": "A-SUPPORT-OCONNOR-1030D",
+    "brand": "OConnor",
+    "model": "1030D Fluid Head",
+    "category": "Support",
+    "subtype": "Fluid Head & Tripod",
+    "specs": {
+      "payload": "30 lb",
+      "head_weight": "8.3 lb",
+      "mount": "100mm bowl"
+    },
+    "compatible_with": "Documentary cameras, FX9, C300",
+    "notes": "Compact cinema head for ENG/doc work"
+  },
+  {
+    "id": "A-SUPPORT-SACHTLER-V18",
+    "brand": "Sachtler",
+    "model": "Video 18 S2 Fluid Head & Tripod",
+    "category": "Support",
+    "subtype": "Fluid Head & Tripod",
+    "specs": {
+      "payload": "4-48.5 lb",
+      "head_weight": "9 lb",
+      "mount": "100mm bowl"
+    },
+    "compatible_with": "Sony FS7, Canon C300, smaller RED rigs",
+    "notes": "Workhorse ENG/cinema tripod head"
+  },
+  {
+    "id": "A-SUPPORT-SACHTLER-FSB10",
+    "brand": "Sachtler",
+    "model": "FSB 10 Fluid Head",
+    "category": "Support",
+    "subtype": "Fluid Head & Tripod",
+    "specs": {
+      "payload": "2-26.5 lb",
+      "head_weight": "5.5 lb",
+      "mount": "75mm bowl"
+    },
+    "compatible_with": "Sony FX3, Canon C70, mirrorless rigs",
+    "notes": "Compact head for hybrid cameras"
+  },
+  {
+    "id": "A-SUPPORT-SACHTLER-FSB6",
+    "brand": "Sachtler",
+    "model": "FSB 6 Fluid Head",
+    "category": "Support",
+    "subtype": "Fluid Head & Tripod",
+    "specs": {
+      "payload": "2-17.6 lb",
+      "head_weight": "3.7 lb",
+      "mount": "75mm bowl"
+    },
+    "compatible_with": "Mirrorless cameras, small documentary rigs",
+    "notes": "Ultra-compact for travel"
+  },
+  {
+    "id": "A-SUPPORT-RONFORD-ATLAS",
+    "brand": "Ronford-Baker",
+    "model": "Atlas 7 Fluid Head",
+    "category": "Support",
+    "subtype": "Fluid Head & Tripod",
+    "specs": {
+      "payload": "77 lb",
+      "head_weight": "19.8 lb",
+      "mount": "Mitchell-base"
+    },
+    "compatible_with": "ARRI, Panavision, RED high-end packages",
+    "notes": "Premium UK-made cinema head"
+  },
+  {
+    "id": "A-SUPPORT-DANA-DOLLY",
+    "brand": "Dana Dolly",
+    "model": "Portable Slider Kit",
+    "category": "Support",
+    "subtype": "Slider/Dolly",
+    "specs": {
+      "payload": "100 lb",
+      "platform_weight": "13 lb",
+      "track": "1.5\" speed-rail"
+    },
+    "compatible_with": "All tripod fluid heads with bowl adapters",
+    "notes": "Versatile portable slider for tracking shots"
+  },
+  {
+    "id": "A-SUPPORT-RHINO-ARC-II",
+    "brand": "Rhino Camera Gear",
+    "model": "Arc II Motorized Slider",
+    "category": "Support",
+    "subtype": "Slider/Dolly",
+    "specs": {
+      "payload": "35 lb",
+      "length": "24\"",
+      "power": "Built-in rechargeable"
+    },
+    "compatible_with": "Mirrorless to cinema cameras",
+    "notes": "Curved slider with mobile app control"
+  },
+  {
+    "id": "A-SUPPORT-EDELKRONE-SLIDERPLUS",
+    "brand": "Edelkrone",
+    "model": "SliderPLUS PRO Long",
+    "category": "Support",
+    "subtype": "Slider/Dolly",
+    "specs": {
+      "payload": "17.6 lb",
+      "length": "27.6\" (extends 42\")",
+      "power": "AC or V-Mount"
+    },
+    "compatible_with": "Mirrorless, C70, FX3, small cinema rigs",
+    "notes": "Extendable slider with app control"
+  },
+  {
+    "id": "A-SUPPORT-KESSLER-CINEJIB",
+    "brand": "Kessler",
+    "model": "CineJib Elite 9ft",
+    "category": "Support",
+    "subtype": "Jib/Crane",
+    "specs": {
+      "length": "9 ft",
+      "payload": "35 lb",
+      "weight": "42 lb"
+    },
+    "compatible_with": "Cinema cameras up to ALEXA Mini",
+    "notes": "Portable jib arm for establishing shots"
+  },
+  {
+    "id": "A-SUPPORT-MYT-GLIDE",
+    "brand": "MYT Works",
+    "model": "Glide Lite Jib",
+    "category": "Support",
+    "subtype": "Jib/Crane",
+    "specs": {
+      "length": "8 ft (extends 12 ft)",
+      "payload": "40 lb",
+      "weight": "28 lb"
+    },
+    "compatible_with": "RED, ALEXA Mini, FX9",
+    "notes": "Telescoping jib for low-angle work"
+  },
+  {
+    "id": "A-SUPPORT-EASYRIG-VARIO5",
+    "brand": "Easyrig",
+    "model": "Vario 5 Cinema",
+    "category": "Support",
+    "subtype": "Body-Mounted Support",
+    "specs": {
+      "payload": "11-38 lb",
+      "vest_size": "M/L adjustable",
+      "line": "Stainless steel"
+    },
+    "compatible_with": "ARRI, RED, Sony VENICE handheld work",
+    "notes": "Industry-standard vest support system"
+  },
+  {
+    "id": "A-SUPPORT-EASYRIG-MINIMAX",
+    "brand": "Easyrig",
+    "model": "Minimax",
+    "category": "Support",
+    "subtype": "Body-Mounted Support",
+    "specs": {
+      "payload": "4.4-15.4 lb",
+      "vest_size": "One size",
+      "line": "Stainless steel"
+    },
+    "compatible_with": "Mirrorless, FX3, C70, documentary rigs",
+    "notes": "Compact vest for smaller cameras"
+  },
+  {
+    "id": "A-SUPPORT-RONIN2",
+    "brand": "DJI",
+    "model": "Ronin 2 3-Axis Gimbal",
+    "category": "Support",
+    "subtype": "Stabilizer",
+    "specs": {
+      "payload": "30 lb",
+      "power": "Dual battery",
+      "modes": "Handheld, vehicle-mounted"
+    },
+    "compatible_with": "Alexa Mini, RED, FX9",
+    "notes": "High-torque gimbal for car chase and action shots"
+  },
+  {
+    "id": "A-SUPPORT-DJI-RS3PRO",
+    "brand": "DJI",
+    "model": "RS 3 Pro Gimbal",
+    "category": "Support",
+    "subtype": "Stabilizer",
+    "specs": {
+      "payload": "10 lb",
+      "weight": "3.3 lb",
+      "modes": "Handheld, briefcase"
+    },
+    "compatible_with": "Mirrorless, C70, FX3, BMPCC",
+    "notes": "Compact gimbal for hybrid shooters"
+  },
+  {
+    "id": "A-SUPPORT-MOVI-PRO",
+    "brand": "Freefly",
+    "model": "MoVI Pro Handheld Gimbal",
+    "category": "Support",
+    "subtype": "Stabilizer",
+    "specs": {
+      "payload": "15 lb",
+      "gimbal_weight": "5.8 lb",
+      "control": "Dual-operator wireless"
+    },
+    "compatible_with": "RED Gemini/Komodo, URSA Mini, DSLRs",
+    "notes": "Popular for documentaries and indie features"
+  },
+  {
+    "id": "A-SUPPORT-TRINITY",
+    "brand": "ARRI",
+    "model": "Trinity 5-Axis Stabilizer",
+    "category": "Support",
+    "subtype": "Stabilizer",
+    "specs": {
+      "payload": "66 lb",
+      "range": "17-28\" telescoping",
+      "power": "12/24V"
+    },
+    "compatible_with": "ARRI cameras, optimized for ALEXA Mini/35",
+    "notes": "Hybrid stabilizer used on 1917"
+  },
+  {
+    "id": "A-SUPPORT-STEADICAM-M1",
+    "brand": "Tiffen",
+    "model": "M-1 Volt Stabilizer System",
+    "category": "Support",
+    "subtype": "Stabilizer",
+    "specs": {
+      "payload": "50+ lb",
+      "arm": "G-70x (70 lb capacity)",
+      "features": "Motor-assisted horizon leveling"
+    },
+    "compatible_with": "ARRI, Panavision, IMAX cameras",
+    "notes": "High-end Steadicam with auto-horizon"
+  },
+  {
+    "id": "A-SUPPORT-FREEFLY-ALTA-X",
+    "brand": "Freefly",
+    "model": "Alta X Drone",
+    "category": "Support",
+    "subtype": "Drone",
+    "specs": {
+      "payload": "35 lb",
+      "motors": "8 (X8 configuration)",
+      "flight_time": "20-40 min"
+    },
+    "compatible_with": "RED Komodo, ALEXA Mini, BMPCC 6K",
+    "notes": "Heavy-lift cinema drone"
+  },
+  {
+    "id": "A-POWER-AB-DIONIC-150",
+    "brand": "Anton Bauer",
+    "model": "Dionic XT 150 Battery",
+    "category": "Power",
+    "subtype": "On-Camera Battery",
+    "specs": {
+      "capacity": "156 Wh",
+      "voltage": "14.4V",
+      "draw": "12A continuous",
+      "mount": "Gold Mount"
+    },
+    "compatible_with": "ARRI Amira, Alexa, ENG cameras",
+    "notes": "High-capacity professional battery with D-Tap and USB"
+  },
+  {
+    "id": "A-POWER-AB-TITON-150",
+    "brand": "Anton Bauer",
+    "model": "Titon SL 150 Battery",
+    "category": "Power",
+    "subtype": "On-Camera Battery",
+    "specs": {
+      "capacity": "154 Wh",
+      "voltage": "14.4V",
+      "draw": "10A continuous",
+      "mount": "Gold Mount"
+    },
+    "compatible_with": "ARRI, Panavision, broadcast cameras",
+    "notes": "Slim profile battery for tight spaces"
+  },
+  {
+    "id": "A-POWER-CORESWX-NEO150",
+    "brand": "Core SWX",
+    "model": "Hypercore NEO 150 Mini",
+    "category": "Power",
+    "subtype": "On-Camera Battery",
+    "specs": {
+      "capacity": "147 Wh",
+      "voltage": "14.8V",
+      "draw": "12A continuous",
+      "mount": "V-Mount"
+    },
+    "compatible_with": "Sony VENICE, FX9, RED cameras",
+    "notes": "Compact high-output battery with RFID"
+  },
+  {
+    "id": "A-POWER-IDX-DUO150",
+    "brand": "IDX",
+    "model": "DUO-150 V-Mount Battery",
+    "category": "Power",
+    "subtype": "On-Camera Battery",
+    "specs": {
+      "capacity": "147 Wh",
+      "voltage": "14.4V",
+      "draw": "10A continuous",
+      "mount": "V-Mount"
+    },
+    "compatible_with": "Sony, RED, Blackmagic cameras",
+    "notes": "Dual D-Tap outputs with LED gauge"
+  },
+  {
+    "id": "A-POWER-SONY-BPU60",
+    "brand": "Sony",
+    "model": "BP-U60 Battery",
+    "category": "Power",
+    "subtype": "On-Camera Battery",
+    "specs": {
+      "capacity": "56 Wh",
+      "voltage": "14.4V",
+      "draw": "5A continuous",
+      "mount": "BP-U"
+    },
+    "compatible_with": "Sony FX9, FS7, FS5, PXW cameras",
+    "notes": "Standard Sony cinema battery"
+  },
+  {
+    "id": "A-POWER-SONY-BPU90",
+    "brand": "Sony",
+    "model": "BP-U90 Battery",
+    "category": "Power",
+    "subtype": "On-Camera Battery",
+    "specs": {
+      "capacity": "85 Wh",
+      "voltage": "14.4V",
+      "draw": "6A continuous",
+      "mount": "BP-U"
+    },
+    "compatible_with": "Sony FX9, FS7, FS5, PXW cameras",
+    "notes": "High-capacity Sony battery"
+  },
+  {
+    "id": "A-POWER-RED-VLOCK-MINI",
+    "brand": "RED",
+    "model": "V-LOCK I/O MINI Battery",
+    "category": "Power",
+    "subtype": "On-Camera Battery",
+    "specs": {
+      "capacity": "153 Wh",
+      "voltage": "14.8V",
+      "draw": "12A continuous",
+      "mount": "V-Mount"
+    },
+    "compatible_with": "RED DSMC2, KOMODO cameras",
+    "notes": "RED-branded V-mount with integrated I/O"
+  },
+  {
+    "id": "A-POWER-BLUESHAPE-B95S",
+    "brand": "Blueshape",
+    "model": "GRANITE MINI 95Wh",
+    "category": "Power",
+    "subtype": "On-Camera Battery",
+    "specs": {
+      "capacity": "95 Wh",
+      "voltage": "14.4V",
+      "draw": "10A continuous",
+      "mount": "V-Mount"
+    },
+    "compatible_with": "Universal V-Mount cameras",
+    "notes": "Compact battery with USB-C PD"
+  },
+  {
+    "id": "A-POWER-AB-VCLX",
+    "brand": "Anton Bauer",
+    "model": "Cine VCLX Block Battery",
+    "category": "Power",
+    "subtype": "Block Battery",
+    "specs": {
+      "capacity": "630 Wh",
+      "voltage": "14.4V / 28V",
+      "draw": "20A at 28V",
+      "weight": "25 lb"
+    },
+    "compatible_with": "ARRI 435, Alexa 65, 24V accessories",
+    "notes": "Academy Award winning block battery"
+  },
+  {
+    "id": "A-POWER-BEBOB-CUBE1200",
+    "brand": "Bebob",
+    "model": "CUBE 1200 Multi-Voltage",
+    "category": "Power",
+    "subtype": "Block Battery",
+    "specs": {
+      "capacity": "1176 Wh",
+      "voltages": "5V, 12V, 24V, 48V",
+      "load": "480W continuous",
+      "weight": "19.7 lb"
+    },
+    "compatible_with": "SkyPanels, LED walls, high-power cameras",
+    "notes": "Portable generator replacement"
+  },
+  {
+    "id": "A-POWER-GOALZERO-YETI1500",
+    "brand": "Goal Zero",
+    "model": "Yeti 1500X Portable Power Station",
+    "category": "Power",
+    "subtype": "Portable Generator",
+    "specs": {
+      "capacity": "1516 Wh",
+      "outputs": "AC, USB-C, 12V",
+      "weight": "45 lb",
+      "charge_time": "5 hrs solar"
+    },
+    "compatible_with": "Universal power for location work",
+    "notes": "Silent battery generator"
+  },
+  {
+    "id": "A-POWER-AB-QUAD",
+    "brand": "Anton Bauer",
+    "model": "Quad 4-Position Charger",
+    "category": "Power",
+    "subtype": "Charger",
+    "specs": {
+      "slots": "4 simultaneous",
+      "current": "6A fast charge",
+      "voltage": "14.4V / 26V",
+      "input": "100-240V AC"
+    },
+    "compatible_with": "Anton Bauer Gold Mount / V-Mount batteries",
+    "notes": "Standard production battery charger"
+  },
+  {
+    "id": "A-POWER-CORESWX-DUAL",
+    "brand": "Core SWX",
+    "model": "Fleet-D Dual Charger",
+    "category": "Power",
+    "subtype": "Charger",
+    "specs": {
+      "slots": "2 simultaneous",
+      "current": "3A per channel",
+      "voltage": "14-16.8V",
+      "input": "100-240V AC"
+    },
+    "compatible_with": "V-Mount batteries",
+    "notes": "Compact dual charger for travel"
+  },
+  {
+    "id": "A-POWER-IDX-VL4S",
+    "brand": "IDX",
+    "model": "VL-4S 4-Channel Charger",
+    "category": "Power",
+    "subtype": "Charger",
+    "specs": {
+      "slots": "4 simultaneous",
+      "current": "2A per channel",
+      "voltage": "14.4V",
+      "input": "100-240V AC"
+    },
+    "compatible_with": "V-Mount batteries",
+    "notes": "Sequential charging with LCD display"
+  },
+  {
+    "id": "A-POWER-DBOX",
+    "brand": "Wooden Camera",
+    "model": "D-Box Power Distribution",
+    "category": "Power",
+    "subtype": "Distribution Hub",
+    "specs": {
+      "outputs": "5 simultaneous",
+      "load": "10A total",
+      "connectors": "D-Tap, LEMO, Hirose, USB"
+    },
+    "compatible_with": "All cinema cameras with battery plates",
+    "notes": "Multi-output power hub for camera rigs"
+  },
+  {
+    "id": "A-POWER-TETHERTOOLS-RAPIDBOX",
+    "brand": "TetherTools",
+    "model": "ONsite D-Tap to AC",
+    "category": "Power",
+    "subtype": "Distribution Hub",
+    "specs": {
+      "outputs": "65W AC outlet",
+      "input": "D-Tap 11-17V",
+      "efficiency": "85%",
+      "weight": "0.5 lb"
+    },
+    "compatible_with": "V-Mount/Gold Mount batteries",
+    "notes": "Power laptops and small AC devices from D-Tap"
+  },
+  {
+    "id": "A-MEDIA-CODEX-1TB",
+    "brand": "Codex",
+    "model": "Compact Drive 1TB & Reader",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "1TB (960GB usable)",
+      "speed": "1000 MB/s",
+      "interface": "USB-C 3.1 / Thunderbolt 3"
+    },
+    "compatible_with": "ARRI ALEXA Mini LF, ALEXA 35",
+    "notes": "Standard media for latest ARRI cameras"
+  },
+  {
+    "id": "A-MEDIA-CODEX-2TB",
+    "brand": "Codex",
+    "model": "Compact Drive 2TB & Reader",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "2TB (1920GB usable)",
+      "speed": "1000 MB/s",
+      "interface": "USB-C 3.1 / Thunderbolt 3"
+    },
+    "compatible_with": "ARRI ALEXA Mini LF, ALEXA 35",
+    "notes": "High-capacity for long takes and high frame rates"
+  },
+  {
+    "id": "A-MEDIA-SONY-AXSR7",
+    "brand": "Sony",
+    "model": "AXS-R7 RAW Recorder & Card",
+    "category": "Media",
+    "subtype": "External Recorder",
+    "specs": {
+      "slots": "Dual AXS card",
+      "formats": "16-bit RAW, X-OCN",
+      "max_res": "6K 60p",
+      "cache": "30-second buffer"
+    },
+    "compatible_with": "Sony VENICE, PMW-F55/F5",
+    "notes": "Unlocks full RAW recording for Sony cameras"
+  },
+  {
+    "id": "A-MEDIA-SONY-SXSPRO",
+    "brand": "Sony",
+    "model": "SxS PRO+ 256GB Card",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "256GB",
+      "speed": "440 MB/s",
+      "type": "SxS PRO+"
+    },
+    "compatible_with": "Sony PMW-F55/F5, F65",
+    "notes": "Professional SxS card for Sony cameras"
+  },
+  {
+    "id": "A-MEDIA-RED-MINIMAG",
+    "brand": "RED",
+    "model": "MINI-MAG 480GB & Reader",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "480GB",
+      "speed": "300 MB/s",
+      "interface": "USB 3.1 (10 Gb/s)"
+    },
+    "compatible_with": "RED DSMC2 (WEAPON, EPIC-W, SCARLET-W)",
+    "notes": "Standard RED SSD media for 8K RAW"
+  },
+  {
+    "id": "A-MEDIA-RED-MINIMAG-960",
+    "brand": "RED",
+    "model": "MINI-MAG 960GB & Reader",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "960GB",
+      "speed": "300 MB/s",
+      "interface": "USB 3.1 (10 Gb/s)"
+    },
+    "compatible_with": "RED DSMC2 (WEAPON, EPIC-W, SCARLET-W)",
+    "notes": "High-capacity RED media"
+  },
+  {
+    "id": "A-MEDIA-ANGELBIRD-CFAST",
+    "brand": "Angelbird",
+    "model": "AV Pro CFast 256GB & Reader",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "256GB",
+      "speed": "430 MB/s",
+      "type": "CFast 2.0"
+    },
+    "compatible_with": "ARRI ALEXA Mini, AMIRA, URSA Mini",
+    "notes": "ARRI-certified CFast card"
+  },
+  {
+    "id": "A-MEDIA-SANDISK-CFAST",
+    "brand": "SanDisk",
+    "model": "Extreme PRO CFast 2.0 256GB",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "256GB",
+      "speed": "525 MB/s read, 450 MB/s write",
+      "type": "CFast 2.0"
+    },
+    "compatible_with": "ARRI ALEXA Mini, AMIRA, Canon C300 Mark II",
+    "notes": "High-speed CFast card for 4K RAW"
+  },
+  {
+    "id": "A-MEDIA-PROGRADE-CFEXPRESS",
+    "brand": "ProGrade Digital",
+    "model": "Cobalt CFexpress 2.0 325GB",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "325GB",
+      "speed": "1700 MB/s read, 1500 MB/s write",
+      "type": "CFexpress Type B"
+    },
+    "compatible_with": "Canon C500 Mark II, C300 Mark III, R5C",
+    "notes": "High-performance CFexpress for Cinema RAW"
+  },
+  {
+    "id": "A-MEDIA-LEXAR-CFEXPRESS",
+    "brand": "Lexar",
+    "model": "Professional CFexpress Gold 512GB",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "512GB",
+      "speed": "1900 MB/s read, 1700 MB/s write",
+      "type": "CFexpress Type B"
+    },
+    "compatible_with": "Canon R5, R3, C500 Mark II, Nikon Z9",
+    "notes": "Gold series for extreme performance"
+  },
+  {
+    "id": "A-MEDIA-SANDISK-SD-V90",
+    "brand": "SanDisk",
+    "model": "Extreme PRO UHS-II 128GB V90",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "128GB",
+      "speed": "300 MB/s read, 260 MB/s write",
+      "type": "SD UHS-II V90"
+    },
+    "compatible_with": "Sony FX3, α7S III, Panasonic S1H, GH6",
+    "notes": "Fast SD card for 4K 120p"
+  },
+  {
+    "id": "A-MEDIA-PROGRADE-SD-V60",
+    "brand": "ProGrade Digital",
+    "model": "V60 UHS-II SD Card 256GB",
+    "category": "Media",
+    "subtype": "Camera Memory",
+    "specs": {
+      "capacity": "256GB",
+      "speed": "250 MB/s read, 130 MB/s write",
+      "type": "SD UHS-II V60"
+    },
+    "compatible_with": "Blackmagic Pocket 6K, Panasonic cameras",
+    "notes": "High-capacity for long-form recording"
+  },
+  {
+    "id": "A-MEDIA-ANGELBIRD-SSD2GO",
+    "brand": "Angelbird",
+    "model": "SSD2GO PKT 1TB",
+    "category": "Media",
+    "subtype": "External SSD",
+    "specs": {
+      "capacity": "1TB",
+      "speed": "560 MB/s",
+      "interface": "USB-C 3.2"
+    },
+    "compatible_with": "Blackmagic Video Assist, data wrangling",
+    "notes": "Rugged portable SSD for on-set backup"
+  },
+  {
+    "id": "A-CART-INOVATIV-ECHO48",
+    "brand": "Inovativ",
+    "model": "Echo 48 Camera Cart",
+    "category": "Carts",
+    "subtype": "Equipment Cart",
+    "specs": {
+      "size": "48\" x 24\"",
+      "capacity": "1000 lb",
+      "wheels": "10\" pneumatic",
+      "shelves": "2 (adjustable)"
+    },
+    "compatible_with": "All camera and DIT equipment",
+    "notes": "Premium collapsible camera cart"
+  },
+  {
+    "id": "A-CART-INOVATIV-ECHO36",
+    "brand": "Inovativ",
+    "model": "Echo 36 Camera Cart",
+    "category": "Carts",
+    "subtype": "Equipment Cart",
+    "specs": {
+      "size": "36\" x 24\"",
+      "capacity": "750 lb",
+      "wheels": "8\" pneumatic",
+      "shelves": "2 (adjustable)"
+    },
+    "compatible_with": "Camera, AC, and 1st AC gear",
+    "notes": "Compact cart for smaller crews"
+  },
+  {
+    "id": "A-CART-MAGLINER",
+    "brand": "Magliner",
+    "model": "Senior Convertible Cart",
+    "category": "Carts",
+    "subtype": "Equipment Cart",
+    "specs": {
+      "size": "24\" x 49.5\"",
+      "capacity": "1000 lb",
+      "weight": "97 lb",
+      "wheels": "4 pneumatic"
+    },
+    "compatible_with": "Camera, lighting, grip gear",
+    "notes": "Industry standard utility cart"
+  },
+  {
+    "id": "A-CART-BACKSTAGE-CADDY",
+    "brand": "Backstage Equipment",
+    "model": "Caddy",
+    "category": "Carts",
+    "subtype": "Equipment Cart",
+    "specs": {
+      "size": "36\" x 19\"",
+      "capacity": "500 lb",
+      "weight": "35 lb",
+      "wheels": "6\" casters"
+    },
+    "compatible_with": "Smaller camera packages, AC gear",
+    "notes": "Lightweight collapsible cart"
+  },
+  {
+    "id": "A-CART-PELICAN-1650",
+    "brand": "Pelican",
+    "model": "1650 Hard Case with Foam",
+    "category": "Carts",
+    "subtype": "Hard Case",
+    "specs": {
+      "size": "29.2\" x 18\" x 10.4\"",
+      "capacity": "Watertight to 3.3 ft",
+      "weight": "19.9 lb (empty)",
+      "wheels": "2 + telescoping handle"
+    },
+    "compatible_with": "Cameras, lenses, accessories",
+    "notes": "Rugged waterproof travel case"
+  },
+  {
+    "id": "A-RIG-ARRI-BP8",
+    "brand": "ARRI",
+    "model": "Bridge Plate BP-8",
+    "category": "Rigging",
+    "subtype": "Camera Baseplate",
+    "specs": {
+      "rods": "19mm studio (104mm spacing)",
+      "weight": "1.1 lb",
+      "mount": "3/8\" + locating pins"
+    },
+    "compatible_with": "ARRI, RED, Sony Venice cameras",
+    "notes": "Standard studio bridgeplate for heavy cameras"
+  },
+  {
+    "id": "A-RIG-WOODEN-UNIFIED",
+    "brand": "Wooden Camera",
+    "model": "Unified Baseplate",
+    "category": "Rigging",
+    "subtype": "Camera Baseplate",
+    "specs": {
+      "rods": "15mm LWS (60mm spacing)",
+      "weight": "0.7 lb",
+      "mount": "3/8\" + 1/4-20"
+    },
+    "compatible_with": "RED Komodo, BMPCC, Sony α7S III",
+    "notes": "Lightweight baseplate for smaller cameras"
+  },
+  {
+    "id": "A-RIG-TILTA-ADVANCED",
+    "brand": "Tilta",
+    "model": "Advanced Camera Baseplate",
+    "category": "Rigging",
+    "subtype": "Camera Baseplate",
+    "specs": {
+      "rods": "15mm LWS (60mm spacing)",
+      "weight": "0.6 lb",
+      "mount": "Quick-release"
+    },
+    "compatible_with": "FX3, FX6, C70, mirrorless rigs",
+    "notes": "Quick-release baseplate with integrated NATO rail"
+  },
+  {
+    "id": "A-RIG-19MM-RODS",
+    "brand": "Generic",
+    "model": "19mm Support Rod Pair (18\")",
+    "category": "Rigging",
+    "subtype": "Rod Support",
+    "specs": {
+      "diameter": "19mm",
+      "length": "18\"",
+      "spacing": "104mm",
+      "material": "Stainless steel"
+    },
+    "compatible_with": "19mm studio bridge plates",
+    "notes": "Standard support rods for lens support and accessories"
+  },
+  {
+    "id": "A-RIG-15MM-RODS",
+    "brand": "Generic",
+    "model": "15mm Support Rod Pair (12\")",
+    "category": "Rigging",
+    "subtype": "Rod Support",
+    "specs": {
+      "diameter": "15mm",
+      "length": "12\"",
+      "spacing": "60mm",
+      "material": "Stainless steel"
+    },
+    "compatible_with": "15mm LWS baseplates",
+    "notes": "Lightweight support rods for matte box and follow focus"
+  },
+  {
+    "id": "A-RIG-ZACUTO-VCT",
+    "brand": "Zacuto",
+    "model": "VCT Pro Baseplate",
+    "category": "Rigging",
+    "subtype": "Shoulder Rig",
+    "specs": {
+      "rods": "15mm LWS",
+      "mount": "VCT wedge",
+      "adjustment": "10\" sliding"
+    },
+    "compatible_with": "All cameras from DSLR to Alexa/RED",
+    "notes": "Universal shoulder-mount baseplate"
+  },
+  {
+    "id": "A-RIG-WOODEN-SHOULDER",
+    "brand": "Wooden Camera",
+    "model": "Directors Monitor Cage Shoulder Kit",
+    "category": "Rigging",
+    "subtype": "Shoulder Rig",
+    "specs": {
+      "rods": "15mm LWS",
+      "mount": "Cage-based",
+      "adjustment": "Sliding shoulder pad"
+    },
+    "compatible_with": "RED Komodo, FX6, C70",
+    "notes": "Compact shoulder rig for documentary work"
+  },
+  {
+    "id": "A-RIG-SMALLRIG-CHEESE",
+    "brand": "SmallRig",
+    "model": "Cheese Plate 3\" x 6\"",
+    "category": "Rigging",
+    "subtype": "Mounting Plate",
+    "specs": {
+      "size": "3\" x 6\"",
+      "threads": "1/4-20 + 3/8\"",
+      "weight": "0.3 lb"
+    },
+    "compatible_with": "Universal rigging",
+    "notes": "Swiss cheese mounting plate for monitors and accessories"
+  },
+  {
+    "id": "A-RIG-ARRI-TOPHANDLE",
+    "brand": "ARRI",
+    "model": "Top Handle TCH-1",
+    "category": "Rigging",
+    "subtype": "Handle",
+    "specs": {
+      "mount": "1/4-20 + 3/8\"",
+      "weight": "0.5 lb",
+      "features": "Sliding mounting bracket"
+    },
+    "compatible_with": "ARRI cameras, universal rigging",
+    "notes": "Ergonomic top handle with ARRI accessory mount"
+  },
+  {
+    "id": "A-RIG-CARDELLINI",
+    "brand": "Matthews",
+    "model": "Cardellini Clamp (2\")",
+    "category": "Rigging",
+    "subtype": "Mounting Clamp",
+    "specs": {
+      "jaw": "2\" capacity",
+      "mount": "5/8\" baby pin",
+      "length": "7\""
+    },
+    "compatible_with": "Universal grip and camera rigging",
+    "notes": "Versatile end-jaw clamp for mounting"
+  },
+  {
+    "id": "A-RIG-MAGIC-ARM",
+    "brand": "Manfrotto",
+    "model": "Magic Arm (244)",
+    "category": "Rigging",
+    "subtype": "Articulating Arm",
+    "specs": {
+      "length": "20.8\"",
+      "payload": "6.6 lb",
+      "weight": "2.5 lb"
+    },
+    "compatible_with": "Monitors, lights, cameras",
+    "notes": "Fully articulated arm with single-knob lock"
+  },
+  {
+    "id": "A-RIG-NOGA-ARM",
+    "brand": "Noga",
+    "model": "NF61003 Large Magnetic Base",
+    "category": "Rigging",
+    "subtype": "Articulating Arm",
+    "specs": {
+      "length": "15.7\"",
+      "payload": "11 lb",
+      "base": "Magnetic 176 lb pull"
+    },
+    "compatible_with": "Metal surfaces, camera carts",
+    "notes": "Heavy-duty magnetic mounting arm"
+  }
+]

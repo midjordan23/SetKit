@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetKit - Cinema Equipment Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- SIDEBAR NAVIGATION -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>SetKit</h1>
+                <p>Cinema Equipment Database</p>
+            </div>
+
+            <div class="nav">
+                <div class="nav-item active" data-tab="cameras">Cameras</div>
+                <div class="nav-item" data-tab="search">Lenses</div>
+                <div class="nav-item" data-tab="accessories">Accessories</div>
+                <div class="nav-separator"></div>
+                <div class="nav-item" data-tab="recommend">Recommendations</div>
+                <div class="nav-item" data-tab="compare">Compare</div>
+                <div class="nav-separator"></div>
+                <div class="nav-item" data-tab="package">
+                    Build Package
+                    <span class="package-badge" id="packageBadge" style="display: none;">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT WRAPPER -->
+        <div class="main-wrapper">
+            <!-- HEADER -->
+            <header>
+                <div class="header-content">
+                    <h1>Cameras</h1>
+                </div>
+            </header>
+
+            <!-- Search & Filter Tab -->
+            <section id="search" class="tab-content">
+                <div class="filters">
+                    <h2>Find Your Lens</h2>
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label for="searchText">Search</label>
+                            <input type="text" id="searchText" placeholder="Lens name, manufacturer...">
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="category">Category</label>
+                            <select id="category">
+                                <option value="">All Categories</option>
+                                <option value="16mm primes">16mm Primes</option>
+                                <option value="16mm zooms">16mm Zooms</option>
+                                <option value="35mm primes">35mm Primes</option>
+                                <option value="35mm zooms">35mm Zooms</option>
+                                <option value="anamorphic">Anamorphic</option>
+                                <option value="full frame primes">Full Frame Primes</option>
+                                <option value="full frame zooms">Full Frame Zooms</option>
+                                <option value="65mm">65mm Lenses</option>
+                                <option value="special">Special Purpose</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="manufacturer">Manufacturer</label>
+                            <select id="manufacturer">
+                                <option value="">All Brands</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="mount">Mount</label>
+                            <select id="mount">
+                                <option value="">All Mounts</option>
+                                <option value="PL">PL</option>
+                                <option value="LPL">LPL</option>
+                                <option value="EF">Canon EF</option>
+                                <option value="E">Sony E</option>
+                                <option value="RF">Canon RF</option>
+                                <option value="PV">Panavision</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="lensType">Type</label>
+                            <select id="lensType">
+                                <option value="">All Types</option>
+                                <option value="prime">Prime</option>
+                                <option value="zoom">Zoom</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="maxAperture">Max Aperture</label>
+                            <select id="maxAperture">
+                                <option value="">Any</option>
+                                <option value="1.3">T1.3 or faster</option>
+                                <option value="1.5">T1.5 or faster</option>
+                                <option value="2.0">T2.0 or faster</option>
+                                <option value="2.8">T2.8 or faster</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn-primary" onclick="searchLenses()">Search Lenses</button>
+                        <button class="btn-secondary" onclick="clearFilters()">Clear Filters</button>
+                    </div>
+                </div>
+
+                <div class="results">
+                    <h3>Results <span id="resultCount">(Loading...)</span></h3>
+                    <div id="lensResults" class="lens-grid">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compare Tab -->
+            <section id="compare" class="tab-content">
+                <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Compare Lenses</h2>
+                <div class="compare-section">
+                    <div class="compare-selectors">
+                        <div class="compare-slot">
+                            <label>Lens 1</label>
+                            <select id="compareLens1" onchange="updateComparison()">
+                                <option value="">Select a lens...</option>
+                            </select>
+                        </div>
+                        <div class="compare-slot">
+                            <label>Lens 2</label>
+                            <select id="compareLens2" onchange="updateComparison()">
+                                <option value="">Select a lens...</option>
+                            </select>
+                        </div>
+                        <div class="compare-slot">
+                            <label>Lens 3</label>
+                            <select id="compareLens3" onchange="updateComparison()">
+                                <option value="">Select a lens...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="comparisonTable"></div>
+                </div>
+            </section>
+
+            <!-- Recommendations Tab -->
+            <section id="recommend" class="tab-content">
+                <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Get Lens Recommendations</h2>
+                <div class="recommend-form">
+                    <div class="form-group">
+                        <label>What are you shooting?</label>
+                        <select id="projectType">
+                            <option value="">Select project type...</option>
+                            <option value="narrative">Narrative Feature</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="documentary">Documentary</option>
+                            <option value="music-video">Music Video</option>
+                            <option value="corporate">Corporate</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Camera Format</label>
+                        <select id="cameraFormat">
+                            <option value="">Select format...</option>
+                            <option value="16mm">16mm</option>
+                            <option value="S35">Super 35</option>
+                            <option value="FF">Full Frame</option>
+                            <option value="65mm">65mm / IMAX</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Aesthetic Preference</label>
+                        <select id="aesthetic">
+                            <option value="">Select look...</option>
+                            <option value="clean-modern">Clean & Modern</option>
+                            <option value="vintage">Vintage/Character</option>
+                            <option value="anamorphic">Anamorphic</option>
+                            <option value="neutral">Neutral/Versatile</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Primary Focal Length Need</label>
+                        <select id="focalNeed">
+                            <option value="">Select range...</option>
+                            <option value="wide">Wide Angle (< 28mm)</option>
+                            <option value="standard">Standard (28-50mm)</option>
+                            <option value="portrait">Portrait (50-100mm)</option>
+                            <option value="telephoto">Telephoto (> 100mm)</option>
+                            <option value="zoom">Zoom Flexibility</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-primary" onclick="getRecommendations()">Get Recommendations</button>
+                </div>
+
+                <div id="recommendationResults" class="recommendations"></div>
+            </section>
+
+            <!-- Package Builder Tab -->
+            <section id="package" class="tab-content">
+                <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Build Camera Package</h2>
+                <div class="package-builder">
+                    <div class="package-list">
+                        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 16px;">Your Package</h3>
+                        <div id="packageItems" class="package-items">
+                            <p class="empty-state">No items added yet. Search for lenses and click "Add to Package"</p>
+                        </div>
+                        <div class="package-summary">
+                            <div class="summary-row">
+                                <span>Total Items:</span>
+                                <span id="packageCount">0</span>
+                            </div>
+                            <button class="btn-primary" onclick="exportPackage()">Export Package</button>
+                            <button class="btn-secondary" onclick="clearPackage()">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cameras Tab -->
+            <section id="cameras" class="tab-content active">
+                <div class="filters">
+                    <h2>Find Cameras</h2>
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label for="cameraSearch">Search</label>
+                            <input type="text" id="cameraSearch" placeholder="Camera model, brand...">
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="cameraBrand">Brand</label>
+                            <select id="cameraBrand">
+                                <option value="">All Brands</option>
+                                <option value="ARRI">ARRI</option>
+                                <option value="Sony">Sony</option>
+                                <option value="Panavision">Panavision</option>
+                                <option value="Canon">Canon</option>
+                                <option value="Panasonic">Panasonic</option>
+                                <option value="Blackmagic">Blackmagic</option>
+                                <option value="RED">RED</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="cameraMount">Mount</label>
+                            <select id="cameraMount">
+                                <option value="">All Mounts</option>
+                                <option value="PL">PL</option>
+                                <option value="LPL">LPL</option>
+                                <option value="E">Sony E</option>
+                                <option value="EF">Canon EF</option>
+                                <option value="RF">Canon RF</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="cameraSensor">Sensor Size</label>
+                            <select id="cameraSensor">
+                                <option value="">All Sizes</option>
+                                <option value="S35">Super 35</option>
+                                <option value="FF">Full Frame</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn-primary" onclick="searchCameras()">Search Cameras</button>
+                        <button class="btn-secondary" onclick="clearCameraFilters()">Clear Filters</button>
+                    </div>
+                </div>
+
+                <div class="results">
+                    <h3>Results <span id="cameraResultCount">(Loading...)</span></h3>
+                    <div id="cameraResults" class="lens-grid"></div>
+                </div>
+            </section>
+
+            <!-- Accessories Tab -->
+            <section id="accessories" class="tab-content">
+                <div class="filters">
+                    <h2>Accessories</h2>
+                    <div class="category-tabs">
+                        <button class="category-btn active" data-category="all" onclick="filterAccessories('all')">All</button>
+                        <button class="category-btn" data-category="wireless_video" onclick="filterAccessories('wireless_video')">Wireless Video</button>
+                        <button class="category-btn" data-category="monitor" onclick="filterAccessories('monitor')">Monitors</button>
+                        <button class="category-btn" data-category="follow_focus" onclick="filterAccessories('follow_focus')">Follow Focus</button>
+                        <button class="category-btn" data-category="Power" onclick="filterAccessories('Power')">Power</button>
+                        <button class="category-btn" data-category="Media" onclick="filterAccessories('Media')">Media</button>
+                        <button class="category-btn" data-category="Support" onclick="filterAccessories('Support')">Support</button>
+                    </div>
+                </div>
+
+                <div class="results">
+                    <h3>Results <span id="accessoryResultCount">(0)</span></h3>
+                    <div id="accessoryResults" class="lens-grid"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // Update sidebar navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const tab = this.getAttribute('data-tab');
+
+                // Update active state on nav items
+                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+
+                // Update active tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(tab).classList.add('active');
+
+                // Update header title
+                const titles = {
+                    'search': 'Lenses',
+                    'cameras': 'Cameras',
+                    'accessories': 'Accessories',
+                    'recommend': 'Recommendations',
+                    'compare': 'Compare',
+                    'package': 'Build Package'
+                };
+                document.querySelector('header h1').textContent = titles[tab] || 'SetKit';
+            });
+        });
+    </script>
+</body>
+</html>

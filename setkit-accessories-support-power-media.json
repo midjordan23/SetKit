@@ -1,0 +1,230 @@
+Support, Power, and Media Accessories
+
+
+[
+  {
+    "brand": "OConnor",
+    "model": "Ultimate 2575D Fluid Head & Cine Tripod",
+    "category": "Support",
+    "subtype": "Fluid Head & Tripod",
+    "specs": "Heavy-duty fluid head with 90 lb (40.8 kg) payload capacity and continuous counterbalance up to 133 lb:contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1}; head weight ~22.9 lb:contentReference[oaicite:2]{index=2}; typically used with Mitchell-base cine tripods.",
+    "compatibility": "Supports full-size cinema cameras (ARRI, Panavision, RED) with large lens packages; mounts on Mitchell or 150mm bowl tripods.",
+    "usage": "Industry-standard film tripod head – a **\"largest film head\"** and **\"the standard for film production\"** on high-end sets:contentReference[oaicite:3]{index=3}:contentReference[oaicite:4]{index=4}, used on feature films and commercials for its smooth pan/tilt and reliable balance."
+  },
+  {
+    "brand": "Sachtler",
+    "model": "Video 18 S2 Fluid Head & Tripod",
+    "category": "Support",
+    "subtype": "Fluid Head & Tripod",
+    "specs": "100mm bowl-mount fluid head supporting 4–48.5 lb (2–22 kg) payload:contentReference[oaicite:5]{index=5}:contentReference[oaicite:6]{index=6}; 16-step counterbalance and 7-step drag for precise control:contentReference[oaicite:7]{index=7}; head weight ~9 lb (4.1 kg):contentReference[oaicite:8]{index=8}.",
+    "compatibility": "Versatile for mid-sized cine and ENG cameras (e.g. Sony FS7, Canon C300, smaller RED rigs); common in documentaries, news, and field productions.",
+    "usage": "Workhorse ENG/cinema tripod head known for reliability in **studio or field production**, handling everything from DSLR setups to broadcast cameras:contentReference[oaicite:9]{index=9}. Widely used on news shoots, documentaries, and mid-tier film sets for its quick adjustment and broad payload range."
+  },
+  {
+    "brand": "Ronford-Baker",
+    "model": "Fluid 7 Tripod System",
+    "category": "Support",
+    "subtype": "Fluid Head & Tripod",
+    "specs": "Mitchell-mount fluid head with 360° continuous pan/tilt rotation:contentReference[oaicite:10]{index=10}; payload up to 55 lbs (25 kg):contentReference[oaicite:11]{index=11}:contentReference[oaicite:12]{index=12}; head weight ~18 lbs; 7-step drag control via three on/off levers:contentReference[oaicite:13]{index=13}; sturdy 2-stage heavy-duty tripod legs.",
+    "compatibility": "Supports film cameras and heavy digital cine rigs; commonly paired with ARRI and Panavision cameras. Mitchell base fits studio dollies and hi-hats as well.",
+    "usage": "High-end tripod known for durability and smooth operation, favored especially in Europe/UK productions. Often seen on feature films and commercials requiring a rock-solid support – a classic alternative to O’Connor for heavy 35mm and digital cameras."
+  },
+  {
+    "brand": "Dana Dolly",
+    "model": "Portable Slider Kit",
+    "category": "Support",
+    "subtype": "Slider/Dolly",
+    "specs": "Portable camera dolly slider with 16-wheel urethane track wheels on a 1.5\" speed-rail pipe track:contentReference[oaicite:14]{index=14}:contentReference[oaicite:15]{index=15}; supports up to ~100 lb (45 kg) payload:contentReference[oaicite:16]{index=16}; Mitchell mount bowl with adapters for 75mm/100mm fluid heads:contentReference[oaicite:17]{index=17}; platform weight ~13 lb (5.9 kg):contentReference[oaicite:18]{index=18}.",
+    "compatibility": "Works with any tripod/fluid head (75mm, 100mm, 150mm bowl via adapters); carries heavy cinema cameras or lighter rigs for smooth tracking shots. Often mounted on combo stands or apple boxes.",
+    "usage": "A ubiquitous **\"versatile and portable slider system\"** for smooth tracking shots:contentReference[oaicite:19]{index=19}:contentReference[oaicite:20]{index=20}. Widely used on indie and mid-tier productions (commercials, music videos, features) for its quick setup and ability to achieve cinematic dolly moves on location. Popular for location shoots needing fast setup:contentReference[oaicite:21]{index=21}."
+  },
+  {
+    "brand": "DJI",
+    "model": "Ronin 2 3-Axis Gimbal",
+    "category": "Support",
+    "subtype": "Stabilizer (Motorized Gimbal)",
+    "specs": "High-torque 3-axis motorized stabilizer with ~30 lb (13.6 kg) max payload:contentReference[oaicite:22]{index=22}:contentReference[oaicite:23]{index=23}; supports full handheld or vehicle-mounted operation; dual hot-swappable battery system for long runtime:contentReference[oaicite:24]{index=24}; multiple modes (underslung, upright) and built-in GPS for stability.",
+    "compatibility": "Accommodates large cinema cameras (Alexa Mini, RED DSMC2, FX9) with cinema lenses. Often mounted to car rigs, drones, cable-cams or operated handheld with an Easyrig/arm for support.",
+    "usage": "Top-tier gimbal for Hollywood action – **capable of car chase shots and high-G force mounts**:contentReference[oaicite:25]{index=25}. Used on feature films and commercials for dynamic moving camera work; e.g. car-mounted sequences, running shots. Provides stabilized footage with heavy camera packages that previously required Steadicam or cranes."
+  },
+  {
+    "brand": "Freefly",
+    "model": "MoVI Pro Handheld Gimbal",
+    "category": "Support",
+    "subtype": "Stabilizer (Motorized Gimbal)",
+    "specs": "3-axis gimbal stabilizer with ~15 lb (6.8 kg) payload capacity:contentReference[oaicite:26]{index=26}:contentReference[oaicite:27]{index=27}; gimbal weight ~5.8 lb (2.65 kg) excluding batteries:contentReference[oaicite:28]{index=28}; hot-swappable dual batteries, integrated stand/ring; offers dual-operator control via wireless remote.",
+    "compatibility": "Ideal for mid-size cinema cameras (RED Gemini/Komodo, Blackmagic URSA Mini, DSLRs) with prime lenses. Can be used handheld or mounted on drones and vehicles (compatible with Freefly ALTA drones, etc.).",
+    "usage": "Revolutionized on-set stabilization for handheld shots since its 2013 debut. Common on documentaries, indie features, and commercials – enabling fluid camera movement in tight spaces and on foot. Often used for running/chase sequences, and was famously used on films to achieve shots previously impractical (the MoVI system **\"supports a wide range of camera and lens combinations\"** up to 15 lbs:contentReference[oaicite:29]{index=29}:contentReference[oaicite:30]{index=30})."
+  },
+  {
+    "brand": "ARRI",
+    "model": "Trinity 5-Axis Stabilizer",
+    "category": "Support",
+    "subtype": "Stabilizer (Hybrid Steadicam/Gimbal)",
+    "specs": "Hybrid stabilization rig combining a mechanical Steadicam with a 2-axis electronic gimbal. Payload up to ~66 lb (30 kg):contentReference[oaicite:31]{index=31}:contentReference[oaicite:32]{index=32} (Trinity 1; Trinity 2 up to 88 lb). Allows fluid booming moves from low to high angle with full horizon stabilization. Incorporates 19mm post, 17–28″ telescoping range, and 12/24V power distribution.",
+    "compatibility": "Designed for ARRI cameras (optimized for ALEXA Mini/35) but adaptable to others; supports heavy builds like Alexa LF with Master Anamorphics. Requires trained operator with Steadicam vest and arm.",
+    "usage": "Cutting-edge stabilizer used on high-end films for complex one-takes and agile camera moves. Enables shots impossible on traditional Steadicam – e.g. continuous floor-to-shoulder moves. **Used on “1917” for its fluid, mobile camerawork** with moves from feet to head level in one shot:contentReference[oaicite:33]{index=33}. Provides extremely stable images (less float than Steadicam) and performs well even in wind:contentReference[oaicite:34]{index=34}, making it a go-to for innovative cinematography."
+  },
+  {
+    "brand": "Tiffen (Steadicam)",
+    "model": "M-1 Volt Stabilizer System",
+    "category": "Support",
+    "subtype": "Stabilizer (Body-Mounted)",
+    "specs": "Professional Steadicam rig with motor-assisted Volt technology for horizon leveling. Uses G-70x iso-elastic arm (70 lb lifting capacity):contentReference[oaicite:35]{index=35} and a modular sled supporting camera payloads of 50+ lb. 1.5″ post, high-precision gimbal, and a detachable electronic module (Volt) that maintains level horizon and tilt stability.",
+    "compatibility": "Supports nearly any large cinema camera (ARRI, Panavision, IMAX) when properly balanced on the sled. Arm can be tuned for lightweight DSLR rigs up to full 35mm packages. Often paired with vest and arm systems like Tiffen Exovest or G-70x.",
+    "usage": "The high-end Steadicam for film and broadcast – used on countless feature films, TV dramas, and live events. The M-1 Volt’s auto-horizon feature assists operators in maintaining level shots during fast pans or tilts. Favored for its reliability and payload capacity, it’s the **workhorse “camera stabilizer” for Hollywood** allowing dramatic walk-and-talks, chase scenes, and long takes with heavy cameras."
+  },
+  {
+    "brand": "Anton Bauer",
+    "model": "Dionic XT 150 Battery (Gold Mount)",
+    "category": "Power",
+    "subtype": "On-Camera Battery",
+    "specs": "156 Wh lithium-ion Gold Mount battery (14.4 V nominal):contentReference[oaicite:36]{index=36}; supports 12A continuous draw (20A peak):contentReference[oaicite:37]{index=37}; features LCD fuel gauge, P-Tap (D-Tap) output and 5V USB power:contentReference[oaicite:38]{index=38}; ~2.4 lb weight. Over 1000 charge cycles lifespan.",
+    "compatibility": "Gold Mount plate cameras (ARRI Amira, Alexa Classic, ENG cams) and lights/monitors via D-Tap. Also available in V-Mount. Provides ample power for digital cinema cameras, high-draw accessories like wireless transmitters or monitors.",
+    "usage": "High-capacity **professional battery pack** for film sets – commonly seen on cameras to allow hours of untethered shooting. Its robust 12A output can run power-hungry 4K cameras (RED, Alexa) plus accessories simultaneously. Widely used on feature and television productions for reliable all-day power."
+  },
+  {
+    "brand": "Core SWX",
+    "model": "Hypercore NEO 150 Mini Battery",
+    "category": "Power",
+    "subtype": "On-Camera Battery",
+    "specs": "147 Wh lithium-ion battery (14.8 V, ~9.9 Ah) in compact form factor:contentReference[oaicite:39]{index=39}; 12A continuous draw, 16A peak output:contentReference[oaicite:40]{index=40}; V-Mount (or Gold Mount) options; backlit runtime LCD and RFID transmitter for battery data (for monitoring via app):contentReference[oaicite:41]{index=41}:contentReference[oaicite:42]{index=42}.",
+    "compatibility": "Cine and broadcast cameras requiring V-Mount power – fits cameras like Sony VENICE, FX9, RED, etc. Its small size suits gimbal or drone use as well. P-Tap (SmartTap) and USB outputs power accessories (follow focus, monitors) directly.",
+    "usage": "Modern high-output battery used on digital cinema and broadcast shoots. Provides a **“high-performance” 14.8V power source designed for cine cameras and field use:contentReference[oaicite:43]{index=43}**, with a compact build ideal for stabilized rigs (gimbals, handheld). Common in mid-tier productions and rentals for its balance of capacity and size, and smart features (RFID, robust housing) beneficial on set."
+  },
+  {
+    "brand": "Anton Bauer",
+    "model": "Cine VCLX Block Battery",
+    "category": "Power",
+    "subtype": "Block Battery",
+    "specs": "Free-standing NiMH block battery, 630 Wh capacity:contentReference[oaicite:44]{index=44}:contentReference[oaicite:45]{index=45}; dual voltage outputs: 14.4 V and 28 V XLR (3-pin & 8-pin) for camera and high-power lighting:contentReference[oaicite:46]{index=46}; capable of sustained high current draw (~20A at 28V). Weighs ~25 lb (11+ kg). Safe for air transport (NiMH chemistry).",
+    "compatibility": "Used to power high-draw film cameras (e.g. ARRI 435, Alexa 65) or 24V accessories like motion control heads and lights (ARRI SkyPanel, 1200W HMI ballasts). Provides long runtimes for camera carts or on-set lighting where AC power is impractical.",
+    "usage": "**\"Academy Award winning\"** battery system for high-current applications:contentReference[oaicite:47]{index=47} – a fixture on big-budget film sets and camera carts. Often used when shooting all day on location with power-hungry cameras or when running 24V film equipment. Its robust build and massive capacity keep cameras and lights running for hours (e.g. reliably ran Alexa 35 and large LED panels for extended takes)."
+  },
+  {
+    "brand": "Bebob",
+    "model": "CUBE 1200 Multi-Voltage Block",
+    "category": "Power",
+    "subtype": "Block Battery",
+    "specs": "Enormous 1176 Wh lithium-ion battery case (81.6 Ah):contentReference[oaicite:48]{index=48}; provides 5V, 12V, 24V, and 48V outputs (XLR connectors) up to 480W continuous load (700W peak):contentReference[oaicite:49]{index=49}:contentReference[oaicite:50]{index=50}; runs an ARRI SkyPanel S60 (420W) at full power ~2.5 hours:contentReference[oaicite:51]{index=51}. Built-in charger (90–264V AC input, ~8-hour recharge):contentReference[oaicite:52]{index=52}; weighs ~19.7 lb (8.9 kg):contentReference[oaicite:53]{index=53}.",
+    "compatibility": "Feeds high-power devices: large LED lights (SkyPanels, LED walls), 24-48V cinema cameras or rigs (ARRI 65, high-speed Phantom cameras). Multiple 12V outputs (D-Tap, XLR) also allow standard 12V camera/accessory powering. Often used on carts or as a portable generator replacement.",
+    "usage": "A **“versatile solution for high-performance devices”** on location:contentReference[oaicite:54]{index=54}. Deployed on film sets to power lights and cameras where generators or wall power aren’t available. Its ability to output true 48V means crews can run high-output LED panels at full brightness off battery – hugely useful for remote shoots. Frequently found on large commercials and features, powering cameras and lighting in the field."
+  },
+  {
+    "brand": "Anton Bauer",
+    "model": "Quad 4-Position Charger",
+    "category": "Power",
+    "subtype": "Battery Charger",
+    "specs": "Simultaneous 4-battery charger for Anton Bauer Gold-Mount (or V-Mount) batteries. 4-position **simultaneous charging** with intelligent priority (auto-detects and charges the fullest battery first):contentReference[oaicite:55]{index=55}:contentReference[oaicite:56]{index=56}; supports both 14.4V and 26V battery models:contentReference[oaicite:57]{index=57}:contentReference[oaicite:58]{index=58}. Fast charge current (~6A) for rapid turnaround. Some models include LCD status display and a 150W DC output for camera powering.",
+    "compatibility": "Used with Anton Bauer’s battery lines (Dionic, Titon, etc.), charging any Digital or Logic series battery. Multi-chemistry support allows Li-Ion and older NiMH packs. AC input 100-240V for worldwide use. The low-profile designs fit in standard travel cases for location shoots.",
+    "usage": "A common sight in the camera truck or DIT station – this charger recharges all batteries overnight or between scenes. **Simultaneously charges four batteries** to keep a production’s fleet of packs ready:contentReference[oaicite:59]{index=59}:contentReference[oaicite:60]{index=60}. Often also used as a power station on set (some have 4-pin XLR outputs to power cameras directly). Its rugged, field-upgradeable design suits rental houses and on-location production where reliable charging is critical."
+  },
+  {
+    "brand": "Wooden Camera",
+    "model": "D-Box (Power Distribution)",
+    "category": "Power",
+    "subtype": "D-Tap Splitter/Hub",
+    "specs": "Modular power distribution box providing up to five simultaneous outputs (D-Tap, 2-pin LEMO, 4-pin Hirose, USB, etc.) for camera accessories:contentReference[oaicite:61]{index=61}:contentReference[oaicite:62]{index=62}.  One input via 4-pin XLR (fed from a battery plate D-Tap) and total load up to 10 Amps (fused) across outputs:contentReference[oaicite:63]{index=63}:contentReference[oaicite:64]{index=64}. Each output max 3A (1A for 24V outputs):contentReference[oaicite:65]{index=65}. Typically sandwiched between camera and battery plate (V-Mount or Gold Mount).",
+    "compatibility": "Universally used on cinema camera rigs to power multiple accessories: monitors, wireless video, focus motors, etc. Attaches behind cameras like ARRI Alexa Mini, RED, Sony Venice via appropriate battery plate. Can be mounted via 1/4\"-20 to rod clamps or cheeseplates.",
+    "usage": "Widely used on professional camera builds to streamline power. Instead of multiple batteries, the D-Box routes a single battery’s power to many devices. It’s essentially a customizable multi-outlet hub for cameras. Crew can hot-swap different output modules (D-Tap, USB, etc.) as needed. Seen on virtually every high-end camera rig that has monitors, wireless transmitters and other add-ons – ensuring all accessories get regulated power from one source."
+  },
+  {
+    "brand": "Codex / ARRI",
+    "model": "Codex Compact Drive 1TB & Reader",
+    "category": "Media",
+    "subtype": "Camera Memory & Reader",
+    "specs": "1 TB high-speed SSD magazine for ARRI cameras (960 GB usable):contentReference[oaicite:66]{index=66}; rated ~8 Gb/s (~1000 MB/s) sustained write speed for ARRIRAW recording:contentReference[oaicite:67]{index=67}:contentReference[oaicite:68]{index=68}. Housed in a rugged enclosure for on-set use. Typically used via USB-C 3.1 reader or Thunderbolt 3 dock for offload:contentReference[oaicite:69]{index=69}. Enables ~32 minutes of 4.5K ARRIRAW on Alexa Mini LF at 24fps.",
+    "compatibility": "Designed for ARRI ALEXA Mini LF and ALEXA 35 cameras:contentReference[oaicite:70]{index=70} (also usable in older ALEXA SXT/65 with adapter). Records both **ARRIRAW and ProRes** internally:contentReference[oaicite:71]{index=71}. The Compact Drive USB-C Reader allows fast offloads to laptop/DIT cart; also compatible with Codex Dock via adapter.",
+    "usage": "Standard media for latest ARRI cameras – used on virtually all high-end productions using the Mini LF/35. Its **“durable, industrial-style SSD”** build:contentReference[oaicite:72]{index=72} handles the demands of onset use and heavy data rates. Often shuttled from camera to DIT: after a take, the Compact Drive is plugged into a reader on the DIT cart to download footage quickly. The reliability and speed are critical for managing large ARRIRAW files on feature films."
+  },
+  {
+    "brand": "Sony",
+    "model": "AXS-R7 RAW Recorder & AXS Card",
+    "category": "Media",
+    "subtype": "External Recorder & Memory",
+    "specs": "Bolt-on 16-bit RAW recording module for Sony CineAlta cameras. Dual slot recorder for AXS memory cards (S48 series):contentReference[oaicite:73]{index=73}:contentReference[oaicite:74]{index=74}; enables up to 6K 60p RAW on VENICE and 4K 120fps RAW or X-OCN on F55/F5:contentReference[oaicite:75]{index=75}. Features a 30-second cache recording in RAW/X-OCN mode:contentReference[oaicite:76]{index=76}:contentReference[oaicite:77]{index=77} and robust all-metal chassis (dust/splash resistant) attaching via secure bracket. Uses slim AXS-A 512GB/1TB cards (approx 2.4 Gbps throughput for 4K/120).",
+    "compatibility": "Designed for Sony VENICE (1) and PMW-F55/F5 cameras:contentReference[oaicite:78]{index=78}. VENICE achieves 6K X-OCN/RAW with this unit, while F55/F5 get extended 4K and high-speed capabilities. AXS-A cards from 512 GB to 1 TB are used for recording. The cards offload via Sony AXS-AR3 Thunderbolt or AXS-CR1 USB-3 readers.",
+    "usage": "Used on high-end Sony camera productions to unlock full image quality and high frame rates. With an F55, for example, the AXS-R7 allowed **continuous 4K/120fps 16-bit RAW** capture:contentReference[oaicite:79]{index=79}:contentReference[oaicite:80]{index=80}, which was impossible internally – critical for slow-motion sequences. On VENICE, productions use it to record the X-OCN format for efficient 6K workflow. It’s a staple for feature films, commercials or TV shoots using Sony’s CineAlta line where maximum dynamic range and resolution are needed."
+  },
+  {
+    "brand": "RED",
+    "model": "RED MINI-MAG 480GB & Reader",
+    "category": "Media",
+    "subtype": "Camera Memory & Reader",
+    "specs": "Proprietary RED SSD media (480 GB) for DSMC2 cameras (WEAPON, EPIC-W, SCARLET-W, etc.). Red-colored MINI-MAGs support up to ~300 MB/s write speeds (for lowest compression RAW):contentReference[oaicite:81]{index=81}:contentReference[oaicite:82]{index=82}. Attaches via RED’s internal SSD slot. Paired with the RED STATION Mini-Mag USB 3.1 reader, which offloads data at up to 10 Gb/s (via USB-C):contentReference[oaicite:83]{index=83}. Allows recording of 8K REDCODE RAW at high frame rates (e.g. 8K/60).",
+    "compatibility": "Used in RED DSMC2 camera bodies (Monstro, Helium, Gemini, Dragon-X). Also backward-compatible to older EPIC/SCARLET if updated. The 480GB size stores ~50 minutes of 8K RAW (at modest compression). Requires RED’s readers for offload (USB 3.1, Thunderbolt, or older eSATA docks).",
+    "usage": "Standard media for RED cameras on professional shoots. Its fast 300 MB/s bandwidth ensures the camera can write enormous RAW files without dropping frames:contentReference[oaicite:84]{index=84}. On set, DITs use the RED Station to quickly dump footage to storage. Practically every feature, commercial, or series shot on RED will have a stack of MINI-MAGs cycling between camera and DIT – known for being robust but also a costly item to safeguard."
+  },
+  {
+    "brand": "Angelbird",
+    "model": "AV Pro AR 256 CFast Card & Reader",
+    "category": "Media",
+    "subtype": "Camera Memory & Reader",
+    "specs": "256 GB ARRI-certified CFast 2.0 card, developed with Angelbird for ALEXA Mini and AMIRA:contentReference[oaicite:85]{index=85}:contentReference[oaicite:86]{index=86}. Sustained write speed of 430 MB/s for reliable ARRIRAW 2.8K or ProRes recording:contentReference[oaicite:87]{index=87}. Rugged build (temperature, shock, and overload proof). Paired with a USB 3.1 CFast 2.0 dual-card reader for offloading footage at up to ~500 MB/s per card.",
+    "compatibility": "Qualified for ARRI ALEXA Mini and AMIRA cameras (the only CFast media those cameras accept) – handles both ProRes and uncompressed ARRIRAW recording without frame drops. Also used in Blackmagic URSA Mini, Canon C200/C300 II (for raw light), and any CFast-equipped camera requiring high sustained speeds. The Angelbird reader works on Mac/PC for ingest.",
+    "usage": "Trusted media on professional ARRI setups before the Compact Drives. **“Perfect CFast 2.0 card for your ALEXA Mini… supports ProRes and ARRIRAW”**:contentReference[oaicite:88]{index=88}, ensuring the camera doesn’t drop frames. Often purchased or rented in matched sets (“ARRI Edition” cards) by camera crews. In practice, a media manager will rotate these cards, transferring via the Angelbird reader to multiple backups on set. The high write speed and durability give camera assistants confidence during intense shooting schedules."
+  },
+  {
+    "brand": "Inovativ",
+    "model": "Echo 48 Camera Cart",
+    "category": "Carts",
+    "subtype": "Equipment Cart",
+    "specs": "Large collapsible camera cart workstation. Aluminum frame (5052/6061) with two shelves (top adjustable 10″ vertically):contentReference[oaicite:89]{index=89}:contentReference[oaicite:90]{index=90}; 10″ pneumatic wheels with foot brakes; approx 48″ L x 24″ W footprint (folds down for transport). Weight capacity ~1000 lb (454 kg) total:contentReference[oaicite:91]{index=91}:contentReference[oaicite:92]{index=92}. Features cable pass-through ports and option for drawer systems, monitor mounts, etc.",
+    "compatibility": "Used by camera and DIT departments to organize gear on set. Top shelf can support monitors, laptops, even a camera build on a head. The sturdy build allows mounting of stands, clamps, and securing heavy cases. Fits through standard doorways when collapsed.",
+    "usage": "A premium on-set cart **“ideal… to carry and have equipment within arm’s reach”** for camera crews and DITs:contentReference[oaicite:93]{index=93}:contentReference[oaicite:94]{index=94}. Frequently seen on high-end commercials and features as the DIT workstation or camera assistant cart. Its stability and tool-free setup make it popular for transporting cameras, lenses, and monitors around set, and then serving as a mobile workspace for data offloading or lens changes."
+  },
+  {
+    "brand": "Magliner/Backstage",
+    "model": "Senior Convertible Cart (Modified)",
+    "category": "Carts",
+    "subtype": "Equipment Cart",
+    "specs": "Film industry standard utility cart with 24″ x 49.5″ shelves (top and bottom):contentReference[oaicite:95]{index=95} on a convertible hand-truck frame. 4-wheel configuration with pneumatic tires; usually aluminum/steel construction ~97 lb weight:contentReference[oaicite:96]{index=96}. Rated for up to 1000 lbs load (about 200 lbs on top shelf):contentReference[oaicite:97]{index=97}. Shelves are carpeted to protect gear; can be broken down for transport.",
+    "compatibility": "An all-purpose cart for camera, lighting, or grip gear. Often customized with accessories: stand holders, detachable baskets, umbrella mounts, etc. Fits through standard doors and can convert to 2-wheel mode for narrow spaces. Used across all departments (camera assistants, sound mixers, grips).",
+    "usage": "The **“legendary favorite in the film and TV industries”** for hauling equipment:contentReference[oaicite:98]{index=98}. Common on nearly every set – loaded with camera cases, batteries, and sandbags for easy staging. Camera assistants use it as their workstation (AKA “AC cart”) for building cameras. Its durability and capacity make it the go-to cart from small indie shoots to big studio films for moving and organizing gear on set."
+  },
+  {
+    "brand": "ARRI",
+    "model": "Bridge Plate BP-8 (19mm Studio)",
+    "category": "Rigging",
+    "subtype": "Camera Baseplate",
+    "specs": "Long bridge plate that mates with ARRI-standard dovetail baseplates to support large camera builds. Provides 19mm studio rod clamps (104mm spacing) for lens supports and accessories:contentReference[oaicite:99]{index=99}:contentReference[oaicite:100]{index=100}. All-aluminum construction ~1.1 lb. Attaches to camera via 3/8″ screws and locating pins. Optimizes fore-aft balance on tripod or Steadicam by sliding along a dovetail.",
+    "compatibility": "Fits ARRI cameras (Alexa, Amira) and any third-party camera with the correct baseplate dimensions. Commonly used under RED, Sony Venice, etc. when using 19mm rods and heavy lenses. Pairs with ARRI dovetail plates (e.g. 12″ or 18″) on tripods, dollies, Steadicams.",
+    "usage": "Standard studio bridgeplate for heavy cameras – enables use of **19 mm support rods** and proper balancing of the camera rig:contentReference[oaicite:101]{index=101}. Seen on feature film camera setups, supporting long zoom lenses with lens motors, matte boxes, etc. The BP-8 and similar allow camera assistants to quickly swap the whole camera package from tripod to Steadicam to crane via the dovetail, maintaining consistent balance and support."
+  },
+  {
+    "brand": "Steel 19mm Rods",
+    "model": "19mm Support Rod Pair (18″)",
+    "category": "Rigging",
+    "subtype": "Rod Support",
+    "specs": "Pair of 19mm diameter support rods, stainless steel or aluminum, commonly 18 inches long. Conform to studio 19mm standard (rods spaced 104mm apart in BP-8/BP-9 plates):contentReference[oaicite:102]{index=102}. Used for mounting lens support brackets, follow focus motors, matte boxes, and other accessories in front of the camera. Extremely rigid to prevent flex under heavy lenses.",
+    "compatibility": "Fits any 19mm studio bridge plate or support bracket (ARRI, Bright Tangerine, etc.). Used primarily with cine cameras and zoom lenses. 19mm rods are standard on professional feature setups, while 15mm rods are used for smaller rigs – but many cameras can adapt both.",
+    "usage": "Essential building blocks of a camera rig – these rods create a stable mounting rail. On a high-end camera package, you’ll see 19mm rods holding up a heavy zoom lens with a **lens support** and multiple motors attached. ACs (assistant camera) appreciate the stiffness for precise focus and zoom control. They are swapped out in different lengths (12″, 18″, 24″) depending on the accessories needed. The 19mm system is ubiquitous in feature film production for its strength."
+  },
+  {
+    "brand": "Zacuto",
+    "model": "VCT Pro Baseplate",
+    "category": "Rigging",
+    "subtype": "Shoulder Rig",
+    "specs": "Universal shoulder-mount baseplate with built-in gel shoulder pad and VCT wedge mount for tripod quick-release:contentReference[oaicite:103]{index=103}:contentReference[oaicite:104]{index=104}. Includes 15mm LWS rod clamps in front (with two 6.5″ rods) and rear rod ports for extensions:contentReference[oaicite:105]{index=105}. Offers 10″ of sliding adjustment for camera balance and an ARRI M6 rosette on each side for handles:contentReference[oaicite:106]{index=106}. Low profile design (camera sits ~3/4″ above shoulder) for better center of gravity.",
+    "compatibility": "Fits virtually any camera – from DSLRs and mirrorless up to Alexa/RED – via sliding top plate and multiple 1/4″-20 and 3/8″-16 screws. The VCT wedge on bottom works with Sony VCT-14 tripod plates or can screw onto standard tripod plates. Commonly used for ENG-style shooting with cameras like FS7, FX9, C300, etc., as well as on cine rigs to go from tripod to shoulder quickly.",
+    "usage": "A **“best shoulder-mounted baseplate”** choice for many camera operators:contentReference[oaicite:107]{index=107}. Allows fast transition between handheld and tripod work. Frequently part of documentary and TV setup – e.g. a Canon C500 on this baseplate lets the operator run-and-gun comfortably with a shoulder pad and then click into a tripod in seconds. Its wide compatibility means rental houses use it to support many camera models. The long sliding range and front/back rods enable balancing heavy front lenses with rear batteries or accessories for perfect shoulder comfort."
+  },
+  {
+    "brand": "Matthews (Cardellini)",
+    "model": "Matthellini / Cardellini Clamp (2″)",
+    "category": "Rigging",
+    "subtype": "Mounting Clamp",
+    "specs": "Strong steel end-jaw clamp with 2″ jaw capacity and 5/8″ baby pin receiver. Jaw opens up to grip pipes, beams, tabletops up to ~2 inches thick. End Jaw design (clamping jaw at end of shaft) allows clamping flush to flat surfaces. Typically ~7″ long shaft with threaded baby pin stud for mounting lights or camera accessories. Supports loads of several kg (limited by what it’s clamped to).",
+    "compatibility": "A go-to grip clamp – can mount lights, rig cameras or accessories almost anywhere. Attachable to speed rail, scaffolding, door frames, tables, car rigs, etc. Often used with other grip heads or connected to C-stand arms. Also comes in center-jaw and right-angle versions for different rigging needs.",
+    "usage": "Beloved by grips and ACs alike – **“a favorite among film professionals”** for its versatility:contentReference[oaicite:108]{index=108}. On set, you might see a Cardellini holding a small LED light to a ceiling beam, or securing a GoPro to a car. Camera teams use them to attach monitors or battery plates to carts. The strong bite and all-metal construction give confidence when clamping expensive gear in odd places. It’s an indispensable multi-purpose clamp in any professional grip kit."
+  },
+  {
+    "brand": "Manfrotto",
+    "model": "Variable Friction Magic Arm (244)",
+    "category": "Rigging",
+    "subtype": "Articulating Arm",
+    "specs": "Fully articulated aluminum arm, 20.8″ long with ball joints at each end and a central locking knob:contentReference[oaicite:109]{index=109}. Supports up to 6.6 lb (3 kg) payload:contentReference[oaicite:110]{index=110} – e.g. a small monitor or light. Typically comes with a camera/bracket plate on one end and a spigot or Super Clamp on the other. The single knob tightens all joints, locking the arm in position. Weight ~2.5 lb (1.1 kg).",
+    "compatibility": "Mounts to virtually anything via the right accessories: often one end goes into a Super Clamp (clamped to a stand or dolly), and the other end screws into a monitor, light, or camera (1/4″-20 or 3/8″ studs). Commonly used to hold director’s monitors, witness cameras, small LED panels, flags, or even an audio recorder in place.",
+    "usage": "Known on set simply as the “Magic Arm,” it provides quick adjustability for odd mounting needs. For example, the focus puller’s monitor might be attached to the camera via a Magic Arm, adjustable to a comfortable viewing angle. Its **ergonomic single knob** makes repositioning easy while securely supporting gear:contentReference[oaicite:111]{index=111}. Used in both film and photography – anytime you need to cantilever an item in a specific spot (like a micro light over a product table or a microphone just out of frame), the Magic Arm is the tool of choice."
+  }
+]

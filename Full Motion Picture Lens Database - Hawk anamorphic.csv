@@ -1,0 +1,82 @@
+name,focal length,max aperture (T),close focus,image circle,front diameter,weight,length,original mount,iris blades,notes / comments
+class-X,28mm,2.2,2',,125mm,2400g,137mm,PL,,
+,35mm,2.2,"2' 6""",,125mm,2900g,178mm,PL,,
+,45mm,2.2,"2' 6""",,125mm,2300g,164mm,PL,,
+,55mm,2.2,"2' 6""",,114mm,2200g,170mm,PL,,
+,55mm macro,2.2,"1' 2""",,125mm,2400g,180mm,PL,,
+,65mm,2.2,"1' 8""",,114mm,2300g,180mm,PL,,
+,80mm,2.2,"2' 6""",,114mm,2500g,188mm,PL,,
+,110mm,3.0,"2' 6""",,114mm,2800g,205mm,PL,,
+,140mm,3.5,"2' 6""",,114mm,2900g,225mm,PL,,
+,38 - 80mm,2.8,2',,142mm,5600g,288mm,PL,,
+,80 - 180mm,2.8,"3' 3""",,125mm,8100g,430mm,PL,,
+,,,,,,,,,,
+C-Series,40mm,2.2,"3' 6""",s35,110mm,2200g,143mm,PL,15,
+,50mm,2.2,"3' 6""",s35,110mm,2100g,161mm,PL,15,
+,60mm,2.2,"3' 6""",s35,110mm,2100g,180mm,PL,15,
+,75mm,2.2,"3' 6""",s35,110mm,2400g,188mm,PL,15,
+,100mm,2.2,"3' 6""",s35,110mm,2700g,218mm,PL,15,
+,55 - 165mm,4.0,"3' 6""",s35,110mm,2200g,192mm,PL,15,
+,,,,,,,,,,
+V-Series,25mm,2.2,"3' 6""",s35,142mm,2800g,135mm,PL,15,
+,30mm,2.2,"2' 8""",s35,156mm,5200g,188mm,PL,15,
+,35mm,2.2,"2' 6""",s35,156mm,5600g,187mm,PL,15,
+,40mm,2.2,"2' 6""",s35,156mm,6200g,202mm,PL,15,
+,50mm,2.2,2',s35,125mm,3700g,202mm,PL,15,
+,60mm,2.2,2',s35,125mm,4000g,213mm,PL,15,
+,75mm,2.2,2',s35,125mm,4600g,238mm,PL,15,
+,100mm,2.2,"3' 6""",s35,125mm,6600g,325mm,PL,15,
+,135mm,3.0,"3' 6""",s35,125mm,6300g,325mm,PL,15,
+,180mm,3.0,"6' 6""",s35,142mm,7500g,407mm,PL,15,
+,250mm,3.0,"6' 6""",s35,142mm,7800g,461mm,PL,15,
+,350mm,4.2,"6' 6""",s35,142mm,8400g,486mm,PL,15,
+,46 - 230mm,4.0,"1' 6""",s35,150mm,7400g,377mm,PL,15,
+,300 - 900mm,4.0,"9' 9""",s35,156mm,15800g,672mm,PL,15,
+,,,,,,,,,,
+V-Plus,35mm,2.2,"2' 6""",s35,156mm,5300g,187mm,PL,15,
+,40mm,2.2,"2' 6""",s35,156mm,5500g,202mm,PL,15,
+,50mm,2.2,2',s35,125mm,3700g,202mm,PL,15,
+,60mm,2.2,2',s35,125mm,4000g,213mm,PL,15,
+,65mm,3.0,"1' 2""",s35,125mm,4300g,252mm,PL,15,
+,75mm,2.2,2',s35,125mm,4300g,238mm,PL,15,
+,85mm,2.2,2',s35,125mm,4400g,250mm,PL,15,
+,100mm,2.2,"3' 3""",s35,125mm,5600g,325mm,PL,15,
+,120mm,3.5,"1' 5""",s35,125mm,5600g,333mm,PL,15,
+,135mm,3.0,"3' 3""",s35,125mm,5400g,325mm,PL,15,
+,150mm,3.0,"3' 3""",s35,125mm,5300g,323mm,PL,15,
+,45 - 90mm,2.8,"2' 6""",s35,125mm,4500g,220mm,PL,15,"2x or 1.3x squeeze, also available as Vintage '74 model"
+,80 - 180mm,2.8,"3' 3""",s35,125mm,6600g,430mm,PL,15,"2x or 1.3x squeeze, also available as Vintage '74 model"
+,,,,,,,,,,
+V-Plus 1.3x Squeeze,30 - 60mm,2.8,,s35,,,,,,
+,,,,,,,,,,
+V-Lite,28mm,2.2,"2' 7""",s35,120mm,2100g,137mm,PL,15,also available as Vintage '74 model
+,35mm,2.2,"3' 3""",s35,120mm,2900g,170mm,PL,15,also available as Vintage '74 model
+,45mm,2.2,"3' 3""",s35,104mm,1900g,154mm,PL,15,also available as Vintage '74 model
+,55mm,2.2,"3' 3""",s35,104mm,2000g,156mm,PL,15,also available as Vintage '74 model
+,65mm,2.2,"3' 3""",s35,104mm,2000g,160mm,PL,15,also available as Vintage '74 model
+,80mm,2.2,"3' 3""",s35,104mm,2300g,185mm,PL,15,also available as Vintage '74 model
+,110mm,3.0,"3' 3""",s35,104mm,2600g,200mm,PL,15,also available as Vintage '74 model
+,140mm,3.5,"3' 3""",s35,104mm,2700g,220mm,PL,15,also available as Vintage '74 model
+,,,,,,,,,,
+V-Lite 1.3x Squeeze,20mm,2.2,2',s35,142mm,2600g,145mm,PL,15,also available as Vintage '74 model
+,24mm,2.2,2',s35,120mm,2500g,145mm,PL,15,also available as Vintage '74 model
+,28mm,2.2,"2' 7""",s35,120mm,2300g,137mm,PL,15,also available as Vintage '74 model
+,35mm,2.2,"3' 3""",s35,120mm,2900g,170mm,PL,15,also available as Vintage '74 model
+,45mm,2.2,"3' 3""",s35,104mm,1900g,154mm,PL,15,also available as Vintage '74 model
+,55mm,2.2,"3' 3""",s35,104mm,2000g,156mm,PL,15,also available as Vintage '74 model
+,65mm,2.2,"3' 3""",s35,104mm,2000g,160mm,PL,15,also available as Vintage '74 model
+,80mm,2.2,"3' 3""",s35,104mm,2300g,185mm,PL,15,also available as Vintage '74 model
+,110mm,3.0,"3' 3""",s35,104mm,2600g,200mm,PL,15,also available as Vintage '74 model
+,140mm,3.5,"3' 3""",s35,104mm,2700g,220mm,PL,15,also available as Vintage '74 model
+,,,,,,,,,,
+V-Lite 16 2x,14mm,1.5,"2' 7""",s16,120mm,2300g,140mm,,,16mm format anamorphics
+,18mm,1.5,"3' 3""",s16,120mm,2900g,173mm,,,16mm format anamorphics
+,24mm,1.5,"3' 3""",s16,104mm,1900g,158mm,,,16mm format anamorphics
+,28mm,1.5,"3' 3""",s16,104mm,2000g,160mm,,,16mm format anamorphics
+,35mm,1.5,"3' 3""",s16,104mm,2000g,159mm,,,16mm format anamorphics
+,,,,,,,,,,
+V-Lite 16 1.3x,14mm,1.5,"2' 7""",s16,120mm,2300g,140mm,,,16mm format anamorphics
+,18mm,1.5,"3' 3""",s16,120mm,2900g,173mm,,,16mm format anamorphics
+,24mm,1.5,"3' 3""",s16,104mm,1900g,158mm,,,16mm format anamorphics
+,28mm,1.5,"3' 3""",s16,104mm,2000g,160mm,,,16mm format anamorphics
+,35mm,1.5,"3' 3""",s16,104mm,2000g,159mm,,,16mm format anamorphics

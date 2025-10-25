@@ -1,0 +1,212 @@
+more support
+
+
+[
+  {
+    "id": "A-WIRELESS-TERADEK-BOLT6-LT",
+    "brand": "Teradek",
+    "model": "Bolt 6 LT 750",
+    "category": "wireless_video",
+    "subtype": "TX/RX kit",
+    "specs": {
+      "range": "750 ft",
+      "video": "3G-SDI / HDMI",
+      "latency": "<0.001s",
+      "mount": "1/4\"-20",
+      "power": "2-pin Lemo / D-Tap"
+    },
+    "compatible_with": "All SDI-based systems",
+    "notes": "Line-of-sight, uncompressed video transmission"
+  },
+  {
+    "id": "A-WIRELESS-TERADEK-BOLT4K",
+    "brand": "Teradek",
+    "model": "Bolt 4K MAX",
+    "category": "wireless_video",
+    "subtype": "TX/RX kit",
+    "specs": {
+      "range": "5000 ft",
+      "video": "12G-SDI",
+      "latency": "<1 ms",
+      "mount": "1/4\"-20",
+      "power": "2-pin Lemo"
+    },
+    "compatible_with": "High-end cameras (Venice, ALEXA)",
+    "notes": "4K HDR wireless transmission"
+  },
+  {
+    "id": "A-MONITOR-SMALLHD-703",
+    "brand": "SmallHD",
+    "model": "703 Bolt",
+    "category": "monitor",
+    "subtype": "on-camera",
+    "specs": {
+      "size": "7\"",
+      "brightness": "3000 nits",
+      "inputs": "3G-SDI",
+      "power": "D-Tap",
+      "mount": "\u00bc-20",
+      "receiver": "Built-in Teradek"
+    },
+    "compatible_with": "All Teradek TX kits",
+    "notes": "Popular AC monitor"
+  },
+  {
+    "id": "A-MONITOR-SMALLHD-CINE13",
+    "brand": "SmallHD",
+    "model": "Cine 13",
+    "category": "monitor",
+    "subtype": "field",
+    "specs": {
+      "size": "13\"",
+      "brightness": "1500 nits",
+      "inputs": "3G-SDI",
+      "power": "XLR / D-Tap",
+      "mount": "VESA"
+    },
+    "compatible_with": "Director\u2019s video village",
+    "notes": "Lightweight production monitor"
+  },
+  {
+    "id": "A-MONITOR-SMALLHD-CINE24",
+    "brand": "SmallHD",
+    "model": "Cine 24",
+    "category": "monitor",
+    "subtype": "production",
+    "specs": {
+      "size": "24\"",
+      "brightness": "1350 nits",
+      "inputs": "12G-SDI",
+      "power": "XLR / Gold Mount",
+      "mount": "C-Stand / VESA"
+    },
+    "compatible_with": "Production carts",
+    "notes": "Full-size monitoring on set"
+  },
+  {
+    "id": "A-FF-PRESTON-FIZ4",
+    "brand": "Preston",
+    "model": "FIZ 4 + MDR-4",
+    "category": "follow_focus",
+    "subtype": "wireless",
+    "specs": {
+      "control": "Focus/Iris/Zoom",
+      "range": "1000 ft",
+      "protocol": "Preston RF",
+      "power": "D-Tap / 2-pin"
+    },
+    "compatible_with": "All lens motors",
+    "notes": "High-end wireless lens control"
+  },
+  {
+    "id": "A-FF-ARRI-HI5",
+    "brand": "ARRI",
+    "model": "Hi-5 + Cforce Mini",
+    "category": "follow_focus",
+    "subtype": "wireless",
+    "specs": {
+      "control": "Focus/Iris/Zoom",
+      "range": "1000 ft",
+      "protocol": "L-BUS",
+      "power": "24V Lemo"
+    },
+    "compatible_with": "ARRI cameras",
+    "notes": "Native integration with ALEXA ecosystem"
+  },
+  {
+    "id": "A-TIMECODE-TENTACLE",
+    "brand": "Tentacle",
+    "model": "Sync E MkII",
+    "category": "timecode",
+    "subtype": "sync box",
+    "specs": {
+      "battery_life": "35 hrs",
+      "connector": "3.5mm / USB-C",
+      "mount": "velcro / cold shoe"
+    },
+    "compatible_with": "DSLRs / cine cameras",
+    "notes": "Affordable wireless timecode"
+  },
+  {
+    "id": "A-TIMECODE-LOCKIT",
+    "brand": "Ambient",
+    "model": "Lockit ACN-TS1",
+    "category": "timecode",
+    "subtype": "sync box",
+    "specs": {
+      "jamming": "yes",
+      "interface": "BNC / USB",
+      "battery_life": "48 hrs"
+    },
+    "compatible_with": "Multi-cam workflows",
+    "notes": "Standard in high-end sync workflows"
+  },
+  {
+    "id": "A-CABLE-SDI-RIGHT90",
+    "brand": "Canare",
+    "model": "RG59 SDI Cable RA",
+    "category": "cable",
+    "subtype": "video",
+    "specs": {
+      "length": "18 in",
+      "connector": "BNC right-angle",
+      "signal": "3G-SDI"
+    },
+    "compatible_with": "All SDI monitors / TX",
+    "notes": "For tight camera rigs"
+  },
+  {
+    "id": "A-CABLE-POWER-DTAP-LEMO",
+    "brand": "Anton Bauer",
+    "model": "D-Tap to 2-pin Lemo",
+    "category": "cable",
+    "subtype": "power",
+    "specs": {
+      "length": "24 in",
+      "voltage": "12\u201324V",
+      "connector": "D-Tap \u2192 2-pin"
+    },
+    "compatible_with": "Wireless TX / monitors",
+    "notes": "Industry-standard power feed"
+  },
+  {
+    "id": "A-RIG-NOGA-ARM",
+    "brand": "Noga",
+    "model": "Cine Arm DG",
+    "category": "rigging",
+    "subtype": "articulating arm",
+    "specs": {
+      "length": "10\"",
+      "thread": "\u00bc-20",
+      "clamp": "ball-lock"
+    },
+    "compatible_with": "Monitors / wireless units",
+    "notes": "Holds gear off camera body"
+  },
+  {
+    "id": "A-RIG-CLAMP-MAFER",
+    "brand": "Matthews",
+    "model": "Mafer Clamp",
+    "category": "rigging",
+    "subtype": "clamp",
+    "specs": {
+      "jaw": "2.5 in",
+      "mount": "5/8\" baby pin"
+    },
+    "compatible_with": "Light stands / cart builds",
+    "notes": "Universal camera dept clamp"
+  },
+  {
+    "id": "A-RIG-PLATE-CHEESE",
+    "brand": "Wooden Camera",
+    "model": "Cheese Plate Universal",
+    "category": "rigging",
+    "subtype": "mounting plate",
+    "specs": {
+      "material": "Aluminum",
+      "thread": "1/4-20 & 3/8-16"
+    },
+    "compatible_with": "Mounting wireless / power",
+    "notes": "Universal backplate"
+  }
+]

@@ -1,0 +1,515 @@
+[
+  {
+    "id": "A-WIRELESS-TERADEK-BOLT6-LT",
+    "brand": "Teradek",
+    "model": "Bolt 6 LT 750",
+    "category": "wireless_video",
+    "subtype": "TX/RX kit",
+    "specs": {
+      "range": "750 ft",
+      "video": "3G-SDI / HDMI",
+      "latency": "<0.001s",
+      "mount": "1/4\"-20",
+      "power": "2-pin Lemo / D-Tap"
+    },
+    "compatible_with": "All SDI-based systems",
+    "notes": "Line-of-sight, uncompressed video transmission"
+  },
+  {
+    "id": "A-WIRELESS-TERADEK-BOLT4K",
+    "brand": "Teradek",
+    "model": "Bolt 4K MAX",
+    "category": "wireless_video",
+    "subtype": "TX/RX kit",
+    "specs": {
+      "range": "5000 ft",
+      "video": "12G-SDI",
+      "latency": "<1 ms",
+      "mount": "1/4\"-20",
+      "power": "2-pin Lemo"
+    },
+    "compatible_with": "High-end cameras (Venice, ALEXA)",
+    "notes": "4K HDR wireless transmission"
+  },
+  {
+    "id": "A-WIRELESS-PARALINX-ARROW",
+    "brand": "Paralinx",
+    "model": "Arrow-X",
+    "category": "wireless_video",
+    "subtype": "TX/RX kit",
+    "specs": {
+      "range": "2500 ft",
+      "video": "3G-SDI / HDMI",
+      "latency": "<1 ms",
+      "mount": "1/4\"-20",
+      "power": "D-Tap / USB-C"
+    },
+    "compatible_with": "All cameras with SDI/HDMI out",
+    "notes": "Reliable wireless with encryption"
+  },
+  {
+    "id": "A-WIRELESS-VAXIS-STORM",
+    "brand": "Vaxis",
+    "model": "Storm 072 Pro",
+    "category": "wireless_video",
+    "subtype": "TX/RX kit",
+    "specs": {
+      "range": "750 ft",
+      "video": "3G-SDI / HDMI",
+      "latency": "<60 ms",
+      "mount": "1/4\"-20",
+      "power": "NP-F / D-Tap"
+    },
+    "compatible_with": "Mirrorless and cinema cameras",
+    "notes": "Affordable wireless video"
+  },
+  {
+    "id": "A-WIRELESS-HOLLYLAND-MARS",
+    "brand": "Hollyland",
+    "model": "Mars 4K",
+    "category": "wireless_video",
+    "subtype": "TX/RX kit",
+    "specs": {
+      "range": "450 ft",
+      "video": "HDMI",
+      "latency": "<80 ms",
+      "mount": "Cold shoe",
+      "power": "NP-F"
+    },
+    "compatible_with": "HDMI cameras",
+    "notes": "Budget-friendly wireless"
+  },
+  {
+    "id": "A-WIRELESS-ACCSOON-SEEMO",
+    "brand": "Accsoon",
+    "model": "SeeMo Pro",
+    "category": "wireless_video",
+    "subtype": "TX/RX kit",
+    "specs": {
+      "range": "1000 ft",
+      "video": "HDMI",
+      "latency": "<50 ms",
+      "mount": "1/4\"-20",
+      "power": "NP-F / USB-C"
+    },
+    "compatible_with": "HDMI cameras and gimbals",
+    "notes": "Lightweight wireless for run-and-gun"
+  },
+  {
+    "id": "A-WIRELESS-ATOMOS-CONNECT",
+    "brand": "Atomos",
+    "model": "AtomX CAST",
+    "category": "wireless_video",
+    "subtype": "Streaming module",
+    "specs": {
+      "range": "WiFi/4G/5G",
+      "video": "HDMI",
+      "latency": "Variable",
+      "mount": "SDI Module slot",
+      "power": "Powered by Ninja V"
+    },
+    "compatible_with": "Atomos Ninja V",
+    "notes": "Wireless streaming and monitoring"
+  },
+  {
+    "id": "A-MONITOR-SMALLHD-703",
+    "brand": "SmallHD",
+    "model": "703 Bolt",
+    "category": "monitor",
+    "subtype": "on-camera",
+    "specs": {
+      "size": "7\"",
+      "brightness": "3000 nits",
+      "inputs": "3G-SDI",
+      "power": "D-Tap",
+      "mount": "¼-20"
+    },
+    "compatible_with": "All Teradek TX kits",
+    "notes": "Popular AC monitor"
+  },
+  {
+    "id": "A-MONITOR-SMALLHD-CINE13",
+    "brand": "SmallHD",
+    "model": "Cine 13",
+    "category": "monitor",
+    "subtype": "field",
+    "specs": {
+      "size": "13\"",
+      "brightness": "1500 nits",
+      "inputs": "3G-SDI",
+      "power": "XLR / D-Tap",
+      "mount": "VESA"
+    },
+    "compatible_with": "Director's video village",
+    "notes": "Lightweight production monitor"
+  },
+  {
+    "id": "A-MONITOR-SMALLHD-CINE24",
+    "brand": "SmallHD",
+    "model": "Cine 24",
+    "category": "monitor",
+    "subtype": "production",
+    "specs": {
+      "size": "24\"",
+      "brightness": "1350 nits",
+      "inputs": "12G-SDI",
+      "power": "XLR / Gold Mount",
+      "mount": "C-Stand / VESA"
+    },
+    "compatible_with": "Production carts",
+    "notes": "Full-size monitoring on set"
+  },
+  {
+    "id": "A-MONITOR-ATOMOS-NINJA-V",
+    "brand": "Atomos",
+    "model": "Ninja V",
+    "category": "monitor",
+    "subtype": "recorder",
+    "specs": {
+      "size": "5\"",
+      "brightness": "1000 nits",
+      "inputs": "HDMI 2.0",
+      "power": "NP-F",
+      "mount": "¼-20"
+    },
+    "compatible_with": "HDMI cameras",
+    "notes": "Monitor + ProRes RAW recorder"
+  },
+  {
+    "id": "A-MONITOR-ATOMOS-SHOGUN-7",
+    "brand": "Atomos",
+    "model": "Shogun 7",
+    "category": "monitor",
+    "subtype": "recorder",
+    "specs": {
+      "size": "7\"",
+      "brightness": "3000 nits",
+      "inputs": "12G-SDI / HDMI 2.0",
+      "power": "NP-F / D-Tap",
+      "mount": "¼-20 / VESA"
+    },
+    "compatible_with": "High-end cameras with SDI",
+    "notes": "4K 60p HDR monitor/recorder"
+  },
+  {
+    "id": "A-MONITOR-FSI-DM240",
+    "brand": "Flanders Scientific",
+    "model": "DM240",
+    "category": "monitor",
+    "subtype": "reference",
+    "specs": {
+      "size": "24\"",
+      "brightness": "250 nits",
+      "inputs": "12G-SDI x4",
+      "power": "AC / V-mount",
+      "mount": "VESA"
+    },
+    "compatible_with": "Color-critical workflows",
+    "notes": "Reference-grade OLED monitor"
+  },
+  {
+    "id": "A-MONITOR-TVLOGIC-LVM",
+    "brand": "TV Logic",
+    "model": "LVM-173W",
+    "category": "monitor",
+    "subtype": "field",
+    "specs": {
+      "size": "17\"",
+      "brightness": "400 nits",
+      "inputs": "3G-SDI x2 / HDMI",
+      "power": "V-mount / D-Tap",
+      "mount": "VESA"
+    },
+    "compatible_with": "DIT carts and production",
+    "notes": "Broadcast-grade field monitor"
+  },
+  {
+    "id": "A-MONITOR-PORTKEYS-BM5",
+    "brand": "Portkeys",
+    "model": "BM5 III WR",
+    "category": "monitor",
+    "subtype": "on-camera",
+    "specs": {
+      "size": "5.5\"",
+      "brightness": "2200 nits",
+      "inputs": "4K HDMI / 3G-SDI",
+      "power": "NP-F / D-Tap",
+      "mount": "¼-20 / Cold shoe"
+    },
+    "compatible_with": "Mirrorless and cine cameras",
+    "notes": "Touchscreen with waveform"
+  },
+  {
+    "id": "A-MONITOR-FEELWORLD-LUT7S",
+    "brand": "Feelworld",
+    "model": "LUT7S Pro",
+    "category": "monitor",
+    "subtype": "on-camera",
+    "specs": {
+      "size": "7\"",
+      "brightness": "2200 nits",
+      "inputs": "4K HDMI / 3G-SDI",
+      "power": "NP-F / D-Tap",
+      "mount": "¼-20"
+    },
+    "compatible_with": "All cameras",
+    "notes": "Budget touchscreen with 3D LUT support"
+  },
+  {
+    "id": "A-FF-PRESTON-FIZ4",
+    "brand": "Preston",
+    "model": "FIZ 4 + MDR-4",
+    "category": "follow_focus",
+    "subtype": "wireless",
+    "specs": {
+      "control": "Focus/Iris/Zoom",
+      "range": "1000 ft",
+      "protocol": "Preston RF",
+      "power": "D-Tap / 2-pin"
+    },
+    "compatible_with": "All lens motors",
+    "notes": "High-end wireless lens control"
+  },
+  {
+    "id": "A-FF-ARRI-HI5",
+    "brand": "ARRI",
+    "model": "Hi-5 + Cforce Mini",
+    "category": "follow_focus",
+    "subtype": "wireless",
+    "specs": {
+      "control": "Focus/Iris/Zoom",
+      "range": "1000 ft",
+      "protocol": "L-BUS",
+      "power": "24V Lemo"
+    },
+    "compatible_with": "ARRI cameras",
+    "notes": "Native integration with ALEXA ecosystem"
+  },
+  {
+    "id": "A-FF-TILTA-NUCLEUS-M",
+    "brand": "Tilta",
+    "model": "Nucleus-M",
+    "category": "follow_focus",
+    "subtype": "wireless",
+    "specs": {
+      "control": "Focus/Iris/Zoom",
+      "range": "1000 ft",
+      "protocol": "2.4 GHz",
+      "power": "18650 battery"
+    },
+    "compatible_with": "Universal lens motors",
+    "notes": "Affordable wireless FIZ system"
+  },
+  {
+    "id": "A-FF-TILTA-NUCLEUS-NANO",
+    "brand": "Tilta",
+    "model": "Nucleus Nano",
+    "category": "follow_focus",
+    "subtype": "wireless",
+    "specs": {
+      "control": "Focus",
+      "range": "300 ft",
+      "protocol": "2.4 GHz",
+      "power": "USB-C rechargeable"
+    },
+    "compatible_with": "Mirrorless cameras and gimbals",
+    "notes": "Ultra-compact wireless focus"
+  },
+  {
+    "id": "A-FF-DJI-FOCUS-PRO",
+    "brand": "DJI",
+    "model": "DJI Focus Pro",
+    "category": "follow_focus",
+    "subtype": "wireless",
+    "specs": {
+      "control": "Focus/Iris/Zoom",
+      "range": "1000 ft",
+      "protocol": "DJI Transmission",
+      "power": "TB50 / USB-C PD"
+    },
+    "compatible_with": "Cinema cameras and DJI systems",
+    "notes": "Professional wireless control with LiDAR"
+  },
+  {
+    "id": "A-FF-RT-MOTION-LENS-CTRL",
+    "brand": "RT Motion",
+    "model": "CTRL.3",
+    "category": "follow_focus",
+    "subtype": "wireless",
+    "specs": {
+      "control": "Focus/Iris/Zoom",
+      "range": "500 ft",
+      "protocol": "2.4 GHz",
+      "power": "18650 battery"
+    },
+    "compatible_with": "Universal lens motors",
+    "notes": "High-precision wireless control"
+  },
+  {
+    "id": "A-FF-BRIGHT-TANGERINE-REVOLVER",
+    "brand": "Bright Tangerine",
+    "model": "Revolver Atom",
+    "category": "follow_focus",
+    "subtype": "mechanical",
+    "specs": {
+      "control": "Focus",
+      "type": "Mechanical",
+      "gears": "0.8 mod",
+      "mount": "15mm rods"
+    },
+    "compatible_with": "All cine lenses with 0.8 mod gears",
+    "notes": "Precision mechanical follow focus"
+  },
+  {
+    "id": "A-TIMECODE-TENTACLE",
+    "brand": "Tentacle",
+    "model": "Sync E MkII",
+    "category": "timecode",
+    "subtype": "sync box",
+    "specs": {
+      "battery_life": "35 hrs",
+      "connector": "3.5mm / USB-C",
+      "mount": "velcro / cold shoe"
+    },
+    "compatible_with": "DSLRs / cine cameras",
+    "notes": "Affordable wireless timecode"
+  },
+  {
+    "id": "A-TIMECODE-LOCKIT",
+    "brand": "Ambient",
+    "model": "Lockit ACN-TS1",
+    "category": "timecode",
+    "subtype": "sync box",
+    "specs": {
+      "jamming": "yes",
+      "interface": "BNC / USB",
+      "battery_life": "48 hrs"
+    },
+    "compatible_with": "Multi-cam workflows",
+    "notes": "Standard in high-end sync workflows"
+  },
+  {
+    "id": "A-TIMECODE-ATOMOS-UMC",
+    "brand": "Atomos",
+    "model": "UltraSync ONE",
+    "category": "timecode",
+    "subtype": "sync box",
+    "specs": {
+      "battery_life": "30 hrs",
+      "connector": "BNC / 3.5mm",
+      "mount": "Cold shoe / ¼-20"
+    },
+    "compatible_with": "All cameras and recorders",
+    "notes": "Bluetooth wireless timecode"
+  },
+  {
+    "id": "A-CABLE-SDI-RIGHT90",
+    "brand": "Canare",
+    "model": "RG59 SDI Cable RA",
+    "category": "cable",
+    "subtype": "video",
+    "specs": {
+      "length": "18 in",
+      "connector": "BNC right-angle",
+      "signal": "3G-SDI"
+    },
+    "compatible_with": "All SDI monitors / TX",
+    "notes": "For tight camera rigs"
+  },
+  {
+    "id": "A-CABLE-SDI-12G",
+    "brand": "Canare",
+    "model": "12G-SDI Cable",
+    "category": "cable",
+    "subtype": "video",
+    "specs": {
+      "length": "3 ft",
+      "connector": "BNC",
+      "signal": "12G-SDI"
+    },
+    "compatible_with": "4K/8K cameras and monitors",
+    "notes": "High-bandwidth SDI cable"
+  },
+  {
+    "id": "A-CABLE-POWER-DTAP-LEMO",
+    "brand": "Anton Bauer",
+    "model": "D-Tap to 2-pin Lemo",
+    "category": "cable",
+    "subtype": "power",
+    "specs": {
+      "length": "24 in",
+      "voltage": "12–24V",
+      "connector": "D-Tap → 2-pin"
+    },
+    "compatible_with": "Wireless TX / monitors",
+    "notes": "Industry-standard power feed"
+  },
+  {
+    "id": "A-CABLE-POWER-DTAP-USB-C",
+    "brand": "Wooden Camera",
+    "model": "D-Tap to USB-C PD",
+    "category": "cable",
+    "subtype": "power",
+    "specs": {
+      "length": "18 in",
+      "voltage": "12V (regulated)",
+      "connector": "D-Tap → USB-C PD"
+    },
+    "compatible_with": "USB-C powered devices",
+    "notes": "Powers mirrorless and small cameras"
+  },
+  {
+    "id": "A-RIG-NOGA-ARM",
+    "brand": "Noga",
+    "model": "Cine Arm DG",
+    "category": "rigging",
+    "subtype": "articulating arm",
+    "specs": {
+      "length": "10\"",
+      "thread": "¼-20",
+      "clamp": "ball-lock"
+    },
+    "compatible_with": "Monitors / wireless units",
+    "notes": "Holds gear off camera body"
+  },
+  {
+    "id": "A-RIG-CLAMP-MAFER",
+    "brand": "Matthews",
+    "model": "Mafer Clamp",
+    "category": "rigging",
+    "subtype": "clamp",
+    "specs": {
+      "jaw": "2.5 in",
+      "mount": "5/8\" baby pin"
+    },
+    "compatible_with": "Light stands / cart builds",
+    "notes": "Universal camera dept clamp"
+  },
+  {
+    "id": "A-RIG-PLATE-CHEESE",
+    "brand": "Wooden Camera",
+    "model": "Cheese Plate Universal",
+    "category": "rigging",
+    "subtype": "mounting plate",
+    "specs": {
+      "material": "Aluminum",
+      "thread": "1/4-20 & 3/8-16"
+    },
+    "compatible_with": "Mounting wireless / power",
+    "notes": "Universal backplate"
+  },
+  {
+    "id": "A-RIG-SMALLRIG-CAGE",
+    "brand": "SmallRig",
+    "model": "Universal Camera Cage",
+    "category": "rigging",
+    "subtype": "camera cage",
+    "specs": {
+      "material": "Aluminum",
+      "mount": "¼-20 & 3/8-16 threads",
+      "features": "NATO rail, ARRI rosettes"
+    },
+    "compatible_with": "Mirrorless and small cinema cameras",
+    "notes": "Modular camera protection and mounting"
+  }
+]

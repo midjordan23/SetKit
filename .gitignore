@@ -1,0 +1,21 @@
+# Backup files
+*-old-*
+*-backup*
+*.bak
+
+# Mockups and test files
+ui-mockup*.html
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+~*

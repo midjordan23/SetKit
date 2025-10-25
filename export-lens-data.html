@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Lens Data - Camera Lyst</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1e1e1e;
+            color: #e0e0e0;
+            padding: 40px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #252525;
+            padding: 40px;
+            border-radius: 12px;
+        }
+        h1 {
+            color: #d32f2f;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background: #d32f2f;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px 10px 10px 0;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: #b71c1c;
+        }
+        textarea {
+            width: 100%;
+            min-height: 300px;
+            background: #1a1a1a;
+            border: 1px solid #444;
+            color: #e0e0e0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin: 20px 0;
+        }
+        .stats {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+        }
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Export Lens Data for ChatGPT</h1>
+        <p>Export your complete lens database in formats optimized for ChatGPT analysis.</p>
+
+        <div class="stats" id="stats">
+            <div class="stat-row">
+                <span>Total Lenses:</span>
+                <strong id="totalLenses">Loading...</strong>
+            </div>
+            <div class="stat-row">
+                <span>Manufacturers:</span>
+                <strong id="totalMfr">0</strong>
+            </div>
+            <div class="stat-row">
+                <span>Categories:</span>
+                <strong id="totalCat">0</strong>
+            </div>
+        </div>
+
+        <h2>Export Options:</h2>
+        <button class="btn" onclick="exportJSON()">Download as JSON</button>
+        <button class="btn" onclick="exportStructuredText()">Download as Structured Text</button>
+        <button class="btn" onclick="exportMarkdown()">Download as Markdown</button>
+        <button class="btn" onclick="copyToClipboard()">Copy All to Clipboard</button>
+
+        <h2>Preview (First 10 Lenses):</h2>
+        <textarea id="preview" readonly></textarea>
+
+        <p style="color: #888; margin-top: 20px;">
+            <strong>Tip:</strong> The JSON format is best for ChatGPT to analyze and work with programmatically.
+            The Markdown format is best for ChatGPT to read and understand the data structure.
+        </p>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                // Update stats
+                document.getElementById('totalLenses').textContent = allLenses.length;
+                document.getElementById('totalMfr').textContent = manufacturers.size;
+                document.getElementById('totalCat').textContent = new Set(allLenses.map(l => l.category)).size;
+
+                // Show preview
+                const preview = allLenses.slice(0, 10).map(lens =>
+                    `${lens.manufacturer} ${lens.name} ${lens['focal length']} - T${lens['max aperture (T)'] || 'N/A'} (${lens.category})`
+                ).join('\n');
+                document.getElementById('preview').value = preview + '\n\n... and ' + (allLenses.length - 10) + ' more lenses';
+            }, 500);
+        });
+
+        function exportJSON() {
+            const data = {
+                metadata: {
+                    source: "Camera Lyst - Cinema Lens Database",
+                    compiled_by: "Richard Bradbury ACO",
+                    export_date: new Date().toISOString(),
+                    total_lenses: allLenses.length,
+                    total_manufacturers: manufacturers.size,
+                    total_categories: new Set(allLenses.map(l => l.category)).size
+                },
+                lenses: allLenses
+            };
+
+            const json = JSON.stringify(data, null, 2);
+            downloadFile(json, 'camera-lyst-lens-database.json', 'application/json');
+        }
+
+        function exportStructuredText() {
+            let text = 'CAMERA LYST - COMPLETE CINEMA LENS DATABASE\n';
+            text += '='.repeat(80) + '\n\n';
+            text += 'Compiled by: Richard Bradbury ACO\n';
+            text += `Export Date: ${new Date().toLocaleString()}\n`;
+            text += `Total Lenses: ${allLenses.length}\n`;
+            text += `Manufacturers: ${manufacturers.size}\n`;
+            text += `Categories: ${new Set(allLenses.map(l => l.category)).size}\n\n`;
+
+            // Group by category
+            const categories = {};
+            allLenses.forEach(lens => {
+                if (!categories[lens.category]) {
+                    categories[lens.category] = [];
+                }
+                categories[lens.category].push(lens);
+            });
+
+            Object.entries(categories).forEach(([category, lenses]) => {
+                text += '\n' + '='.repeat(80) + '\n';
+                text += `CATEGORY: ${category.toUpperCase()} (${lenses.length} lenses)\n`;
+                text += '='.repeat(80) + '\n\n';
+
+                lenses.forEach(lens => {
+                    text += `${lens.manufacturer} ${lens.name}\n`;
+                    text += `  Focal Length: ${lens['focal length'] || 'N/A'}\n`;
+                    text += `  Max Aperture: T${lens['max aperture (T)'] || 'N/A'}\n`;
+                    if (lens['original mount']) text += `  Mount: ${lens['original mount']}\n`;
+                    if (lens['close focus']) text += `  Close Focus: ${lens['close focus']}\n`;
+                    if (lens['image circle']) text += `  Image Circle: ${lens['image circle']}\n`;
+                    if (lens['weight']) text += `  Weight: ${lens['weight']}\n`;
+                    if (lens['front diameter']) text += `  Front Diameter: ${lens['front diameter']}\n`;
+                    if (lens['notes / comments'] || lens.notes) {
+                        text += `  Notes: ${lens['notes / comments'] || lens.notes}\n`;
+                    }
+                    text += '\n';
+                });
+            });
+
+            downloadFile(text, 'camera-lyst-lens-database.txt', 'text/plain');
+        }
+
+        function exportMarkdown() {
+            let md = '# Camera Lyst - Cinema Lens Database\n\n';
+            md += '**Compiled by:** Richard Bradbury ACO  \n';
+            md += `**Export Date:** ${new Date().toLocaleDateString()}  \n`;
+            md += `**Total Lenses:** ${allLenses.length}  \n`;
+            md += `**Manufacturers:** ${manufacturers.size}  \n`;
+            md += `**Categories:** ${new Set(allLenses.map(l => l.category)).size}  \n\n`;
+
+            md += '---\n\n';
+
+            // Group by category
+            const categories = {};
+            allLenses.forEach(lens => {
+                if (!categories[lens.category]) {
+                    categories[lens.category] = [];
+                }
+                categories[lens.category].push(lens);
+            });
+
+            Object.entries(categories).forEach(([category, lenses]) => {
+                md += `## ${category.toUpperCase()} (${lenses.length} lenses)\n\n`;
+
+                lenses.forEach(lens => {
+                    md += `### ${lens.manufacturer} ${lens.name} ${lens['focal length']}\n\n`;
+                    md += '| Specification | Value |\n';
+                    md += '|--------------|-------|\n';
+                    md += `| Focal Length | ${lens['focal length'] || 'N/A'} |\n`;
+                    md += `| Max Aperture | T${lens['max aperture (T)'] || 'N/A'} |\n`;
+                    if (lens['original mount']) md += `| Mount | ${lens['original mount']} |\n`;
+                    if (lens['close focus']) md += `| Close Focus | ${lens['close focus']} |\n`;
+                    if (lens['image circle']) md += `| Image Circle | ${lens['image circle']} |\n`;
+                    if (lens['weight']) md += `| Weight | ${lens['weight']} |\n`;
+                    if (lens['front diameter']) md += `| Front Diameter | ${lens['front diameter']} |\n`;
+                    if (lens['filter thread']) md += `| Filter Thread | ${lens['filter thread']} |\n`;
+                    if (lens['notes / comments'] || lens.notes) {
+                        md += `\n**Notes:** ${lens['notes / comments'] || lens.notes}\n`;
+                    }
+                    md += '\n';
+                });
+
+                md += '\n---\n\n';
+            });
+
+            downloadFile(md, 'camera-lyst-lens-database.md', 'text/markdown');
+        }
+
+        function copyToClipboard() {
+            const data = {
+                metadata: {
+                    source: "Camera Lyst - Cinema Lens Database",
+                    compiled_by: "Richard Bradbury ACO",
+                    total_lenses: allLenses.length,
+                    total_manufacturers: manufacturers.size
+                },
+                lenses: allLenses.slice(0, 100) // Limit to first 100 for clipboard
+            };
+
+            navigator.clipboard.writeText(JSON.stringify(data, null, 2)).then(() => {
+                alert('First 100 lenses copied to clipboard! (Full export would be too large for clipboard - use download options instead)');
+            });
+        }
+
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
