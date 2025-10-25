@@ -6,7 +6,16 @@ let compatibilityMatrix = [];
 let currentPackage = [];
 let manufacturers = new Set();
 let cameraBrands = new Set();
-let currentProjectName = '';
+let currentProjectInfo = {
+    projectName: '',
+    pickupDate: '',
+    shootDate: '',
+    returnDate: '',
+    contactTitle: '',
+    contactName: '',
+    contactPhone: '',
+    contactEmail: ''
+};
 let currentNoteItemId = null;
 
 // CSV file mapping
@@ -964,6 +973,15 @@ function updatePackageDisplay() {
 
         let displayHTML = '';
 
+        const quantity = item.quantity || 1;
+
+        const quantityHTML = `
+            <div class="item-quantity-control">
+                <label>Qty:</label>
+                <input type="number" min="1" max="99" value="${quantity}" onchange="updateItemQuantity('${itemId}', this.value)">
+            </div>
+        `;
+
         const notesHTML = item.note ? `
             <div class="item-notes">
                 <div class="item-notes-text">${item.note}</div>
@@ -980,6 +998,7 @@ function updatePackageDisplay() {
                         <span class="item-type-badge">Camera</span>
                         <h4>${item.brand} ${item.model}</h4>
                         <p>Mount: ${item.native_mount} | Sensor: ${item.sensor_modes?.[0]?.crop_class || 'N/A'}</p>
+                        ${quantityHTML}
                         ${notesHTML}
                     </div>
                     <button class="btn-remove" onclick="removeFromPackage('${itemId}')">Remove</button>
@@ -992,6 +1011,7 @@ function updatePackageDisplay() {
                         <span class="item-type-badge">Accessory</span>
                         <h4>${item.brand} ${item.model}</h4>
                         <p>${item.category} - ${item.subtype || ''}</p>
+                        ${quantityHTML}
                         ${notesHTML}
                     </div>
                     <button class="btn-remove" onclick="removeFromPackage('${itemId}')">Remove</button>
@@ -1005,6 +1025,7 @@ function updatePackageDisplay() {
                         <span class="item-type-badge">Lens</span>
                         <h4>${item.manufacturer} ${item.name} ${item['focal length'] || ''}</h4>
                         <p>${item.category} - ${item.mount || item['original mount'] || 'N/A'}</p>
+                        ${quantityHTML}
                         ${notesHTML}
                     </div>
                     <button class="btn-remove" onclick="removeFromPackage('${itemId}')">Remove</button>
@@ -1037,28 +1058,50 @@ function exportPackage() {
         return;
     }
 
-    let text = 'Equipment List\n';
-    text += '='.repeat(50) + '\n\n';
+    let text = 'EQUIPMENT LIST\n';
+    text += '='.repeat(60) + '\n\n';
 
-    if (currentProjectName) {
-        text += `Project: ${currentProjectName}\n`;
-        text += '='.repeat(50) + '\n\n';
+    // Project Info
+    if (currentProjectInfo.projectName) {
+        text += `Project: ${currentProjectInfo.projectName}\n`;
     }
+    if (currentProjectInfo.pickupDate || currentProjectInfo.shootDate || currentProjectInfo.returnDate) {
+        text += '\nDates:\n';
+        if (currentProjectInfo.pickupDate) text += `  Pick-Up: ${currentProjectInfo.pickupDate}\n`;
+        if (currentProjectInfo.shootDate) text += `  Shoot: ${currentProjectInfo.shootDate}\n`;
+        if (currentProjectInfo.returnDate) text += `  Return: ${currentProjectInfo.returnDate}\n`;
+    }
+    if (currentProjectInfo.contactName || currentProjectInfo.contactTitle) {
+        text += '\nContact:\n';
+        if (currentProjectInfo.contactTitle) text += `  Title: ${currentProjectInfo.contactTitle}\n`;
+        if (currentProjectInfo.contactName) text += `  Name: ${currentProjectInfo.contactName}\n`;
+        if (currentProjectInfo.contactPhone) text += `  Phone: ${currentProjectInfo.contactPhone}\n`;
+        if (currentProjectInfo.contactEmail) text += `  Email: ${currentProjectInfo.contactEmail}\n`;
+    }
+
+    text += '\n' + '='.repeat(60) + '\n\n';
 
     text += currentPackage.map((item, i) => {
         const itemType = item.itemType || 'lens';
+        const quantity = item.quantity || 1;
         let itemText = `${i + 1}. `;
 
         if (itemType === 'camera') {
-            itemText += `${item.brand} ${item.model} (Camera)\n`;
+            itemText += `${item.brand} ${item.model} (Camera)`;
+            if (quantity > 1) itemText += ` x${quantity}`;
+            itemText += `\n`;
             itemText += `   Mount: ${item.native_mount}\n`;
             itemText += `   Sensor: ${item.sensor_modes?.[0]?.crop_class || 'N/A'}\n`;
         } else if (itemType === 'accessory') {
-            itemText += `${item.brand} ${item.model} (Accessory)\n`;
+            itemText += `${item.brand} ${item.model} (Accessory)`;
+            if (quantity > 1) itemText += ` x${quantity}`;
+            itemText += `\n`;
             itemText += `   Category: ${item.category}\n`;
             itemText += `   Type: ${item.subtype || 'N/A'}\n`;
         } else {
-            itemText += `${item.manufacturer} ${item.name} ${item['focal length'] || ''} (Lens)\n`;
+            itemText += `${item.manufacturer} ${item.name} ${item['focal length'] || ''} (Lens)`;
+            if (quantity > 1) itemText += ` x${quantity}`;
+            itemText += `\n`;
             itemText += `   Category: ${item.category}\n`;
             itemText += `   Mount: ${item['original mount'] || 'N/A'}\n`;
             itemText += `   Aperture: T${item['max aperture (T)'] || 'N/A'}\n`;
@@ -1093,29 +1136,58 @@ function exportPackage() {
 window.addEventListener('DOMContentLoaded', () => {
     loadAllData();
     loadTemplates();
-    loadProjectName();
+    loadProjectInfo();
 });
 
 // ========================================
-// PROJECT NAME & NOTES FUNCTIONS
+// PROJECT INFO & NOTES FUNCTIONS
 // ========================================
 
-// Save project name
-function saveProjectName() {
-    const input = document.getElementById('projectName');
-    if (input) {
-        currentProjectName = input.value;
-        localStorage.setItem('currentProjectName', currentProjectName);
+// Save all project info
+function saveProjectInfo() {
+    currentProjectInfo = {
+        projectName: document.getElementById('projectName')?.value || '',
+        pickupDate: document.getElementById('pickupDate')?.value || '',
+        shootDate: document.getElementById('shootDate')?.value || '',
+        returnDate: document.getElementById('returnDate')?.value || '',
+        contactTitle: document.getElementById('contactTitle')?.value || '',
+        contactName: document.getElementById('contactName')?.value || '',
+        contactPhone: document.getElementById('contactPhone')?.value || '',
+        contactEmail: document.getElementById('contactEmail')?.value || ''
+    };
+    localStorage.setItem('currentProjectInfo', JSON.stringify(currentProjectInfo));
+}
+
+// Load all project info
+function loadProjectInfo() {
+    const savedInfo = localStorage.getItem('currentProjectInfo');
+    if (savedInfo) {
+        currentProjectInfo = JSON.parse(savedInfo);
+    }
+
+    // Set all input values
+    if (document.getElementById('projectName')) {
+        document.getElementById('projectName').value = currentProjectInfo.projectName || '';
+        document.getElementById('pickupDate').value = currentProjectInfo.pickupDate || '';
+        document.getElementById('shootDate').value = currentProjectInfo.shootDate || '';
+        document.getElementById('returnDate').value = currentProjectInfo.returnDate || '';
+        document.getElementById('contactTitle').value = currentProjectInfo.contactTitle || '';
+        document.getElementById('contactName').value = currentProjectInfo.contactName || '';
+        document.getElementById('contactPhone').value = currentProjectInfo.contactPhone || '';
+        document.getElementById('contactEmail').value = currentProjectInfo.contactEmail || '';
     }
 }
 
-// Load project name
-function loadProjectName() {
-    const savedName = localStorage.getItem('currentProjectName') || '';
-    currentProjectName = savedName;
-    const input = document.getElementById('projectName');
-    if (input) {
-        input.value = savedName;
+// Update item quantity
+function updateItemQuantity(itemId, quantity) {
+    const item = currentPackage.find(i => {
+        const iId = i.id || `${i.brand || i.manufacturer}-${i.model || i.name}`;
+        return iId === itemId;
+    });
+
+    if (item) {
+        item.quantity = parseInt(quantity) || 1;
+        updatePackageDisplay();
     }
 }
 
@@ -1249,7 +1321,7 @@ function confirmSaveTemplate() {
     const newTemplate = {
         id: Date.now().toString(),
         name: templateName,
-        projectName: currentProjectName,
+        projectInfo: JSON.parse(JSON.stringify(currentProjectInfo)), // Save all project info
         items: JSON.parse(JSON.stringify(currentPackage)), // Deep copy
         createdAt: new Date().toISOString(),
         itemCount: currentPackage.length
@@ -1345,14 +1417,30 @@ function loadTemplate(templateId) {
     // Load template items into current package
     currentPackage = JSON.parse(JSON.stringify(template.items)); // Deep copy
 
-    // Load project name if it exists
-    if (template.projectName) {
-        currentProjectName = template.projectName;
+    // Load project info if it exists
+    if (template.projectInfo) {
+        currentProjectInfo = JSON.parse(JSON.stringify(template.projectInfo));
+        localStorage.setItem('currentProjectInfo', JSON.stringify(currentProjectInfo));
+
+        // Update all form fields
+        if (document.getElementById('projectName')) {
+            document.getElementById('projectName').value = currentProjectInfo.projectName || '';
+            document.getElementById('pickupDate').value = currentProjectInfo.pickupDate || '';
+            document.getElementById('shootDate').value = currentProjectInfo.shootDate || '';
+            document.getElementById('returnDate').value = currentProjectInfo.returnDate || '';
+            document.getElementById('contactTitle').value = currentProjectInfo.contactTitle || '';
+            document.getElementById('contactName').value = currentProjectInfo.contactName || '';
+            document.getElementById('contactPhone').value = currentProjectInfo.contactPhone || '';
+            document.getElementById('contactEmail').value = currentProjectInfo.contactEmail || '';
+        }
+    } else if (template.projectName) {
+        // Backward compatibility with old templates
+        currentProjectInfo.projectName = template.projectName;
         const projectInput = document.getElementById('projectName');
         if (projectInput) {
             projectInput.value = template.projectName;
         }
-        localStorage.setItem('currentProjectName', template.projectName);
+        localStorage.setItem('currentProjectInfo', JSON.stringify(currentProjectInfo));
     }
 
     updatePackageDisplay();

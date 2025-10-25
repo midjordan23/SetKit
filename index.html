@@ -238,11 +238,53 @@
                 <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Your List</h2>
                 <div class="package-builder">
                     <div class="package-list">
-                        <div class="project-name-section">
-                            <label for="projectName">Project Name (Optional)</label>
-                            <input type="text" id="projectName" placeholder="e.g., Documentary - Mountain Climbing, Commercial - Nike Ad..." oninput="saveProjectName()">
+                        <div class="project-info-section">
+                            <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 16px;">Project Information</h3>
+
+                            <div class="project-name-field">
+                                <label for="projectName">Project Name</label>
+                                <input type="text" id="projectName" placeholder="e.g., Documentary - Mountain Climbing" oninput="saveProjectInfo()">
+                            </div>
+
+                            <div class="project-dates-section">
+                                <div class="date-field">
+                                    <label for="pickupDate">Pick-Up Date</label>
+                                    <input type="date" id="pickupDate" oninput="saveProjectInfo()">
+                                </div>
+                                <div class="date-field">
+                                    <label for="shootDate">Shoot Date</label>
+                                    <input type="date" id="shootDate" oninput="saveProjectInfo()">
+                                </div>
+                                <div class="date-field">
+                                    <label for="returnDate">Return Date</label>
+                                    <input type="date" id="returnDate" oninput="saveProjectInfo()">
+                                </div>
+                            </div>
+
+                            <div class="project-contact-section">
+                                <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 12px; color: #171717;">Contact Information</h4>
+                                <div class="contact-grid">
+                                    <div class="contact-field">
+                                        <label for="contactTitle">Title/Role</label>
+                                        <input type="text" id="contactTitle" placeholder="e.g., Producer, DP" oninput="saveProjectInfo()">
+                                    </div>
+                                    <div class="contact-field">
+                                        <label for="contactName">Name</label>
+                                        <input type="text" id="contactName" placeholder="Full name" oninput="saveProjectInfo()">
+                                    </div>
+                                    <div class="contact-field">
+                                        <label for="contactPhone">Phone</label>
+                                        <input type="tel" id="contactPhone" placeholder="(555) 123-4567" oninput="saveProjectInfo()">
+                                    </div>
+                                    <div class="contact-field">
+                                        <label for="contactEmail">Email</label>
+                                        <input type="email" id="contactEmail" placeholder="email@example.com" oninput="saveProjectInfo()">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 16px;">Your List</h3>
+
+                        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 16px; margin-top: 32px;">Equipment List</h3>
                         <div id="packageItems" class="package-items">
                             <p class="empty-state">No items added yet. Search for cameras, lenses, and accessories, then click "Add to Package"</p>
                         </div>
