@@ -341,6 +341,23 @@
         </div>
     </div>
 
+    <!-- TEMPLATE NAME MODAL -->
+    <div class="modal-overlay" id="templateModalOverlay" onclick="closeTemplateModal()"></div>
+    <div class="template-modal" id="templateModal">
+        <div class="template-modal-header">
+            <h3>Save as Template</h3>
+            <button class="modal-close" onclick="closeTemplateModal()">×</button>
+        </div>
+        <div class="template-modal-body">
+            <label for="templateNameInput">Template Name</label>
+            <input type="text" id="templateNameInput" placeholder="e.g., Documentary Kit, Studio Setup..." maxlength="50">
+        </div>
+        <div class="template-modal-footer">
+            <button class="btn-secondary" onclick="closeTemplateModal()">Cancel</button>
+            <button class="btn-primary" onclick="confirmSaveTemplate()">Save Template</button>
+        </div>
+    </div>
+
     <!-- MINI CART SIDEBAR -->
     <div class="mini-cart-overlay" id="miniCartOverlay" onclick="closeMiniCart()"></div>
     <div class="mini-cart" id="miniCart">
@@ -356,6 +373,7 @@
                 <span>Subtotal:</span>
                 <span id="miniCartSubtotal"><span id="miniCartCount">0</span> items</span>
             </div>
+            <button class="mini-cart-btn mini-cart-checkout" onclick="saveAsTemplate()">SAVE AS TEMPLATE</button>
             <button class="mini-cart-btn mini-cart-checkout" onclick="exportPackage()">SEND LIST</button>
         </div>
     </div>

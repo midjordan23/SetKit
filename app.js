@@ -1066,10 +1066,51 @@ function saveAsTemplate() {
         return;
     }
 
-    const templateName = prompt('Enter a name for this template:');
+    // Show modal
+    openTemplateModal();
+}
 
-    if (!templateName || !templateName.trim()) {
-        return; // User cancelled or entered empty name
+// Open template name modal
+function openTemplateModal() {
+    const modal = document.getElementById('templateModal');
+    const overlay = document.getElementById('templateModalOverlay');
+    const input = document.getElementById('templateNameInput');
+
+    modal.classList.add('active');
+    overlay.classList.add('active');
+    input.value = '';
+
+    // Focus input after animation
+    setTimeout(() => input.focus(), 300);
+
+    // Handle Enter key
+    input.onkeyup = function(e) {
+        if (e.key === 'Enter') {
+            confirmSaveTemplate();
+        } else if (e.key === 'Escape') {
+            closeTemplateModal();
+        }
+    };
+}
+
+// Close template name modal
+function closeTemplateModal() {
+    const modal = document.getElementById('templateModal');
+    const overlay = document.getElementById('templateModalOverlay');
+
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
+// Confirm and save template
+function confirmSaveTemplate() {
+    const input = document.getElementById('templateNameInput');
+    const templateName = input.value.trim();
+
+    if (!templateName) {
+        alert('Please enter a template name.');
+        input.focus();
+        return;
     }
 
     // Get existing templates
@@ -1078,7 +1119,7 @@ function saveAsTemplate() {
     // Create new template
     const newTemplate = {
         id: Date.now().toString(),
-        name: templateName.trim(),
+        name: templateName,
         items: JSON.parse(JSON.stringify(currentPackage)), // Deep copy
         createdAt: new Date().toISOString(),
         itemCount: currentPackage.length
@@ -1090,9 +1131,15 @@ function saveAsTemplate() {
     // Save to localStorage
     localStorage.setItem('equipmentTemplates', JSON.stringify(templates));
 
+    // Close modal
+    closeTemplateModal();
+
+    // Close mini cart if open
+    closeMiniCart();
+
     alert(`Template "${templateName}" saved successfully!`);
 
-    // Refresh templates display if on templates page
+    // Refresh templates display
     displayTemplates();
 }
 
