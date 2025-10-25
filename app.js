@@ -6,6 +6,8 @@ let compatibilityMatrix = [];
 let currentPackage = [];
 let manufacturers = new Set();
 let cameraBrands = new Set();
+let currentProjectName = '';
+let currentNoteItemId = null;
 
 // CSV file mapping
 const csvFiles = [
@@ -962,6 +964,15 @@ function updatePackageDisplay() {
 
         let displayHTML = '';
 
+        const notesHTML = item.note ? `
+            <div class="item-notes">
+                <div class="item-notes-text">${item.note}</div>
+                <button class="btn-edit-note" onclick="openNotesModal('${itemId}')">Edit</button>
+            </div>
+        ` : `
+            <button class="btn-add-note" onclick="openNotesModal('${itemId}')">+ Add Note</button>
+        `;
+
         if (itemType === 'camera') {
             displayHTML = `
                 <div class="package-item package-item-camera">
@@ -969,6 +980,7 @@ function updatePackageDisplay() {
                         <span class="item-type-badge">Camera</span>
                         <h4>${item.brand} ${item.model}</h4>
                         <p>Mount: ${item.native_mount} | Sensor: ${item.sensor_modes?.[0]?.crop_class || 'N/A'}</p>
+                        ${notesHTML}
                     </div>
                     <button class="btn-remove" onclick="removeFromPackage('${itemId}')">Remove</button>
                 </div>
@@ -980,6 +992,7 @@ function updatePackageDisplay() {
                         <span class="item-type-badge">Accessory</span>
                         <h4>${item.brand} ${item.model}</h4>
                         <p>${item.category} - ${item.subtype || ''}</p>
+                        ${notesHTML}
                     </div>
                     <button class="btn-remove" onclick="removeFromPackage('${itemId}')">Remove</button>
                 </div>
@@ -992,6 +1005,7 @@ function updatePackageDisplay() {
                         <span class="item-type-badge">Lens</span>
                         <h4>${item.manufacturer} ${item.name} ${item['focal length'] || ''}</h4>
                         <p>${item.category} - ${item.mount || item['original mount'] || 'N/A'}</p>
+                        ${notesHTML}
                     </div>
                     <button class="btn-remove" onclick="removeFromPackage('${itemId}')">Remove</button>
                 </div>
@@ -1023,13 +1037,39 @@ function exportPackage() {
         return;
     }
 
-    const text = 'Camera Package List\n\n' +
-        currentPackage.map((lens, i) =>
-            `${i + 1}. ${lens.manufacturer} ${lens.name} ${lens['focal length']}\n` +
-            `   Category: ${lens.category}\n` +
-            `   Mount: ${lens['original mount'] || 'N/A'}\n` +
-            `   Aperture: T${lens['max aperture (T)'] || 'N/A'}\n`
-        ).join('\n');
+    let text = 'Equipment List\n';
+    text += '='.repeat(50) + '\n\n';
+
+    if (currentProjectName) {
+        text += `Project: ${currentProjectName}\n`;
+        text += '='.repeat(50) + '\n\n';
+    }
+
+    text += currentPackage.map((item, i) => {
+        const itemType = item.itemType || 'lens';
+        let itemText = `${i + 1}. `;
+
+        if (itemType === 'camera') {
+            itemText += `${item.brand} ${item.model} (Camera)\n`;
+            itemText += `   Mount: ${item.native_mount}\n`;
+            itemText += `   Sensor: ${item.sensor_modes?.[0]?.crop_class || 'N/A'}\n`;
+        } else if (itemType === 'accessory') {
+            itemText += `${item.brand} ${item.model} (Accessory)\n`;
+            itemText += `   Category: ${item.category}\n`;
+            itemText += `   Type: ${item.subtype || 'N/A'}\n`;
+        } else {
+            itemText += `${item.manufacturer} ${item.name} ${item['focal length'] || ''} (Lens)\n`;
+            itemText += `   Category: ${item.category}\n`;
+            itemText += `   Mount: ${item['original mount'] || 'N/A'}\n`;
+            itemText += `   Aperture: T${item['max aperture (T)'] || 'N/A'}\n`;
+        }
+
+        if (item.note) {
+            itemText += `   Note: ${item.note}\n`;
+        }
+
+        return itemText;
+    }).join('\n');
 
     const blob = new Blob([text], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
@@ -1053,7 +1093,96 @@ function exportPackage() {
 window.addEventListener('DOMContentLoaded', () => {
     loadAllData();
     loadTemplates();
+    loadProjectName();
 });
+
+// ========================================
+// PROJECT NAME & NOTES FUNCTIONS
+// ========================================
+
+// Save project name
+function saveProjectName() {
+    const input = document.getElementById('projectName');
+    if (input) {
+        currentProjectName = input.value;
+        localStorage.setItem('currentProjectName', currentProjectName);
+    }
+}
+
+// Load project name
+function loadProjectName() {
+    const savedName = localStorage.getItem('currentProjectName') || '';
+    currentProjectName = savedName;
+    const input = document.getElementById('projectName');
+    if (input) {
+        input.value = savedName;
+    }
+}
+
+// Open notes modal for an item
+function openNotesModal(itemId) {
+    currentNoteItemId = itemId;
+
+    const modal = document.getElementById('notesModal');
+    const overlay = document.getElementById('notesModalOverlay');
+    const textarea = document.getElementById('itemNoteInput');
+
+    // Find item and load existing note
+    const item = currentPackage.find(i => {
+        const iId = i.id || `${i.brand || i.manufacturer}-${i.model || i.name}`;
+        return iId === itemId;
+    });
+
+    const modalTitle = modal.querySelector('h3');
+    if (item && item.note) {
+        textarea.value = item.note;
+        modalTitle.textContent = 'Edit Note';
+    } else {
+        textarea.value = '';
+        modalTitle.textContent = 'Add Note';
+    }
+
+    modal.classList.add('active');
+    overlay.classList.add('active');
+
+    // Focus textarea after animation
+    setTimeout(() => textarea.focus(), 300);
+}
+
+// Close notes modal
+function closeNotesModal() {
+    const modal = document.getElementById('notesModal');
+    const overlay = document.getElementById('notesModalOverlay');
+
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+    currentNoteItemId = null;
+}
+
+// Confirm and save note
+function confirmSaveNote() {
+    if (!currentNoteItemId) return;
+
+    const textarea = document.getElementById('itemNoteInput');
+    const noteText = textarea.value.trim();
+
+    // Find item and add/update note
+    const item = currentPackage.find(i => {
+        const iId = i.id || `${i.brand || i.manufacturer}-${i.model || i.name}`;
+        return iId === currentNoteItemId;
+    });
+
+    if (item) {
+        if (noteText) {
+            item.note = noteText;
+        } else {
+            delete item.note;
+        }
+        updatePackageDisplay();
+    }
+
+    closeNotesModal();
+}
 
 // ========================================
 // TEMPLATE FUNCTIONS
@@ -1120,6 +1249,7 @@ function confirmSaveTemplate() {
     const newTemplate = {
         id: Date.now().toString(),
         name: templateName,
+        projectName: currentProjectName,
         items: JSON.parse(JSON.stringify(currentPackage)), // Deep copy
         createdAt: new Date().toISOString(),
         itemCount: currentPackage.length
@@ -1214,6 +1344,17 @@ function loadTemplate(templateId) {
 
     // Load template items into current package
     currentPackage = JSON.parse(JSON.stringify(template.items)); // Deep copy
+
+    // Load project name if it exists
+    if (template.projectName) {
+        currentProjectName = template.projectName;
+        const projectInput = document.getElementById('projectName');
+        if (projectInput) {
+            projectInput.value = template.projectName;
+        }
+        localStorage.setItem('currentProjectName', template.projectName);
+    }
+
     updatePackageDisplay();
 
     // Navigate to Your List page

@@ -238,6 +238,10 @@
                 <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Your List</h2>
                 <div class="package-builder">
                     <div class="package-list">
+                        <div class="project-name-section">
+                            <label for="projectName">Project Name (Optional)</label>
+                            <input type="text" id="projectName" placeholder="e.g., Documentary - Mountain Climbing, Commercial - Nike Ad..." oninput="saveProjectName()">
+                        </div>
                         <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 16px;">Your List</h3>
                         <div id="packageItems" class="package-items">
                             <p class="empty-state">No items added yet. Search for cameras, lenses, and accessories, then click "Add to Package"</p>
@@ -338,6 +342,23 @@
                     <div id="accessoryResults" class="lens-grid"></div>
                 </div>
             </section>
+        </div>
+    </div>
+
+    <!-- ITEM NOTES MODAL -->
+    <div class="modal-overlay" id="notesModalOverlay" onclick="closeNotesModal()"></div>
+    <div class="template-modal" id="notesModal">
+        <div class="template-modal-header">
+            <h3>Add Note</h3>
+            <button class="modal-close" onclick="closeNotesModal()">×</button>
+        </div>
+        <div class="template-modal-body">
+            <label for="itemNoteInput">Note</label>
+            <textarea id="itemNoteInput" placeholder="Why this item? Special requirements? Backup options?" rows="4" style="width: 100%; padding: 10px 14px; border: 1px solid #e5e5e5; border-radius: 6px; font-size: 14px; font-family: inherit; resize: vertical;"></textarea>
+        </div>
+        <div class="template-modal-footer">
+            <button class="btn-secondary" onclick="closeNotesModal()">Cancel</button>
+            <button class="btn-primary" onclick="confirmSaveNote()">Save Note</button>
         </div>
     </div>
 
