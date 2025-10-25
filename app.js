@@ -1056,11 +1056,152 @@ window.addEventListener('DOMContentLoaded', loadAllData);
 // GLOBAL SEARCH FUNCTIONS
 // ========================================
 
-// Handle Enter key in global search
+// Handle Enter key in global search and live autocomplete
 function handleGlobalSearch(event) {
     if (event.key === 'Enter') {
         performGlobalSearch();
+        hideSearchDropdown();
+    } else {
+        // Show live search suggestions as user types
+        updateSearchDropdown();
     }
+}
+
+// Show search dropdown
+function showSearchDropdown() {
+    const dropdown = document.getElementById('searchDropdown');
+    const searchText = document.getElementById('globalSearch').value.trim();
+
+    if (searchText.length >= 2) {
+        dropdown.classList.add('active');
+    }
+}
+
+// Hide search dropdown with delay for clicks
+let hideDropdownTimeout;
+function hideSearchDropdown() {
+    hideDropdownTimeout = setTimeout(() => {
+        const dropdown = document.getElementById('searchDropdown');
+        dropdown.classList.remove('active');
+    }, 200);
+}
+
+// Cancel hiding if user clicks in dropdown
+function keepSearchDropdown() {
+    clearTimeout(hideDropdownTimeout);
+}
+
+// Update search dropdown with live results
+function updateSearchDropdown() {
+    const searchText = document.getElementById('globalSearch').value.toLowerCase().trim();
+    const dropdown = document.getElementById('searchDropdown');
+
+    // Hide if less than 2 characters
+    if (searchText.length < 2) {
+        dropdown.classList.remove('active');
+        return;
+    }
+
+    // Search across all data (limit to 5 results per category)
+    const cameraResults = allCameras.filter(camera => {
+        const brand = (camera.brand || '').toLowerCase();
+        const model = (camera.model || '').toLowerCase();
+        const mount = (camera.native_mount || '').toLowerCase();
+        return brand.includes(searchText) ||
+               model.includes(searchText) ||
+               mount.includes(searchText);
+    }).slice(0, 5);
+
+    const lensResults = allLenses.filter(lens => {
+        const manufacturer = (lens.manufacturer || '').toLowerCase();
+        const name = (lens.name || '').toLowerCase();
+        const focal = (lens['focal length'] || '').toLowerCase();
+        const category = (lens.category || '').toLowerCase();
+        return manufacturer.includes(searchText) ||
+               name.includes(searchText) ||
+               focal.includes(searchText) ||
+               category.includes(searchText);
+    }).slice(0, 5);
+
+    const accessoryResults = allAccessories.filter(acc => {
+        const brand = (acc.brand || '').toLowerCase();
+        const model = (acc.model || '').toLowerCase();
+        const category = (acc.category || '').toLowerCase();
+        const subtype = (acc.subtype || '').toLowerCase();
+        return brand.includes(searchText) ||
+               model.includes(searchText) ||
+               category.includes(searchText) ||
+               subtype.includes(searchText);
+    }).slice(0, 5);
+
+    // Build dropdown HTML
+    let html = '';
+
+    if (cameraResults.length === 0 && lensResults.length === 0 && accessoryResults.length === 0) {
+        html = '<div class="search-dropdown-empty">No results found</div>';
+    } else {
+        // Cameras
+        if (cameraResults.length > 0) {
+            html += '<div class="search-dropdown-category">Cameras</div>';
+            cameraResults.forEach(camera => {
+                html += `
+                    <div class="search-dropdown-item" onmousedown="keepSearchDropdown()" onclick="addCameraToPackage('${camera.id}', event); hideSearchDropdown();">
+                        <div class="search-dropdown-icon">🎥</div>
+                        <div class="search-dropdown-details">
+                            <div class="search-dropdown-name">${camera.brand} ${camera.model}</div>
+                            <div class="search-dropdown-meta">${camera.native_mount}</div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Lenses
+        if (lensResults.length > 0) {
+            html += '<div class="search-dropdown-category">Lenses</div>';
+            lensResults.forEach(lens => {
+                const lensData = JSON.stringify(lens).replace(/'/g, "&apos;").replace(/"/g, "&quot;");
+                html += `
+                    <div class="search-dropdown-item" onmousedown="keepSearchDropdown()" onclick='addToPackage(JSON.parse("${lensData}"), "lens", null); hideSearchDropdown();'>
+                        <div class="search-dropdown-icon">🔍</div>
+                        <div class="search-dropdown-details">
+                            <div class="search-dropdown-name">${lens.manufacturer} ${lens.name}</div>
+                            <div class="search-dropdown-meta">${lens['focal length'] || 'N/A'}</div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Accessories
+        if (accessoryResults.length > 0) {
+            html += '<div class="search-dropdown-category">Accessories</div>';
+            accessoryResults.forEach(acc => {
+                html += `
+                    <div class="search-dropdown-item" onmousedown="keepSearchDropdown()" onclick="addAccessoryToPackage('${acc.id}', event); hideSearchDropdown();">
+                        <div class="search-dropdown-icon">⚙️</div>
+                        <div class="search-dropdown-details">
+                            <div class="search-dropdown-name">${acc.brand} ${acc.model}</div>
+                            <div class="search-dropdown-meta">${acc.category.replace(/_/g, ' ')}</div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Add "View all results" option
+        html += `
+            <div class="search-dropdown-item" onmousedown="keepSearchDropdown()" onclick="performGlobalSearch(); hideSearchDropdown();" style="border-top: 1px solid #3a3a3a; margin-top: 8px;">
+                <div class="search-dropdown-icon">🔍</div>
+                <div class="search-dropdown-details">
+                    <div class="search-dropdown-name">View all results for "${searchText}"</div>
+                </div>
+            </div>
+        `;
+    }
+
+    dropdown.innerHTML = html;
+    dropdown.classList.add('active');
 }
 
 // Perform global search across all categories

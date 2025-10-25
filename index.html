@@ -37,7 +37,10 @@
                 <div class="header-content">
                     <h1>Cameras</h1>
                     <div class="global-search">
-                        <input type="text" id="globalSearch" placeholder="Search cameras, lenses, accessories..." onkeyup="handleGlobalSearch(event)">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="globalSearch" placeholder="Search cameras, lenses, accessories..." onkeyup="handleGlobalSearch(event)" onfocus="showSearchDropdown()" onblur="hideSearchDropdown()">
+                            <div class="search-dropdown" id="searchDropdown"></div>
+                        </div>
                         <button onclick="performGlobalSearch()">Search</button>
                     </div>
                 </div>
