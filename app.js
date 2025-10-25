@@ -1964,6 +1964,12 @@ function closeMiniCart() {
     overlay.classList.remove('active');
 }
 
+// Navigate to Your List tab and close mini cart
+function goToList() {
+    closeMiniCart();
+    switchTab('package');
+}
+
 // Update mini cart display
 function updateMiniCartDisplay() {
     const container = document.getElementById('miniCartItems');
