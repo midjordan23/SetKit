@@ -222,9 +222,17 @@
                 <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Templates</h2>
                 <div class="templates-section">
                     <div class="templates-header">
-                        <p style="color: #737373; font-size: 14px; margin-bottom: 24px;">
+                        <p style="color: #737373; font-size: 14px; margin-bottom: 16px;">
                             Save your equipment lists as templates for quick reuse. Perfect for recurring projects or standard setups.
                         </p>
+                        <div class="template-filters">
+                            <button class="template-filter-btn active" data-filter="all" onclick="filterTemplates('all')">All</button>
+                            <button class="template-filter-btn" data-filter="single-cam" onclick="filterTemplates('single-cam')">Single Cam</button>
+                            <button class="template-filter-btn" data-filter="multi-cam" onclick="filterTemplates('multi-cam')">Multi-Cam</button>
+                            <button class="template-filter-btn" data-filter="lighting" onclick="filterTemplates('lighting')">Lighting</button>
+                            <button class="template-filter-btn" data-filter="accessories" onclick="filterTemplates('accessories')">Accessories</button>
+                            <button class="template-filter-btn" data-filter="other" onclick="filterTemplates('other')">Other</button>
+                        </div>
                     </div>
 
                     <div class="templates-grid" id="templatesGrid">
@@ -400,6 +408,15 @@
         <div class="template-modal-body">
             <label for="templateNameInput">Template Name</label>
             <input type="text" id="templateNameInput" placeholder="e.g., Documentary Kit, Studio Setup..." maxlength="50">
+
+            <label for="templateCategorySelect" style="margin-top: 16px;">Category</label>
+            <select id="templateCategorySelect" style="width: 100%; padding: 10px; border: 1px solid #e5e5e5; border-radius: 6px; font-size: 14px; background: white;">
+                <option value="single-cam">Single Cam</option>
+                <option value="multi-cam">Multi-Cam</option>
+                <option value="lighting">Lighting Package</option>
+                <option value="accessories">Accessories Kit</option>
+                <option value="other">Other</option>
+            </select>
         </div>
         <div class="template-modal-footer">
             <button class="btn-secondary" onclick="closeTemplateModal()">Cancel</button>

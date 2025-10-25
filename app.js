@@ -1400,7 +1400,9 @@ function closeTemplateModal() {
 // Confirm and save template
 function confirmSaveTemplate() {
     const input = document.getElementById('templateNameInput');
+    const categorySelect = document.getElementById('templateCategorySelect');
     const templateName = input.value.trim();
+    const category = categorySelect.value;
 
     if (!templateName) {
         alert('Please enter a template name.');
@@ -1415,6 +1417,7 @@ function confirmSaveTemplate() {
     const newTemplate = {
         id: Date.now().toString(),
         name: templateName,
+        category: category,
         projectInfo: JSON.parse(JSON.stringify(currentProjectInfo)), // Save all project info
         items: JSON.parse(JSON.stringify(currentPackage)), // Deep copy
         createdAt: new Date().toISOString(),
@@ -1445,7 +1448,9 @@ function loadTemplates() {
 }
 
 // Display all templates
-function displayTemplates() {
+let currentTemplateFilter = 'all';
+
+function displayTemplates(filter = currentTemplateFilter) {
     const container = document.getElementById('templatesGrid');
     if (!container) return;
 
@@ -1456,13 +1461,33 @@ function displayTemplates() {
         return;
     }
 
-    container.innerHTML = templates.map(template => {
+    // Filter templates by category
+    const filteredTemplates = filter === 'all'
+        ? templates
+        : templates.filter(t => (t.category || 'other') === filter);
+
+    if (filteredTemplates.length === 0) {
+        container.innerHTML = '<div class="empty-state">No templates found in this category.</div>';
+        return;
+    }
+
+    container.innerHTML = filteredTemplates.map(template => {
         const date = new Date(template.createdAt);
         const formattedDate = date.toLocaleDateString('en-US', {
             month: 'short',
             day: 'numeric',
             year: 'numeric'
         });
+
+        // Get category label
+        const category = template.category || 'other';
+        const categoryLabels = {
+            'single-cam': 'Single Cam',
+            'multi-cam': 'Multi-Cam',
+            'lighting': 'Lighting Package',
+            'accessories': 'Accessories Kit',
+            'other': 'Other'
+        };
 
         // Get preview of first 3 items
         const preview = template.items.slice(0, 3).map(item => {
@@ -1474,9 +1499,10 @@ function displayTemplates() {
         const moreItems = template.items.length > 3 ? ` +${template.items.length - 3} more` : '';
 
         return `
-            <div class="template-card">
+            <div class="template-card" data-category="${category}">
                 <div class="template-card-header">
                     <div class="template-name">${template.name}</div>
+                    <div class="template-category-badge ${category}">${categoryLabels[category]}</div>
                     <div class="template-date">Created ${formattedDate}</div>
                 </div>
                 <div class="template-items">
@@ -1572,6 +1598,20 @@ function deleteTemplate(templateId) {
     displayTemplates();
 
     alert(`Template "${template.name}" deleted.`);
+}
+
+// Filter templates by category
+function filterTemplates(category) {
+    currentTemplateFilter = category;
+
+    // Update active button
+    document.querySelectorAll('.template-filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector(`.template-filter-btn[data-filter="${category}"]`).classList.add('active');
+
+    // Display filtered templates
+    displayTemplates(category);
 }
 
 // ========================================

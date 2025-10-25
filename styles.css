@@ -1447,6 +1447,36 @@ header h1 {
     border: 1px solid #e5e5e5;
 }
 
+.template-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.template-filter-btn {
+    padding: 8px 16px;
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #525252;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.template-filter-btn:hover {
+    background: #e5e5e5;
+    border-color: #d4d4d4;
+}
+
+.template-filter-btn.active {
+    background: #171717;
+    color: #fff;
+    border-color: #171717;
+}
+
 .templates-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -1478,7 +1508,43 @@ header h1 {
     font-size: 18px;
     font-weight: 600;
     color: #171717;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+}
+
+.template-category-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.template-category-badge.single-cam {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.template-category-badge.multi-cam {
+    background: #fce7f3;
+    color: #be123c;
+}
+
+.template-category-badge.lighting {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.template-category-badge.accessories {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.template-category-badge.other {
+    background: #f3f4f6;
+    color: #4b5563;
 }
 
 .template-date {
