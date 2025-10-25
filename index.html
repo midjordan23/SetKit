@@ -24,7 +24,7 @@
                 <div class="nav-item" data-tab="compare">Compare</div>
                 <div class="nav-separator"></div>
                 <div class="nav-item" data-tab="package">
-                    Build Package
+                    Your List
                     <span class="package-badge" id="packageBadge" style="display: none;" onclick="openMiniCart(event)">0</span>
                 </div>
             </div>
@@ -205,19 +205,19 @@
 
             <!-- Package Builder Tab -->
             <section id="package" class="tab-content">
-                <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Build Camera Package</h2>
+                <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Your List</h2>
                 <div class="package-builder">
                     <div class="package-list">
-                        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 16px;">Your Package</h3>
+                        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 16px;">Your List</h3>
                         <div id="packageItems" class="package-items">
-                            <p class="empty-state">No items added yet. Search for lenses and click "Add to Package"</p>
+                            <p class="empty-state">No items added yet. Search for cameras, lenses, and accessories, then click "Add to Package"</p>
                         </div>
                         <div class="package-summary">
                             <div class="summary-row">
                                 <span>Total Items:</span>
                                 <span id="packageCount">0</span>
                             </div>
-                            <button class="btn-primary" onclick="exportPackage()">Export Package</button>
+                            <button class="btn-primary" onclick="exportPackage()">Export List</button>
                             <button class="btn-secondary" onclick="clearPackage()">Clear All</button>
                         </div>
                     </div>
@@ -326,7 +326,7 @@
                 <span id="miniCartSubtotal"><span id="miniCartCount">0</span> items</span>
             </div>
             <button class="mini-cart-btn mini-cart-view" onclick="viewCart()">VIEW CART</button>
-            <button class="mini-cart-btn mini-cart-checkout" onclick="checkout()">SEND LIST</button>
+            <button class="mini-cart-btn mini-cart-checkout" onclick="exportPackage()">SEND LIST</button>
         </div>
     </div>
 
@@ -354,7 +354,7 @@
                     'accessories': 'Accessories',
                     'recommend': 'Recommendations',
                     'compare': 'Compare',
-                    'package': 'Build Package'
+                    'package': 'Your List'
                 };
                 document.querySelector('header h1').textContent = titles[tab] || 'List';
             });
