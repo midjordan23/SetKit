@@ -845,6 +845,9 @@ function addToPackage(item, itemType = 'lens', buttonElement = null) {
         if (buttonElement) {
             showAddedFeedback(buttonElement);
         }
+
+        // Open mini cart to show the added item
+        openMiniCart();
     } else {
         // Item already in package - show feedback
         if (buttonElement) {
@@ -901,7 +904,10 @@ function addAccessoryToPackage(accessoryId, event) {
 }
 
 function removeFromPackage(lensId) {
-    currentPackage = currentPackage.filter(l => l.id !== lensId);
+    currentPackage = currentPackage.filter(l => {
+        const itemId = l.id || `${l.brand || l.manufacturer}-${l.model || l.name}`;
+        return itemId !== lensId;
+    });
     updatePackageDisplay();
 }
 
@@ -996,12 +1002,18 @@ function updatePackageDisplay() {
     }).join('');
 
     container.innerHTML = validationHTML + itemsHTML;
+
+    // Update mini cart display as well
+    if (typeof updateMiniCartDisplay === 'function') {
+        updateMiniCartDisplay();
+    }
 }
 
 function clearPackage() {
     if (confirm('Clear all items from package?')) {
         currentPackage = [];
         updatePackageDisplay();
+        updateMiniCartDisplay();
     }
 }
 
@@ -1039,6 +1051,114 @@ function exportPackage() {
 
 // Initialize on load
 window.addEventListener('DOMContentLoaded', loadAllData);
+
+// ========================================
+// MINI CART FUNCTIONS
+// ========================================
+
+// Open mini cart
+function openMiniCart(event) {
+    if (event) {
+        event.stopPropagation(); // Prevent nav item click
+    }
+    const miniCart = document.getElementById('miniCart');
+    const overlay = document.getElementById('miniCartOverlay');
+
+    miniCart.classList.add('active');
+    overlay.classList.add('active');
+    updateMiniCartDisplay();
+}
+
+// Close mini cart
+function closeMiniCart() {
+    const miniCart = document.getElementById('miniCart');
+    const overlay = document.getElementById('miniCartOverlay');
+
+    miniCart.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
+// Update mini cart display
+function updateMiniCartDisplay() {
+    const container = document.getElementById('miniCartItems');
+    const countElement = document.getElementById('miniCartCount');
+
+    if (!container) return;
+
+    countElement.textContent = currentPackage.length;
+
+    if (currentPackage.length === 0) {
+        container.innerHTML = '<div class="mini-cart-empty">No items in package</div>';
+        return;
+    }
+
+    container.innerHTML = currentPackage.map(item => {
+        const itemType = item.itemType || 'lens';
+        const itemId = item.id || `${item.brand || item.manufacturer}-${item.model || item.name}`;
+
+        let icon = '📦';
+        let name = '';
+        let meta = '';
+
+        if (itemType === 'camera') {
+            icon = '🎥';
+            name = `${item.brand} ${item.model}`;
+            meta = `${item.native_mount || 'N/A'}`;
+        } else if (itemType === 'lens') {
+            icon = '🔍';
+            name = `${item.manufacturer} ${item.name}`;
+            meta = `${item['focal length'] || 'N/A'}`;
+        } else if (itemType === 'accessory') {
+            icon = '⚙️';
+            name = `${item.brand} ${item.model}`;
+            meta = `${item.category || 'N/A'}`;
+        }
+
+        return `
+            <div class="mini-cart-item">
+                <div class="mini-cart-item-image">${icon}</div>
+                <div class="mini-cart-item-details">
+                    <div class="mini-cart-item-name">${name}</div>
+                    <div class="mini-cart-item-meta">${meta}</div>
+                </div>
+                <button class="mini-cart-item-remove" onclick="removeFromPackageAndUpdateMiniCart('${itemId}')" title="Remove">×</button>
+            </div>
+        `;
+    }).join('');
+}
+
+// Remove from package and update mini cart
+function removeFromPackageAndUpdateMiniCart(itemId) {
+    removeFromPackage(itemId);
+    updateMiniCartDisplay();
+}
+
+// View cart - navigate to package tab
+function viewCart() {
+    closeMiniCart();
+
+    // Click the package nav item
+    const packageNav = document.querySelector('.nav-item[data-tab="package"]');
+    if (packageNav) {
+        packageNav.click();
+    }
+}
+
+// Checkout placeholder
+function checkout() {
+    if (currentPackage.length === 0) {
+        alert('Your package is empty. Add items to continue.');
+        return;
+    }
+
+    alert('Checkout functionality coming soon!\n\nYour package contains:\n' +
+        currentPackage.map((item, i) => {
+            const name = item.model || item.name || 'Unknown';
+            const brand = item.brand || item.manufacturer || 'Unknown';
+            return `${i + 1}. ${brand} ${name}`;
+        }).join('\n')
+    );
+}
 
 // ========================================
 // CAMERA FUNCTIONS
@@ -1154,15 +1274,42 @@ function clearCameraFilters() {
 // ACCESSORY FUNCTIONS
 // ========================================
 
-// Filter and display accessories
-function filterAccessories(category) {
+// Current accessory filter state
+let currentAccessoryCategory = 'all';
+
+// Search accessories with text and category filter
+function searchAccessories() {
+    const searchText = document.getElementById('accessorySearch')?.value.toLowerCase() || '';
+
     let filtered = allAccessories;
 
-    if (category !== 'all') {
-        filtered = allAccessories.filter(acc => acc.category === category);
+    // Apply category filter
+    if (currentAccessoryCategory !== 'all') {
+        filtered = filtered.filter(acc => acc.category === currentAccessoryCategory);
+    }
+
+    // Apply search text filter
+    if (searchText) {
+        filtered = filtered.filter(acc => {
+            const brand = (acc.brand || '').toLowerCase();
+            const model = (acc.model || '').toLowerCase();
+            const category = (acc.category || '').toLowerCase();
+            const subtype = (acc.subtype || '').toLowerCase();
+
+            return brand.includes(searchText) ||
+                   model.includes(searchText) ||
+                   category.includes(searchText) ||
+                   subtype.includes(searchText);
+        });
     }
 
     displayAccessories(filtered);
+}
+
+// Filter and display accessories
+function filterAccessories(category) {
+    currentAccessoryCategory = category;
+    searchAccessories(); // Use the combined search function
 
     // Update active button
     document.querySelectorAll('.category-btn').forEach(btn => {
