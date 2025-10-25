@@ -1024,7 +1024,17 @@ function exportPackage() {
     const a = document.createElement('a');
     a.href = url;
     a.download = 'camera-package.txt';
+    a.style.display = 'none';
+
+    // Must append to DOM for mobile browsers
+    document.body.appendChild(a);
     a.click();
+
+    // Clean up
+    setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }, 100);
 }
 
 // Initialize on load
