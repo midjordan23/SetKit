@@ -27,6 +27,7 @@
                     Your List
                     <span class="package-badge" id="packageBadge" style="display: none;" onclick="openMiniCart(event)">0</span>
                 </div>
+                <div class="nav-item" data-tab="templates">Templates</div>
             </div>
         </div>
 
@@ -216,6 +217,22 @@
                 <div id="recommendationResults" class="recommendations"></div>
             </section>
 
+            <!-- Templates Tab -->
+            <section id="templates" class="tab-content">
+                <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Templates</h2>
+                <div class="templates-section">
+                    <div class="templates-header">
+                        <p style="color: #737373; font-size: 14px; margin-bottom: 24px;">
+                            Save your equipment lists as templates for quick reuse. Perfect for recurring projects or standard setups.
+                        </p>
+                    </div>
+
+                    <div class="templates-grid" id="templatesGrid">
+                        <div class="empty-state">No templates saved yet. Go to "Your List" and save your current package as a template.</div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Package Builder Tab -->
             <section id="package" class="tab-content">
                 <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Your List</h2>
@@ -231,6 +248,7 @@
                                 <span id="packageCount">0</span>
                             </div>
                             <button class="btn-primary" onclick="exportPackage()">Export List</button>
+                            <button class="btn-primary" onclick="saveAsTemplate()">Save as Template</button>
                             <button class="btn-secondary" onclick="clearPackage()">Clear All</button>
                         </div>
                     </div>
@@ -366,7 +384,8 @@
                     'accessories': 'Accessories',
                     'recommend': 'Recommendations',
                     'compare': 'Compare',
-                    'package': 'Your List'
+                    'package': 'Your List',
+                    'templates': 'Templates'
                 };
                 document.querySelector('header h1').textContent = titles[tab] || 'List';
             });

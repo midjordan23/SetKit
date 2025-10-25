@@ -1050,7 +1050,159 @@ function exportPackage() {
 }
 
 // Initialize on load
-window.addEventListener('DOMContentLoaded', loadAllData);
+window.addEventListener('DOMContentLoaded', () => {
+    loadAllData();
+    loadTemplates();
+});
+
+// ========================================
+// TEMPLATE FUNCTIONS
+// ========================================
+
+// Save current package as template
+function saveAsTemplate() {
+    if (currentPackage.length === 0) {
+        alert('Your list is empty. Add items before saving as a template.');
+        return;
+    }
+
+    const templateName = prompt('Enter a name for this template:');
+
+    if (!templateName || !templateName.trim()) {
+        return; // User cancelled or entered empty name
+    }
+
+    // Get existing templates
+    const templates = JSON.parse(localStorage.getItem('equipmentTemplates') || '[]');
+
+    // Create new template
+    const newTemplate = {
+        id: Date.now().toString(),
+        name: templateName.trim(),
+        items: JSON.parse(JSON.stringify(currentPackage)), // Deep copy
+        createdAt: new Date().toISOString(),
+        itemCount: currentPackage.length
+    };
+
+    // Add to templates
+    templates.push(newTemplate);
+
+    // Save to localStorage
+    localStorage.setItem('equipmentTemplates', JSON.stringify(templates));
+
+    alert(`Template "${templateName}" saved successfully!`);
+
+    // Refresh templates display if on templates page
+    displayTemplates();
+}
+
+// Load templates from localStorage and display
+function loadTemplates() {
+    displayTemplates();
+}
+
+// Display all templates
+function displayTemplates() {
+    const container = document.getElementById('templatesGrid');
+    if (!container) return;
+
+    const templates = JSON.parse(localStorage.getItem('equipmentTemplates') || '[]');
+
+    if (templates.length === 0) {
+        container.innerHTML = '<div class="empty-state">No templates saved yet. Go to "Your List" and save your current package as a template.</div>';
+        return;
+    }
+
+    container.innerHTML = templates.map(template => {
+        const date = new Date(template.createdAt);
+        const formattedDate = date.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric'
+        });
+
+        // Get preview of first 3 items
+        const preview = template.items.slice(0, 3).map(item => {
+            const name = item.model || item.name || 'Unknown';
+            const brand = item.brand || item.manufacturer || '';
+            return `${brand} ${name}`.trim();
+        }).join(', ');
+
+        const moreItems = template.items.length > 3 ? ` +${template.items.length - 3} more` : '';
+
+        return `
+            <div class="template-card">
+                <div class="template-card-header">
+                    <div class="template-name">${template.name}</div>
+                    <div class="template-date">Created ${formattedDate}</div>
+                </div>
+                <div class="template-items">
+                    <div class="template-item-count">${template.itemCount} items</div>
+                    <div class="template-item-preview">${preview}${moreItems}</div>
+                </div>
+                <div class="template-actions">
+                    <button class="btn-load-template" onclick="loadTemplate('${template.id}')">Load Template</button>
+                    <button class="btn-delete-template" onclick="deleteTemplate('${template.id}')">Delete</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+// Load a template into current package
+function loadTemplate(templateId) {
+    const templates = JSON.parse(localStorage.getItem('equipmentTemplates') || '[]');
+    const template = templates.find(t => t.id === templateId);
+
+    if (!template) {
+        alert('Template not found.');
+        return;
+    }
+
+    if (currentPackage.length > 0) {
+        if (!confirm(`This will replace your current list (${currentPackage.length} items) with the template "${template.name}" (${template.itemCount} items). Continue?`)) {
+            return;
+        }
+    }
+
+    // Load template items into current package
+    currentPackage = JSON.parse(JSON.stringify(template.items)); // Deep copy
+    updatePackageDisplay();
+
+    // Navigate to Your List page
+    const packageNav = document.querySelector('.nav-item[data-tab="package"]');
+    if (packageNav) {
+        packageNav.click();
+    }
+
+    alert(`Template "${template.name}" loaded successfully!`);
+}
+
+// Delete a template
+function deleteTemplate(templateId) {
+    const templates = JSON.parse(localStorage.getItem('equipmentTemplates') || '[]');
+    const template = templates.find(t => t.id === templateId);
+
+    if (!template) {
+        alert('Template not found.');
+        return;
+    }
+
+    if (!confirm(`Delete template "${template.name}"? This cannot be undone.`)) {
+        return;
+    }
+
+    // Remove template
+    const updatedTemplates = templates.filter(t => t.id !== templateId);
+
+    // Save to localStorage
+    localStorage.setItem('equipmentTemplates', JSON.stringify(updatedTemplates));
+
+    // Refresh display
+    displayTemplates();
+
+    alert(`Template "${template.name}" deleted.`);
+}
 
 // ========================================
 // GLOBAL SEARCH FUNCTIONS
