@@ -11,10 +11,7 @@ let currentProjectInfo = {
     pickupDate: '',
     shootDate: '',
     returnDate: '',
-    contactTitle: '',
-    contactName: '',
-    contactPhone: '',
-    contactEmail: ''
+    contacts: []
 };
 let currentNoteItemId = null;
 
@@ -1071,12 +1068,17 @@ function exportPackage() {
         if (currentProjectInfo.shootDate) text += `  Shoot: ${currentProjectInfo.shootDate}\n`;
         if (currentProjectInfo.returnDate) text += `  Return: ${currentProjectInfo.returnDate}\n`;
     }
-    if (currentProjectInfo.contactName || currentProjectInfo.contactTitle) {
-        text += '\nContact:\n';
-        if (currentProjectInfo.contactTitle) text += `  Title: ${currentProjectInfo.contactTitle}\n`;
-        if (currentProjectInfo.contactName) text += `  Name: ${currentProjectInfo.contactName}\n`;
-        if (currentProjectInfo.contactPhone) text += `  Phone: ${currentProjectInfo.contactPhone}\n`;
-        if (currentProjectInfo.contactEmail) text += `  Email: ${currentProjectInfo.contactEmail}\n`;
+    if (currentProjectInfo.contacts && currentProjectInfo.contacts.length > 0) {
+        text += '\nContacts:\n';
+        currentProjectInfo.contacts.forEach((contact, index) => {
+            if (contact.title || contact.name || contact.phone || contact.email) {
+                text += `\n  Contact ${index + 1}:\n`;
+                if (contact.title) text += `    Title: ${contact.title}\n`;
+                if (contact.name) text += `    Name: ${contact.name}\n`;
+                if (contact.phone) text += `    Phone: ${contact.phone}\n`;
+                if (contact.email) text += `    Email: ${contact.email}\n`;
+            }
+        });
     }
 
     text += '\n' + '='.repeat(60) + '\n\n';
@@ -1145,16 +1147,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Save all project info
 function saveProjectInfo() {
-    currentProjectInfo = {
-        projectName: document.getElementById('projectName')?.value || '',
-        pickupDate: document.getElementById('pickupDate')?.value || '',
-        shootDate: document.getElementById('shootDate')?.value || '',
-        returnDate: document.getElementById('returnDate')?.value || '',
-        contactTitle: document.getElementById('contactTitle')?.value || '',
-        contactName: document.getElementById('contactName')?.value || '',
-        contactPhone: document.getElementById('contactPhone')?.value || '',
-        contactEmail: document.getElementById('contactEmail')?.value || ''
-    };
+    currentProjectInfo.projectName = document.getElementById('projectName')?.value || '';
+    currentProjectInfo.pickupDate = document.getElementById('pickupDate')?.value || '';
+    currentProjectInfo.shootDate = document.getElementById('shootDate')?.value || '';
+    currentProjectInfo.returnDate = document.getElementById('returnDate')?.value || '';
+
     localStorage.setItem('currentProjectInfo', JSON.stringify(currentProjectInfo));
 }
 
@@ -1163,18 +1160,115 @@ function loadProjectInfo() {
     const savedInfo = localStorage.getItem('currentProjectInfo');
     if (savedInfo) {
         currentProjectInfo = JSON.parse(savedInfo);
+
+        // Migrate old single contact format to array
+        if (currentProjectInfo.contactTitle || currentProjectInfo.contactName) {
+            if (!currentProjectInfo.contacts) {
+                currentProjectInfo.contacts = [];
+            }
+            if (currentProjectInfo.contacts.length === 0) {
+                currentProjectInfo.contacts.push({
+                    id: Date.now().toString(),
+                    title: currentProjectInfo.contactTitle || '',
+                    name: currentProjectInfo.contactName || '',
+                    phone: currentProjectInfo.contactPhone || '',
+                    email: currentProjectInfo.contactEmail || ''
+                });
+            }
+            // Clean up old fields
+            delete currentProjectInfo.contactTitle;
+            delete currentProjectInfo.contactName;
+            delete currentProjectInfo.contactPhone;
+            delete currentProjectInfo.contactEmail;
+            localStorage.setItem('currentProjectInfo', JSON.stringify(currentProjectInfo));
+        }
     }
 
-    // Set all input values
+    // Initialize contacts array if it doesn't exist
+    if (!currentProjectInfo.contacts) {
+        currentProjectInfo.contacts = [];
+    }
+
+    // Set form values
     if (document.getElementById('projectName')) {
         document.getElementById('projectName').value = currentProjectInfo.projectName || '';
         document.getElementById('pickupDate').value = currentProjectInfo.pickupDate || '';
         document.getElementById('shootDate').value = currentProjectInfo.shootDate || '';
         document.getElementById('returnDate').value = currentProjectInfo.returnDate || '';
-        document.getElementById('contactTitle').value = currentProjectInfo.contactTitle || '';
-        document.getElementById('contactName').value = currentProjectInfo.contactName || '';
-        document.getElementById('contactPhone').value = currentProjectInfo.contactPhone || '';
-        document.getElementById('contactEmail').value = currentProjectInfo.contactEmail || '';
+    }
+
+    // Display contacts
+    displayContacts();
+}
+
+// Display all contacts
+function displayContacts() {
+    const container = document.getElementById('contactsList');
+    if (!container) return;
+
+    if (currentProjectInfo.contacts.length === 0) {
+        container.innerHTML = '<p style="color: #a3a3a3; font-size: 13px; font-style: italic; padding: 16px 0;">No contacts added yet. Click "+ Add Contact" to add project contacts.</p>';
+        return;
+    }
+
+    container.innerHTML = currentProjectInfo.contacts.map((contact, index) => `
+        <div class="contact-card">
+            <div class="contact-card-header">
+                <span class="contact-card-title">Contact ${index + 1}</span>
+                <button class="btn-remove-contact" onclick="removeContact('${contact.id}')">Remove</button>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-field">
+                    <label>Title/Role</label>
+                    <input type="text" value="${contact.title || ''}" placeholder="e.g., Producer, DP" oninput="updateContact('${contact.id}', 'title', this.value)">
+                </div>
+                <div class="contact-field">
+                    <label>Name</label>
+                    <input type="text" value="${contact.name || ''}" placeholder="Full name" oninput="updateContact('${contact.id}', 'name', this.value)">
+                </div>
+                <div class="contact-field">
+                    <label>Phone</label>
+                    <input type="tel" value="${contact.phone || ''}" placeholder="(555) 123-4567" oninput="updateContact('${contact.id}', 'phone', this.value)">
+                </div>
+                <div class="contact-field">
+                    <label>Email</label>
+                    <input type="email" value="${contact.email || ''}" placeholder="email@example.com" oninput="updateContact('${contact.id}', 'email', this.value)">
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Add a new contact
+function addContactPerson() {
+    const newContact = {
+        id: Date.now().toString(),
+        title: '',
+        name: '',
+        phone: '',
+        email: ''
+    };
+
+    currentProjectInfo.contacts.push(newContact);
+    saveProjectInfo();
+    displayContacts();
+}
+
+// Update a contact field
+function updateContact(contactId, field, value) {
+    const contact = currentProjectInfo.contacts.find(c => c.id === contactId);
+    if (contact) {
+        contact[field] = value;
+        saveProjectInfo();
+    }
+}
+
+// Remove a contact
+function removeContact(contactId) {
+    if (confirm('Remove this contact?')) {
+        currentProjectInfo.contacts = currentProjectInfo.contacts.filter(c => c.id !== contactId);
+        saveProjectInfo();
+        displayContacts();
     }
 }
 
