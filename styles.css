@@ -1076,12 +1076,24 @@ header h1 {
     transition: all 0.15s ease;
 }
 
-.mini-cart-checkout {
+.mini-cart-save {
+    background: #fff;
+    color: #171717;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+}
+
+.mini-cart-save:hover {
+    background: #fafafa;
+    border-color: #d4d4d4;
+}
+
+.mini-cart-send {
     background: #171717;
     color: #fff;
 }
 
-.mini-cart-checkout:hover {
+.mini-cart-send:hover {
     background: #262626;
 }
 
