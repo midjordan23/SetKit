@@ -998,7 +998,21 @@ function updatePackageDisplay() {
             <button class="btn-add-note" onclick="openNotesModal('${itemId}')">+ Add Note</button>
         `;
 
-        if (itemType === 'camera') {
+        if (item.isCustom || itemType === 'custom') {
+            // Custom item
+            displayHTML = `
+                <div class="package-item package-item-custom">
+                    <div class="package-item-info">
+                        <span class="item-type-badge" style="background: #8b5cf6;">Custom</span>
+                        <h4>${item.brand} ${item.model}</h4>
+                        <p>${item.category}${item.notes ? ' - ' + item.notes : ''}</p>
+                        ${quantityHTML}
+                        ${notesHTML}
+                    </div>
+                    <button class="btn-remove" onclick="removeFromPackage('${itemId}')">Remove</button>
+                </div>
+            `;
+        } else if (itemType === 'camera') {
             displayHTML = `
                 <div class="package-item package-item-camera">
                     <div class="package-item-info">
@@ -2047,14 +2061,18 @@ function updateMiniCartDisplay() {
     }
 
     container.innerHTML = currentPackage.map(item => {
-        const itemType = item.itemType || 'lens';
+        const itemType = item.itemType || (item.isCustom ? 'custom' : 'lens');
         const itemId = item.id || `${item.brand || item.manufacturer}-${item.model || item.name}`;
 
         let icon = '📦';
         let name = '';
         let meta = '';
 
-        if (itemType === 'camera') {
+        if (item.isCustom || itemType === 'custom') {
+            icon = '✨';
+            name = `${item.brand} ${item.model}`;
+            meta = `${item.category || 'Custom'}`;
+        } else if (itemType === 'camera') {
             icon = '🎥';
             name = `${item.brand} ${item.model}`;
             meta = `${item.native_mount || 'N/A'}`;
@@ -2338,4 +2356,117 @@ function initializeCamerasAndAccessories() {
     if (document.getElementById('accessoryResults')) {
         filterAccessories('all');
     }
+}
+
+// Custom Item Modal Functions
+function openCustomItemModal() {
+    document.getElementById('customItemModalOverlay').style.display = 'block';
+    document.getElementById('customItemModal').style.display = 'block';
+
+    // Clear previous inputs
+    document.getElementById('customItemName').value = '';
+    document.getElementById('customItemBrand').value = '';
+    document.getElementById('customItemCategory').value = 'Custom';
+    document.getElementById('customItemNotes').value = '';
+
+    // Focus on name field
+    setTimeout(() => {
+        document.getElementById('customItemName').focus();
+    }, 100);
+}
+
+function closeCustomItemModal() {
+    document.getElementById('customItemModalOverlay').style.display = 'none';
+    document.getElementById('customItemModal').style.display = 'none';
+}
+
+function confirmAddCustomItem() {
+    const name = document.getElementById('customItemName').value.trim();
+    const brand = document.getElementById('customItemBrand').value.trim();
+    const category = document.getElementById('customItemCategory').value;
+    const notes = document.getElementById('customItemNotes').value.trim();
+
+    // Validate required fields
+    if (!name) {
+        alert('Please enter an item name');
+        document.getElementById('customItemName').focus();
+        return;
+    }
+
+    // Create custom item object
+    const customItem = {
+        id: 'CUSTOM-' + Date.now(), // Unique ID using timestamp
+        type: 'custom',
+        brand: brand || 'Custom',
+        model: name,
+        category: category,
+        notes: notes,
+        isCustom: true
+    };
+
+    // Add to package
+    addCustomItemToPackage(customItem);
+
+    // Close modal
+    closeCustomItemModal();
+
+    // Switch to package tab to show the added item
+    showTab('package');
+}
+
+function addCustomItemToPackage(customItem) {
+    // Check if already in package
+    const existingIndex = currentPackage.findIndex(item => item.id === customItem.id);
+
+    if (existingIndex === -1) {
+        currentPackage.push({
+            ...customItem,
+            quantity: 1,
+            addedAt: Date.now()
+        });
+
+        savePackage();
+        updatePackageDisplay();
+        updateMiniCart();
+
+        // Show confirmation
+        showToast(`${customItem.model} added to your list`);
+    } else {
+        // Item already exists (shouldn't happen with timestamp IDs, but just in case)
+        showToast(`${customItem.model} is already in your list`);
+    }
+}
+
+// Toast notification helper
+function showToast(message) {
+    // Create toast element if it doesn't exist
+    let toast = document.getElementById('toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'toast';
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #171717;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            z-index: 10000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        `;
+        document.body.appendChild(toast);
+    }
+
+    toast.textContent = message;
+    toast.style.opacity = '1';
+
+    // Hide after 2 seconds
+    setTimeout(() => {
+        toast.style.opacity = '0';
+    }, 2000);
 }

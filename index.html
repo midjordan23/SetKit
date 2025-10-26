@@ -372,7 +372,10 @@
                             </div>
                         </div>
 
-                        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 16px; margin-top: 32px;">Equipment List</h3>
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; margin-top: 32px;">
+                            <h3 style="font-size: 16px; font-weight: 600; margin: 0;">Equipment List</h3>
+                            <button class="btn-add-contact" onclick="openCustomItemModal()">+ Add Custom Item</button>
+                        </div>
                         <div id="packageItems" class="package-items">
                             <p class="empty-state">No items added yet. Search for cameras, lenses, and accessories, then click "Add to Package"</p>
                         </div>
@@ -519,6 +522,47 @@
         <div class="template-modal-footer">
             <button class="btn-secondary" onclick="closeTemplateModal()">Cancel</button>
             <button class="btn-primary" onclick="confirmSaveTemplate()">Save Template</button>
+        </div>
+    </div>
+
+    <!-- CUSTOM ITEM MODAL -->
+    <div class="modal-overlay" id="customItemModalOverlay" onclick="closeCustomItemModal()"></div>
+    <div class="template-modal" id="customItemModal">
+        <div class="template-modal-header">
+            <h3>Add Custom Item</h3>
+            <button class="modal-close" onclick="closeCustomItemModal()">×</button>
+        </div>
+        <div class="template-modal-body">
+            <label for="customItemName">Item Name *</label>
+            <input type="text" id="customItemName" placeholder="e.g., Custom Slider, Special Filter..." maxlength="100" style="width: 100%; padding: 10px 14px; border: 1px solid #e5e5e5; border-radius: 6px; font-size: 14px; margin-bottom: 16px;">
+
+            <label for="customItemBrand">Brand (Optional)</label>
+            <input type="text" id="customItemBrand" placeholder="e.g., Generic, Custom Built..." maxlength="50" style="width: 100%; padding: 10px 14px; border: 1px solid #e5e5e5; border-radius: 6px; font-size: 14px; margin-bottom: 16px;">
+
+            <label for="customItemCategory">Category</label>
+            <select id="customItemCategory" style="width: 100%; padding: 10px; border: 1px solid #e5e5e5; border-radius: 6px; font-size: 14px; background: white; margin-bottom: 16px;">
+                <option value="Custom">Custom</option>
+                <option value="Camera">Camera</option>
+                <option value="Lens">Lens</option>
+                <option value="Filter">Filter</option>
+                <option value="Matte Box">Matte Box</option>
+                <option value="Follow Focus">Follow Focus</option>
+                <option value="Wireless Video">Wireless Video</option>
+                <option value="Monitor">Monitor</option>
+                <option value="Support">Support</option>
+                <option value="Power">Power</option>
+                <option value="Media">Media</option>
+                <option value="Communication">Communication</option>
+                <option value="Film Equipment">Film Equipment</option>
+                <option value="Accessory">Accessory</option>
+            </select>
+
+            <label for="customItemNotes">Notes (Optional)</label>
+            <textarea id="customItemNotes" placeholder="Any additional details, specs, or requirements..." rows="3" style="width: 100%; padding: 10px 14px; border: 1px solid #e5e5e5; border-radius: 6px; font-size: 14px; font-family: inherit; resize: vertical;"></textarea>
+        </div>
+        <div class="template-modal-footer">
+            <button class="btn-secondary" onclick="closeCustomItemModal()">Cancel</button>
+            <button class="btn-primary" onclick="confirmAddCustomItem()">Add to List</button>
         </div>
     </div>
 
