@@ -1555,10 +1555,14 @@ function displayTemplates(filter = currentTemplateFilter) {
     const container = document.getElementById('templatesGrid');
     if (!container) return;
 
+    console.log('displayTemplates called, defaultTemplates:', defaultTemplates.length);
+
     const userTemplates = JSON.parse(localStorage.getItem('equipmentTemplates') || '[]');
 
     // Combine default and user templates
     const templates = [...defaultTemplates, ...userTemplates];
+
+    console.log('Total templates to display:', templates.length);
 
     if (templates.length === 0) {
         container.innerHTML = '<div class="empty-state">No templates saved yet. Go to "Your List" and save your current package as a template.</div>';
@@ -1598,16 +1602,18 @@ function displayTemplates(filter = currentTemplateFilter) {
         if (template.isDefault) {
             // For default templates, get actual item data
             const previewItems = template.items.slice(0, 3).map(item => {
-                const itemData = allCameras.find(c => c.id === item.id) ||
-                               allAccessories.find(a => a.id === item.id);
+                // Search in all data arrays
+                const itemData = (allCameras && allCameras.find(c => c.id === item.id)) ||
+                               (allAccessories && allAccessories.find(a => a.id === item.id)) ||
+                               (allLenses && allLenses.find(l => l.id === item.id));
                 if (itemData) {
                     const name = itemData.model || itemData.name || 'Unknown';
                     const brand = itemData.brand || itemData.manufacturer || '';
                     return `${brand} ${name}`.trim();
                 }
-                return 'Unknown';
-            }).filter(name => name !== 'Unknown');
-            preview = previewItems.join(', ');
+                return null;
+            }).filter(name => name !== null && name !== '');
+            preview = previewItems.length > 0 ? previewItems.join(', ') : 'Loading preview...';
         } else {
             preview = template.items.slice(0, 3).map(item => {
                 const name = item.model || item.name || 'Unknown';
