@@ -1,18 +1,18 @@
 {
   "camera_images": {
-    "C-ARRI-A35": "https://www.bhphotovideo.com/images/images2500x2500/arri_k0_0041844_alexa_35_production_camera_1671461.jpg",
-    "C-ARRI-MLF": "https://www.bhphotovideo.com/images/images2500x2500/arri_k0_0023163_alexa_mini_lf_production_1474054.jpg",
-    "C-ARRI-LF": "https://www.bhphotovideo.com/images/images2500x2500/arri_k0_0015701_alexa_lf_large_format_1437095.jpg",
-    "C-ARRI-MINI": "https://www.bhphotovideo.com/images/images2500x2500/arri_k0_0013136_alexa_mini_body_only_1242602.jpg",
-    "C-ARRI-SXT": "https://www.bhphotovideo.com/images/images2500x2500/arri_k0_0009535_alexa_sxt_w_body_only_1161050.jpg",
-    "C-ARRI-65": "https://www.bhphotovideo.com/images/images2500x2500/arri_k0_0010515_alexa_65_camera_basic_1161064.jpg",
-    "C-ARRI-AMIRA": "https://www.bhphotovideo.com/images/images2500x2500/arri_k0_0007322_amira_premium_camera_set_1048965.jpg",
-    "C-PANA-DXL2": "https://www.bhphotovideo.com/images/images2500x2500/panavision_dxl2_millennium_dxl2_8k_1432846.jpg",
-    "C-SONY-VENICE": "https://www.bhphotovideo.com/images/images2500x2500/sony_cinealta_venice_6k_full_frame_1368801.jpg",
-    "C-SONY-VENICE2": "https://www.bhphotovideo.com/images/images2500x2500/sony_cinealta_venice_2_8_6k_1633656.jpg",
-    "C-SONY-FX9": "https://www.bhphotovideo.com/images/images2500x2500/sony_pxw_fx9_xdcamtm_6k_full_frame_1488466.jpg",
-    "C-SONY-FS7": "https://www.bhphotovideo.com/images/images2500x2500/sony_pxw_fs7m2_pxw_fs7_mark_ii_xdcam_1297034.jpg",
-    "C-SONY-FX6": "https://www.bhphotovideo.com/images/images2500x2500/sony_ilme_fx6_fx6_full_frame_cinema_1599158.jpg"
+    "C-ARRI-A35": "https://www.bhphotovideo.com/cdn-cgi/image/fit=scale-down,width=500,quality=95/https://www.bhphotovideo.com/images/images500x500/arri_k0_0042900_alexa_35_body_1654048563_1708577.jpg",
+    "C-ARRI-MLF": "https://www.bhphotovideo.com/cdn-cgi/image/fit=scale-down,width=500,quality=95/https://www.bhphotovideo.com/images/images500x500/arri_k0_0024310_alexa_mini_lf_and_1553752231_1470347.jpg",
+    "C-ARRI-LF": "https://www.bhphotovideo.com/cdn-cgi/image/fit=scale-down,width=500,quality=95/https://www.bhphotovideo.com/images/images500x500/arri_k0_0019228_alexa_lf_basic_camera_1518025004_1389652.jpg",
+    "C-ARRI-MINI": "https://www.bhphotovideo.com/cdn-cgi/image/fit=scale-down,width=500,quality=95/https://www.bhphotovideo.com/images/images500x500/arri_k0_0024310_alexa_mini_lf_and_1553752231_1470347.jpg",
+    "C-ARRI-SXT": "https://static.bhphoto.com/images/multiple_images/images500x500/1487330106_IMG_754666.jpg",
+    "C-ARRI-65": "https://static.bhphoto.com/images/multiple_images/images500x500/1487330106_IMG_754662.jpg",
+    "C-ARRI-AMIRA": "https://static.bhphoto.com/images/images500x500/1513877808_1346962.jpg",
+    "C-PANA-DXL2": "https://www.panavision.com/images/default-source/product-images/camera-optics/cameras/dxl2_millennium-dxl2/pv_cameras_digital_panavision_millennium-dxl2_01-png.png?sfvrsn=e1574ff8_0",
+    "C-SONY-VENICE": "https://static.bhphoto.com/images/multiple_images/images500x500/1636969594_IMG_1641937.jpg",
+    "C-SONY-VENICE2": "https://static.bhphoto.com/images/multiple_images/images500x500/1636969594_IMG_1641926.jpg",
+    "C-SONY-FX9": "https://static.bhphoto.com/images/images500x500/1568372784_1506006.jpg",
+    "C-SONY-FS7": "https://www.adorama.com/images/XLarge/1965034_8.jpg",
+    "C-SONY-FX6": "https://static.bhphoto.com/images/multiple_images/images500x500/1605606366_IMG_1446549.jpg"
   },
   "fallback_image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23f5f5f5' width='400' height='300'/%3E%3Ctext fill='%23999' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3ECamera Image%3C/text%3E%3C/svg%3E"
 }

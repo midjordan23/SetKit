@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .test-image { margin: 20px 0; padding: 20px; border: 1px solid #ddd; }
+        img { max-width: 400px; border: 1px solid #ccc; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Camera Image URL Test</h1>
+
+    <div class="test-image">
+        <h3>B&H - ARRI ALEXA 35</h3>
+        <img src="https://www.bhphotovideo.com/images/images2500x2500/arri_k0_0041844_alexa_35_production_camera_1671461.jpg"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>❌ Failed to load</span>'"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✅ Loaded successfully!</span>'">
+        <p></p>
+    </div>
+
+    <div class="test-image">
+        <h3>B&H - ARRI ALEXA Mini LF</h3>
+        <img src="https://www.bhphotovideo.com/images/images2500x2500/arri_k0_0023163_alexa_mini_lf_production_1474054.jpg"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>❌ Failed to load</span>'"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✅ Loaded successfully!</span>'">
+        <p></p>
+    </div>
+
+    <div class="test-image">
+        <h3>B&H - Sony FX6</h3>
+        <img src="https://www.bhphotovideo.com/images/images2500x2500/sony_ilme_fx6_fx6_full_frame_cinema_1599158.jpg"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>❌ Failed to load</span>'"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✅ Loaded successfully!</span>'">
+        <p></p>
+    </div>
+
+    <div class="test-image">
+        <h3>B&H - RED KOMODO</h3>
+        <img src="https://www.bhphotovideo.com/images/images2500x2500/red_digital_cinema_710_0334_komodo_6k_s35_digital_1564735.jpg"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>❌ Failed to load</span>'"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✅ Loaded successfully!</span>'">
+        <p></p>
+    </div>
+
+    <div class="test-image">
+        <h3>Adorama - Canon C70</h3>
+        <img src="https://www.adorama.com/images/Large/cac70b.jpg"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>❌ Failed to load</span>'"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✅ Loaded successfully!</span>'">
+        <p></p>
+    </div>
+
+    <div class="test-image">
+        <h3>Adorama - BMD Pocket 6K</h3>
+        <img src="https://www.adorama.com/images/Large/bmpcc6kp.jpg"
+             onerror="this.nextElementSibling.innerHTML='<span class=error>❌ Failed to load</span>'"
+             onload="this.nextElementSibling.innerHTML='<span class=success>✅ Loaded successfully!</span>'">
+        <p></p>
+    </div>
+
+    <h2>Instructions:</h2>
+    <p>Open this file in your browser and check which images load successfully. The ones that work can be used for your site!</p>
+</body>
+</html>
