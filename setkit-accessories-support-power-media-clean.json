@@ -945,5 +945,145 @@
     },
     "compatible_with": "Metal surfaces, camera carts",
     "notes": "Heavy-duty magnetic mounting arm"
+  },
+  {
+    "id": "A-MATTE-ARRI-LMB25",
+    "brand": "ARRI",
+    "model": "LMB 25",
+    "category": "Matte Box",
+    "subtype": "Clip-On Matte Box",
+    "specs": {
+      "filter_stages": "1-stage",
+      "filter_size": "4x5.65\"",
+      "weight": "0.55 lb"
+    },
+    "compatible_with": "Lightweight cinema lenses, 95mm+ front diameter",
+    "notes": "Ultra-lightweight clip-on matte box for handheld work"
+  },
+  {
+    "id": "A-MATTE-ARRI-LMB4X5",
+    "brand": "ARRI",
+    "model": "LMB 4x5",
+    "category": "Matte Box",
+    "subtype": "Clip-On Matte Box",
+    "specs": {
+      "filter_stages": "2-stage",
+      "filter_size": "4x5.65\"",
+      "weight": "1.98 lb"
+    },
+    "compatible_with": "15mm rods, 110mm+ front diameter",
+    "notes": "Compact 2-stage clip-on matte box with rotating stages"
+  },
+  {
+    "id": "A-MATTE-ARRI-LMB6X6",
+    "brand": "ARRI",
+    "model": "LMB 6x6",
+    "category": "Matte Box",
+    "subtype": "Studio Matte Box",
+    "specs": {
+      "filter_stages": "3-stage",
+      "filter_size": "6.6x6.6\"",
+      "weight": "7.7 lb"
+    },
+    "compatible_with": "15mm/19mm rods, wide-angle lenses",
+    "notes": "Professional 3-stage matte box for large format"
+  },
+  {
+    "id": "A-MATTE-TANGERINE",
+    "brand": "Bright Tangerine",
+    "model": "Misfit Atom",
+    "category": "Matte Box",
+    "subtype": "Clip-On Matte Box",
+    "specs": {
+      "filter_stages": "2-stage",
+      "filter_size": "4x5.65\"",
+      "weight": "1.43 lb"
+    },
+    "compatible_with": "15mm/19mm rods, 95mm+ front diameter",
+    "notes": "Lightweight carbon fiber matte box with quick release"
+  },
+  {
+    "id": "A-MATTE-TANGERINE-STRUMMER",
+    "brand": "Bright Tangerine",
+    "model": "Strummer DNA",
+    "category": "Matte Box",
+    "subtype": "Studio Matte Box",
+    "specs": {
+      "filter_stages": "3-stage",
+      "filter_size": "6.6x6.6\" / 4x5.65\"",
+      "weight": "5.95 lb"
+    },
+    "compatible_with": "15mm/19mm rods, all cinema lenses",
+    "notes": "Modular matte box with interchangeable frames"
+  },
+  {
+    "id": "A-MATTE-TILTA-MIRAGE",
+    "brand": "Tilta",
+    "model": "Mirage Matte Box",
+    "category": "Matte Box",
+    "subtype": "Clip-On Matte Box",
+    "specs": {
+      "filter_stages": "2-stage",
+      "filter_size": "4x5.65\"",
+      "weight": "2.2 lb"
+    },
+    "compatible_with": "15mm rods, 114mm-142mm clamp adapter",
+    "notes": "Versatile matte box with carbon fiber construction"
+  },
+  {
+    "id": "A-MATTE-TILTA-MB-T12",
+    "brand": "Tilta",
+    "model": "MB-T12 Clamp-On",
+    "category": "Matte Box",
+    "subtype": "Clip-On Matte Box",
+    "specs": {
+      "filter_stages": "2-stage",
+      "filter_size": "4x5.65\"",
+      "weight": "1.76 lb"
+    },
+    "compatible_with": "15mm rods, 80mm-114mm diameter lenses",
+    "notes": "Budget-friendly clip-on matte box for indie productions"
+  },
+  {
+    "id": "A-MATTE-CHROSZIEL-456",
+    "brand": "Chrosziel",
+    "model": "456-02 MatteBox",
+    "category": "Matte Box",
+    "subtype": "Studio Matte Box",
+    "specs": {
+      "filter_stages": "2-stage rotating + 1 fixed",
+      "filter_size": "4x5.65\"",
+      "weight": "3.97 lb"
+    },
+    "compatible_with": "15mm/19mm rods, professional cinema lenses",
+    "notes": "German-engineered precision matte box"
+  },
+  {
+    "id": "A-MATTE-WOODEN-ZIP",
+    "brand": "Wooden Camera",
+    "model": "Zip Box Pro 4x5.65",
+    "category": "Matte Box",
+    "subtype": "Clip-On Matte Box",
+    "specs": {
+      "filter_stages": "2-stage",
+      "filter_size": "4x5.65\"",
+      "weight": "1.5 lb"
+    },
+    "compatible_with": "15mm rods, 95mm-114mm clamp",
+    "notes": "Lightweight swing-away design for quick lens changes"
+  },
+  {
+    "id": "A-MATTE-VOCAS-MB435",
+    "brand": "Vocas",
+    "model": "MB-435 Matte Box",
+    "category": "Matte Box",
+    "subtype": "Studio Matte Box",
+    "specs": {
+      "filter_stages": "3-stage",
+      "filter_size": "4x5.65\"",
+      "weight": "4.4 lb"
+    },
+    "compatible_with": "15mm/19mm rods, wide range of lenses",
+    "notes": "Modular design with flexible configuration options"
   }
 ]
