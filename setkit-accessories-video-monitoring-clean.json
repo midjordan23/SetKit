@@ -3,7 +3,7 @@
     "id": "A-WIRELESS-TERADEK-BOLT6-LT",
     "brand": "Teradek",
     "model": "Bolt 6 LT 750",
-    "category": "wireless_video",
+    "category": "Wireless Video",
     "subtype": "TX/RX kit",
     "specs": {
       "range": "750 ft",
@@ -19,7 +19,7 @@
     "id": "A-WIRELESS-TERADEK-BOLT4K",
     "brand": "Teradek",
     "model": "Bolt 4K MAX",
-    "category": "wireless_video",
+    "category": "Wireless Video",
     "subtype": "TX/RX kit",
     "specs": {
       "range": "5000 ft",
@@ -35,7 +35,7 @@
     "id": "A-WIRELESS-PARALINX-ARROW",
     "brand": "Paralinx",
     "model": "Arrow-X",
-    "category": "wireless_video",
+    "category": "Wireless Video",
     "subtype": "TX/RX kit",
     "specs": {
       "range": "2500 ft",
@@ -51,7 +51,7 @@
     "id": "A-WIRELESS-VAXIS-STORM",
     "brand": "Vaxis",
     "model": "Storm 072 Pro",
-    "category": "wireless_video",
+    "category": "Wireless Video",
     "subtype": "TX/RX kit",
     "specs": {
       "range": "750 ft",
@@ -67,7 +67,7 @@
     "id": "A-WIRELESS-HOLLYLAND-MARS",
     "brand": "Hollyland",
     "model": "Mars 4K",
-    "category": "wireless_video",
+    "category": "Wireless Video",
     "subtype": "TX/RX kit",
     "specs": {
       "range": "450 ft",
@@ -83,7 +83,7 @@
     "id": "A-WIRELESS-ACCSOON-SEEMO",
     "brand": "Accsoon",
     "model": "SeeMo Pro",
-    "category": "wireless_video",
+    "category": "Wireless Video",
     "subtype": "TX/RX kit",
     "specs": {
       "range": "1000 ft",
@@ -99,7 +99,7 @@
     "id": "A-WIRELESS-ATOMOS-CONNECT",
     "brand": "Atomos",
     "model": "AtomX CAST",
-    "category": "wireless_video",
+    "category": "Wireless Video",
     "subtype": "Streaming module",
     "specs": {
       "range": "WiFi/4G/5G",
@@ -115,7 +115,7 @@
     "id": "A-MONITOR-SMALLHD-703",
     "brand": "SmallHD",
     "model": "703 Bolt",
-    "category": "monitor",
+    "category": "Monitor",
     "subtype": "on-camera",
     "specs": {
       "size": "7\"",
@@ -131,7 +131,7 @@
     "id": "A-MONITOR-SMALLHD-CINE13",
     "brand": "SmallHD",
     "model": "Cine 13",
-    "category": "monitor",
+    "category": "Monitor",
     "subtype": "field",
     "specs": {
       "size": "13\"",
@@ -147,7 +147,7 @@
     "id": "A-MONITOR-SMALLHD-CINE24",
     "brand": "SmallHD",
     "model": "Cine 24",
-    "category": "monitor",
+    "category": "Monitor",
     "subtype": "production",
     "specs": {
       "size": "24\"",
@@ -163,7 +163,7 @@
     "id": "A-MONITOR-ATOMOS-NINJA-V",
     "brand": "Atomos",
     "model": "Ninja V",
-    "category": "monitor",
+    "category": "Monitor",
     "subtype": "recorder",
     "specs": {
       "size": "5\"",
@@ -179,7 +179,7 @@
     "id": "A-MONITOR-ATOMOS-SHOGUN-7",
     "brand": "Atomos",
     "model": "Shogun 7",
-    "category": "monitor",
+    "category": "Monitor",
     "subtype": "recorder",
     "specs": {
       "size": "7\"",
@@ -195,7 +195,7 @@
     "id": "A-MONITOR-FSI-DM240",
     "brand": "Flanders Scientific",
     "model": "DM240",
-    "category": "monitor",
+    "category": "Monitor",
     "subtype": "reference",
     "specs": {
       "size": "24\"",
@@ -211,7 +211,7 @@
     "id": "A-MONITOR-TVLOGIC-LVM",
     "brand": "TV Logic",
     "model": "LVM-173W",
-    "category": "monitor",
+    "category": "Monitor",
     "subtype": "field",
     "specs": {
       "size": "17\"",
@@ -227,7 +227,7 @@
     "id": "A-MONITOR-PORTKEYS-BM5",
     "brand": "Portkeys",
     "model": "BM5 III WR",
-    "category": "monitor",
+    "category": "Monitor",
     "subtype": "on-camera",
     "specs": {
       "size": "5.5\"",
@@ -243,7 +243,7 @@
     "id": "A-MONITOR-FEELWORLD-LUT7S",
     "brand": "Feelworld",
     "model": "LUT7S Pro",
-    "category": "monitor",
+    "category": "Monitor",
     "subtype": "on-camera",
     "specs": {
       "size": "7\"",
@@ -259,7 +259,7 @@
     "id": "A-FF-PRESTON-FIZ4",
     "brand": "Preston",
     "model": "FIZ 4 + MDR-4",
-    "category": "follow_focus",
+    "category": "Follow Focus",
     "subtype": "wireless",
     "specs": {
       "control": "Focus/Iris/Zoom",
@@ -274,7 +274,7 @@
     "id": "A-FF-ARRI-HI5",
     "brand": "ARRI",
     "model": "Hi-5 + Cforce Mini",
-    "category": "follow_focus",
+    "category": "Follow Focus",
     "subtype": "wireless",
     "specs": {
       "control": "Focus/Iris/Zoom",
@@ -289,7 +289,7 @@
     "id": "A-FF-TILTA-NUCLEUS-M",
     "brand": "Tilta",
     "model": "Nucleus-M",
-    "category": "follow_focus",
+    "category": "Follow Focus",
     "subtype": "wireless",
     "specs": {
       "control": "Focus/Iris/Zoom",
@@ -304,7 +304,7 @@
     "id": "A-FF-TILTA-NUCLEUS-NANO",
     "brand": "Tilta",
     "model": "Nucleus Nano",
-    "category": "follow_focus",
+    "category": "Follow Focus",
     "subtype": "wireless",
     "specs": {
       "control": "Focus",
@@ -319,7 +319,7 @@
     "id": "A-FF-DJI-FOCUS-PRO",
     "brand": "DJI",
     "model": "DJI Focus Pro",
-    "category": "follow_focus",
+    "category": "Follow Focus",
     "subtype": "wireless",
     "specs": {
       "control": "Focus/Iris/Zoom",
@@ -334,7 +334,7 @@
     "id": "A-FF-RT-MOTION-LENS-CTRL",
     "brand": "RT Motion",
     "model": "CTRL.3",
-    "category": "follow_focus",
+    "category": "Follow Focus",
     "subtype": "wireless",
     "specs": {
       "control": "Focus/Iris/Zoom",
@@ -349,7 +349,7 @@
     "id": "A-FF-BRIGHT-TANGERINE-REVOLVER",
     "brand": "Bright Tangerine",
     "model": "Revolver Atom",
-    "category": "follow_focus",
+    "category": "Follow Focus",
     "subtype": "mechanical",
     "specs": {
       "control": "Focus",
@@ -364,7 +364,7 @@
     "id": "A-TIMECODE-TENTACLE",
     "brand": "Tentacle",
     "model": "Sync E MkII",
-    "category": "timecode",
+    "category": "Timecode",
     "subtype": "sync box",
     "specs": {
       "battery_life": "35 hrs",
@@ -378,7 +378,7 @@
     "id": "A-TIMECODE-LOCKIT",
     "brand": "Ambient",
     "model": "Lockit ACN-TS1",
-    "category": "timecode",
+    "category": "Timecode",
     "subtype": "sync box",
     "specs": {
       "jamming": "yes",
@@ -392,7 +392,7 @@
     "id": "A-TIMECODE-ATOMOS-UMC",
     "brand": "Atomos",
     "model": "UltraSync ONE",
-    "category": "timecode",
+    "category": "Timecode",
     "subtype": "sync box",
     "specs": {
       "battery_life": "30 hrs",
@@ -406,7 +406,7 @@
     "id": "A-CABLE-SDI-RIGHT90",
     "brand": "Canare",
     "model": "RG59 SDI Cable RA",
-    "category": "cable",
+    "category": "Cable",
     "subtype": "video",
     "specs": {
       "length": "18 in",
@@ -420,7 +420,7 @@
     "id": "A-CABLE-SDI-12G",
     "brand": "Canare",
     "model": "12G-SDI Cable",
-    "category": "cable",
+    "category": "Cable",
     "subtype": "video",
     "specs": {
       "length": "3 ft",
@@ -434,7 +434,7 @@
     "id": "A-CABLE-POWER-DTAP-LEMO",
     "brand": "Anton Bauer",
     "model": "D-Tap to 2-pin Lemo",
-    "category": "cable",
+    "category": "Cable",
     "subtype": "power",
     "specs": {
       "length": "24 in",
@@ -448,7 +448,7 @@
     "id": "A-CABLE-POWER-DTAP-USB-C",
     "brand": "Wooden Camera",
     "model": "D-Tap to USB-C PD",
-    "category": "cable",
+    "category": "Cable",
     "subtype": "power",
     "specs": {
       "length": "18 in",
@@ -462,7 +462,7 @@
     "id": "A-RIG-NOGA-ARM",
     "brand": "Noga",
     "model": "Cine Arm DG",
-    "category": "rigging",
+    "category": "Rigging",
     "subtype": "articulating arm",
     "specs": {
       "length": "10\"",
@@ -476,7 +476,7 @@
     "id": "A-RIG-CLAMP-MAFER",
     "brand": "Matthews",
     "model": "Mafer Clamp",
-    "category": "rigging",
+    "category": "Rigging",
     "subtype": "clamp",
     "specs": {
       "jaw": "2.5 in",
@@ -489,7 +489,7 @@
     "id": "A-RIG-PLATE-CHEESE",
     "brand": "Wooden Camera",
     "model": "Cheese Plate Universal",
-    "category": "rigging",
+    "category": "Rigging",
     "subtype": "mounting plate",
     "specs": {
       "material": "Aluminum",
@@ -502,7 +502,7 @@
     "id": "A-RIG-SMALLRIG-CAGE",
     "brand": "SmallRig",
     "model": "Universal Camera Cage",
-    "category": "rigging",
+    "category": "Rigging",
     "subtype": "camera cage",
     "specs": {
       "material": "Aluminum",
