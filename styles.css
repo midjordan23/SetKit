@@ -1958,4 +1958,24 @@ header h1 {
     .btn-cta-secondary {
         width: 100%;
     }
+
+    /* Modal adjustments for mobile */
+    .template-modal {
+        width: 95%;
+        max-width: none;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .template-modal-body {
+        padding: 16px;
+    }
+
+    .template-modal-header {
+        padding: 16px;
+    }
+
+    .template-modal-footer {
+        padding: 12px 16px 16px;
+    }
 }
