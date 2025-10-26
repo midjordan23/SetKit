@@ -6,6 +6,8 @@ let compatibilityMatrix = [];
 let currentPackage = [];
 let manufacturers = new Set();
 let cameraBrands = new Set();
+let cameraImages = {}; // Camera image URLs
+let fallbackCameraImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23f5f5f5' width='400' height='300'/%3E%3Ctext fill='%23999' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3ECamera Image%3C/text%3E%3C/svg%3E";
 let currentProjectInfo = {
     projectName: '',
     pickupDate: '',
@@ -124,6 +126,14 @@ async function loadAllData() {
 // Load cameras and accessories
 async function loadCamerasAndAccessories() {
     try {
+        // Load camera images
+        const imagesResponse = await fetch('camera-images.json');
+        const imagesData = await imagesResponse.json();
+        cameraImages = imagesData.camera_images || {};
+        if (imagesData.fallback_image) {
+            fallbackCameraImage = imagesData.fallback_image;
+        }
+
         // Load camera data
         const cameraResponse = await fetch('setkit-cameras-data-clean.json');
         const cameraData = await cameraResponse.json();
@@ -2160,8 +2170,12 @@ function displayCameras(cameras) {
     }
 
     container.innerHTML = cameras.map(camera => {
+        const imageUrl = cameraImages[camera.id] || fallbackCameraImage;
         return `
         <div class="lens-card camera-card">
+            <div class="camera-image">
+                <img src="${imageUrl}" alt="${camera.brand} ${camera.model}" onerror="this.src='${fallbackCameraImage}'">
+            </div>
             <div class="lens-card-header">
                 <div class="lens-manufacturer">${camera.brand}</div>
                 <div class="lens-name">${camera.model}</div>

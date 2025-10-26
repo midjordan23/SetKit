@@ -1,0 +1,29 @@
+{
+  "camera_images": {
+    "C-ARRI-A35": "https://www.arri.com/resource/image/267698/16x9/1920/1080/1c/93800d78e2e4ddbf3a16dcadd7adf1f3/dF/alexa-35-body-front.jpg",
+    "C-ARRI-MLF": "https://www.arri.com/resource/image/125074/16x9/1920/1080/a9/97b3c00db8de9d13a4cfb2c087c32ec6/Sh/alexa-mini-lf-body-front.jpg",
+    "C-ARRI-LF": "https://www.arri.com/resource/image/107420/16x9/1920/1080/92/81f1b1e60856f0fb71f87b5caf1b9f5c/nH/alexa-lf-body-front.jpg",
+    "C-ARRI-MINI": "https://www.arri.com/resource/image/63172/16x9/1920/1080/bb/0ce4f0c1c63e6d56e1a70bd37c1a51f3/rC/alexa-mini-body-front.jpg",
+    "C-ARRI-SXT": "https://www.arri.com/resource/image/63090/16x9/1920/1080/43/35c5e34d8bca3e62da9825c7c66ee8e3/qG/alexa-sxt-w-body-front.jpg",
+    "C-ARRI-65": "https://www.arri.com/resource/image/63148/16x9/1920/1080/f5/5e4f0e01c6f8d8e7c3c1e0b7f9c0d2f4/aB/alexa-65-body.jpg",
+    "C-ARRI-AMIRA": "https://www.arri.com/resource/image/63238/16x9/1920/1080/d8/c7d5f0e1c3d4a2b8e9f0c5d6e7f8g9h0/kL/amira-body-front.jpg",
+    "C-RED-V": "https://www.red.com/dsmc2-brain-with-komodo-6k-s35",
+    "C-RED-KOMODO": "https://www.red.com/red-komodo-6k",
+    "C-RED-RAPTOR": "https://www.red.com/raptor-8k-vv",
+    "C-RED-MONSTRO": "https://www.red.com/red-monstro-8k-vv",
+    "C-SONY-VENICE2": "https://pro.sony/s3/cms-static-content/uploadfile/17/1237494268017.jpg",
+    "C-SONY-VENICE": "https://pro.sony/s3/cms-static-content/uploadfile/09/1237494091609.jpg",
+    "C-SONY-FX9": "https://pro.sony/s3/cms-static-content/uploadfile/41/1237493888841.jpg",
+    "C-SONY-FX6": "https://pro.sony/s3/cms-static-content/uploadfile/70/1237494159970.jpg",
+    "C-SONY-FX3": "https://pro.sony/s3/cms-static-content/uploadfile/63/1237494176463.jpg",
+    "C-PANA-VARICAM": "https://na.panasonic.com/us/sites/default/files/styles/product_image/public/product-images/varicam-pure_front_2.png",
+    "C-CANON-C500": "https://www.usa.canon.com/internet/portal/us/home/products/details/cameras/cinema-eos/eos-c500-mark-ii",
+    "C-CANON-C300": "https://www.usa.canon.com/internet/portal/us/home/products/details/cameras/cinema-eos/eos-c300-mark-iii",
+    "C-CANON-C70": "https://www.usa.canon.com/internet/portal/us/home/products/details/cameras/cinema-eos/eos-c70",
+    "C-BMD-URSA12K": "https://images.blackmagicdesign.com/images/products/blackmagicursacine/landing/hero/ursa-mini-pro-12k.png",
+    "C-BMD-URSA46K": "https://images.blackmagicdesign.com/images/products/blackmagicursacine/landing/hero/ursa-mini-pro-46k.png",
+    "C-BMD-POCKET6K": "https://images.blackmagicdesign.com/images/products/blackmagicpocketcinemacamera/landing/hero/6k-pro-front.png",
+    "C-BMD-POCKET4K": "https://images.blackmagicdesign.com/images/products/blackmagicpocketcinemacamera/landing/hero/4k-front.png"
+  },
+  "fallback_image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23f5f5f5' width='400' height='300'/%3E%3Ctext fill='%23999' font-family='Arial' font-size='18' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3ECamera Image%3C/text%3E%3C/svg%3E"
+}
