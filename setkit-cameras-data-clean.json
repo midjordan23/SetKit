@@ -513,6 +513,21 @@
       "power": {"mount": "Internal", "voltage": "3.85V", "typical_draw_w": 5},
       "video_io": ["USB-C", "HDMI Micro"],
       "flags": ["Action Camera"]
+    },
+    {
+      "id": "C-ARRI-416PLUS",
+      "brand": "ARRI",
+      "model": "ARRIFLEX 416 Plus",
+      "type": "film",
+      "native_mount": "PL",
+      "accepted_lens_mounts": [],
+      "sensor_modes": [
+        {"name": "Super 16mm Film", "resolution": "Film", "diagonal_mm": 14.5, "crop_class": "S16"}
+      ],
+      "media_slots": ["400ft Magazine"],
+      "power": {"mount": "Internal Battery", "voltage": "12V", "typical_draw_w": 12},
+      "video_io": [],
+      "flags": ["Film Camera", "16mm"]
     }
   ],
   "adapter_rules": [

@@ -1085,5 +1085,306 @@
     },
     "compatible_with": "15mm/19mm rods, wide range of lenses",
     "notes": "Modular design with flexible configuration options"
+  },
+  {
+    "id": "A-FILTER-ND-SET",
+    "brand": "Tiffen",
+    "model": "ND Filter Set 4x5.65",
+    "category": "Filter",
+    "subtype": "ND Filter",
+    "specs": {
+      "filter_size": "4x5.65\"",
+      "density_range": "0.3 to 2.1 (1-7 stops)",
+      "set_includes": "ND 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1"
+    },
+    "compatible_with": "All cinema matte boxes",
+    "notes": "Professional ND filter set for exposure control"
+  },
+  {
+    "id": "A-FILTER-DIOPTER-SET",
+    "brand": "Tiffen",
+    "model": "Diopter Set 4x5.65",
+    "category": "Filter",
+    "subtype": "Diopter/Close-Up",
+    "specs": {
+      "filter_size": "4x5.65\"",
+      "set_includes": "+½, +1, +2, +3 diopters"
+    },
+    "compatible_with": "All cinema matte boxes",
+    "notes": "Close-up diopter set for macro work"
+  },
+  {
+    "id": "A-FILTER-POLARIZER",
+    "brand": "Tiffen",
+    "model": "Rotating Polarizer 4x5.65",
+    "category": "Filter",
+    "subtype": "Polarizer",
+    "specs": {
+      "filter_size": "4x5.65\"",
+      "type": "Rotating Linear Polarizer"
+    },
+    "compatible_with": "All cinema matte boxes",
+    "notes": "Reduces reflections and enhances skies"
+  },
+  {
+    "id": "A-FILTER-ULTRA-CONTRAST",
+    "brand": "Tiffen",
+    "model": "Ultra Contrast Filter Set",
+    "category": "Filter",
+    "subtype": "Diffusion/Effects",
+    "specs": {
+      "filter_size": "4x5.65\"",
+      "set_includes": "⅛, ¼, ½, 1, 2"
+    },
+    "compatible_with": "All cinema matte boxes",
+    "notes": "Reduces contrast while maintaining sharpness"
+  },
+  {
+    "id": "A-FILTER-BLACK-MAGIC",
+    "brand": "Tiffen",
+    "model": "Hollywood Black Magic",
+    "category": "Filter",
+    "subtype": "Diffusion/Effects",
+    "specs": {
+      "filter_size": "4x5.65\"",
+      "strengths": "⅛, ¼, ½, 1, 2"
+    },
+    "compatible_with": "All cinema matte boxes",
+    "notes": "Softens highlights, enhances skin tones"
+  },
+  {
+    "id": "A-FILTER-85",
+    "brand": "Tiffen",
+    "model": "85 Color Conversion Filter",
+    "category": "Filter",
+    "subtype": "Color Correction",
+    "specs": {
+      "filter_size": "4x5.65\"",
+      "conversion": "Daylight to Tungsten (3200K)"
+    },
+    "compatible_with": "All cinema matte boxes",
+    "notes": "Converts daylight balanced film/sensor to tungsten"
+  },
+  {
+    "id": "A-FILTER-80A",
+    "brand": "Tiffen",
+    "model": "80A Color Conversion Filter",
+    "category": "Filter",
+    "subtype": "Color Correction",
+    "specs": {
+      "filter_size": "4x5.65\"",
+      "conversion": "Tungsten to Daylight (5500K)"
+    },
+    "compatible_with": "All cinema matte boxes",
+    "notes": "Converts tungsten balanced film/sensor to daylight"
+  },
+  {
+    "id": "A-FILTER-OPTICAL-FLAT",
+    "brand": "Schneider",
+    "model": "Optical Flat 4x5.65",
+    "category": "Filter",
+    "subtype": "Optical Flat",
+    "specs": {
+      "filter_size": "4x5.65\"",
+      "type": "Clear optical glass"
+    },
+    "compatible_with": "All cinema matte boxes",
+    "notes": "Protects front element without affecting image"
+  },
+  {
+    "id": "A-FOCUS-WCU4",
+    "brand": "ARRI",
+    "model": "WCU-4 Wireless Compact Unit",
+    "category": "Follow Focus",
+    "subtype": "Wireless Focus Control",
+    "specs": {
+      "channels": "3-axis control",
+      "range": "Up to 300m",
+      "battery": "BP-U30/60"
+    },
+    "compatible_with": "ARRI cameras, CFORCE motors",
+    "notes": "Professional wireless follow focus with handgrip"
+  },
+  {
+    "id": "A-MOTOR-CFORCE-MINI",
+    "brand": "ARRI",
+    "model": "CFORCE Mini Motor",
+    "category": "Follow Focus",
+    "subtype": "Lens Motor",
+    "specs": {
+      "torque": "0.4 Nm",
+      "weight": "0.66 lb",
+      "power": "11-17V"
+    },
+    "compatible_with": "WCU-4, Hi-5, AMC-1",
+    "notes": "Compact lens motor for focus/iris/zoom"
+  },
+  {
+    "id": "A-POWER-DTAP-SPLITTER",
+    "brand": "Wooden Camera",
+    "model": "D-Tap Splitter 1-to-4",
+    "category": "Power",
+    "subtype": "Power Distribution",
+    "specs": {
+      "inputs": "1x D-Tap",
+      "outputs": "4x D-Tap",
+      "fused": "Yes"
+    },
+    "compatible_with": "All V-mount/Gold-mount batteries",
+    "notes": "Distribute power from one battery to multiple devices"
+  },
+  {
+    "id": "A-POWER-DTAP-ANGLE",
+    "brand": "Wooden Camera",
+    "model": "D-Tap Right-Angle Cable",
+    "category": "Power",
+    "subtype": "Power Cable",
+    "specs": {
+      "length": "18 inches",
+      "connectors": "D-Tap to D-Tap 90°"
+    },
+    "compatible_with": "All D-Tap devices",
+    "notes": "Right-angle D-Tap power cable for tight spaces"
+  },
+  {
+    "id": "A-FILM-CHANGING-TENT",
+    "brand": "Harrison",
+    "model": "Film Changing Tent",
+    "category": "Film Equipment",
+    "subtype": "Changing Tent",
+    "specs": {
+      "size": "27\" x 27\" x 10\"",
+      "material": "Light-tight nylon",
+      "sleeves": "2 zippered sleeves"
+    },
+    "compatible_with": "All film cameras",
+    "notes": "Light-tight tent for loading/unloading film magazines"
+  },
+  {
+    "id": "A-SUPPORT-SPIDER-GRIP",
+    "brand": "VCT",
+    "model": "Spider Grip Plate",
+    "category": "Support",
+    "subtype": "Camera Plate",
+    "specs": {
+      "mount": "Universal quick release",
+      "material": "Aluminum"
+    },
+    "compatible_with": "All cameras with tripod mount",
+    "notes": "Quick-release camera mounting plate"
+  },
+  {
+    "id": "A-SUPPORT-HI-HAT",
+    "brand": "Matthews",
+    "model": "Hi-Hat Low Profile Mount",
+    "category": "Support",
+    "subtype": "Tripod Mount",
+    "specs": {
+      "bowl": "100mm or 150mm",
+      "height": "Approx 6 inches",
+      "payload": "50+ lb"
+    },
+    "compatible_with": "All fluid heads",
+    "notes": "Ultra-low camera position mount"
+  },
+  {
+    "id": "A-SUPPORT-CAMERA-CART",
+    "brand": "Inovativ",
+    "model": "Voyager 42 NXT Camera Cart",
+    "category": "Support",
+    "subtype": "Camera Cart",
+    "specs": {
+      "work_surface": "42\" x 24\"",
+      "weight_capacity": "400 lb",
+      "wheels": "8-inch pneumatic"
+    },
+    "compatible_with": "All cameras and equipment",
+    "notes": "Professional camera cart with adjustable shelves"
+  },
+  {
+    "id": "A-WIRELESS-TERADEK-3000",
+    "brand": "Teradek",
+    "model": "Bolt 3000 1:4",
+    "category": "Wireless Video",
+    "subtype": "Wireless TX/RX",
+    "specs": {
+      "range": "Up to 3000 ft",
+      "latency": "< 1ms",
+      "receivers": "4 included"
+    },
+    "compatible_with": "All SDI cameras",
+    "notes": "Zero-delay wireless video transmission"
+  },
+  {
+    "id": "A-MONITOR-SMALLHD-703",
+    "brand": "SmallHD",
+    "model": "703 Bolt",
+    "category": "Monitor",
+    "subtype": "On-Camera Monitor",
+    "specs": {
+      "screen_size": "7 inches",
+      "resolution": "1920x1200",
+      "brightness": "2200 nits",
+      "wireless": "Teradek Bolt built-in"
+    },
+    "compatible_with": "All cameras, Teradek receivers",
+    "notes": "Bright HDR monitor with built-in wireless"
+  },
+  {
+    "id": "A-MONITOR-SMALLHD-13",
+    "brand": "SmallHD",
+    "model": "1303 HDR Production Monitor",
+    "category": "Monitor",
+    "subtype": "Production Monitor",
+    "specs": {
+      "screen_size": "13.3 inches",
+      "resolution": "1920x1080",
+      "brightness": "2500 nits"
+    },
+    "compatible_with": "All SDI/HDMI sources",
+    "notes": "Large HDR monitor for focus pulling"
+  },
+  {
+    "id": "A-MONITOR-PANASONIC-17",
+    "brand": "Panasonic",
+    "model": "BT-LH1710 17-inch Monitor",
+    "category": "Monitor",
+    "subtype": "Production Monitor",
+    "specs": {
+      "screen_size": "17.1 inches",
+      "resolution": "1280x1024",
+      "inputs": "SDI, HDMI, Component"
+    },
+    "compatible_with": "All video sources",
+    "notes": "Professional broadcast monitor"
+  },
+  {
+    "id": "A-BATTERY-GOLD-MOUNT",
+    "brand": "Anton Bauer",
+    "model": "Digital 90 Gold Mount Battery",
+    "category": "Power",
+    "subtype": "Battery",
+    "specs": {
+      "capacity": "90Wh",
+      "chemistry": "Lithium-Ion",
+      "mount": "Gold Mount",
+      "d_tap": "2x D-Tap outputs"
+    },
+    "compatible_with": "All Gold Mount cameras/devices",
+    "notes": "High-capacity Gold Mount battery with dual D-Tap"
+  },
+  {
+    "id": "A-COMMS-EARTEC",
+    "brand": "Eartec",
+    "model": "UltraLITE HD Headset",
+    "category": "Communication",
+    "subtype": "Wireless Comms",
+    "specs": {
+      "range": "Up to 1800 ft",
+      "battery": "6+ hours",
+      "channels": "Full-duplex"
+    },
+    "compatible_with": "Eartec HUB base station",
+    "notes": "Wireless communication headset for crew"
   }
 ]
