@@ -1471,6 +1471,40 @@ function loadTemplates() {
     displayTemplates();
 }
 
+// Default templates (permanent, can't be deleted)
+const defaultTemplates = [
+    {
+        id: 'default-sam-16mm',
+        name: "Sam's 16mm Film Package",
+        category: 'single-cam',
+        itemCount: 20,
+        isDefault: true,
+        createdAt: new Date('2025-01-01').getTime(),
+        items: [
+            { id: 'C-ARRI-416PLUS', itemType: 'camera' },
+            { id: 'A-FILTER-ND-SET', itemType: 'accessory' },
+            { id: 'A-FILTER-DIOPTERS', itemType: 'accessory' },
+            { id: 'A-FILTER-POLARIZER', itemType: 'accessory' },
+            { id: 'A-FILTER-ULTRA-CONTRAST', itemType: 'accessory' },
+            { id: 'A-FILTER-BLACK-MAGIC', itemType: 'accessory' },
+            { id: 'A-FILTER-85-80A', itemType: 'accessory' },
+            { id: 'A-FILTER-OPTICAL-FLAT', itemType: 'accessory' },
+            { id: 'A-FOLLOWFOCUS-ARRI-WCU4', itemType: 'accessory' },
+            { id: 'A-FOLLOWFOCUS-ARRI-CFORCE-MINI', itemType: 'accessory' },
+            { id: 'A-FILM-CHANGING-TENT', itemType: 'accessory' },
+            { id: 'A-MONITOR-SMALLHD-703', itemType: 'accessory' },
+            { id: 'A-MONITOR-SMALLHD-1303', itemType: 'accessory' },
+            { id: 'A-MONITOR-PANASONIC-17', itemType: 'accessory' },
+            { id: 'A-WIRELESS-TERADEK-BOLT3000', itemType: 'accessory' },
+            { id: 'A-SUPPORT-SPIDER-GRIP', itemType: 'accessory' },
+            { id: 'A-SUPPORT-HI-HAT', itemType: 'accessory' },
+            { id: 'A-SUPPORT-CART', itemType: 'accessory' },
+            { id: 'A-POWER-GOLD-MOUNT', itemType: 'accessory' },
+            { id: 'A-COMM-EARTEC', itemType: 'accessory' }
+        ]
+    }
+];
+
 // Display all templates
 let currentTemplateFilter = 'all';
 
@@ -1478,7 +1512,10 @@ function displayTemplates(filter = currentTemplateFilter) {
     const container = document.getElementById('templatesGrid');
     if (!container) return;
 
-    const templates = JSON.parse(localStorage.getItem('equipmentTemplates') || '[]');
+    const userTemplates = JSON.parse(localStorage.getItem('equipmentTemplates') || '[]');
+
+    // Combine default and user templates
+    const templates = [...defaultTemplates, ...userTemplates];
 
     if (templates.length === 0) {
         container.innerHTML = '<div class="empty-state">No templates saved yet. Go to "Your List" and save your current package as a template.</div>';
@@ -1514,20 +1551,41 @@ function displayTemplates(filter = currentTemplateFilter) {
         };
 
         // Get preview of first 3 items
-        const preview = template.items.slice(0, 3).map(item => {
-            const name = item.model || item.name || 'Unknown';
-            const brand = item.brand || item.manufacturer || '';
-            return `${brand} ${name}`.trim();
-        }).join(', ');
+        let preview = '';
+        if (template.isDefault) {
+            // For default templates, get actual item data
+            const previewItems = template.items.slice(0, 3).map(item => {
+                const itemData = allCameras.find(c => c.id === item.id) ||
+                               allAccessories.find(a => a.id === item.id);
+                if (itemData) {
+                    const name = itemData.model || itemData.name || 'Unknown';
+                    const brand = itemData.brand || itemData.manufacturer || '';
+                    return `${brand} ${name}`.trim();
+                }
+                return 'Unknown';
+            }).filter(name => name !== 'Unknown');
+            preview = previewItems.join(', ');
+        } else {
+            preview = template.items.slice(0, 3).map(item => {
+                const name = item.model || item.name || 'Unknown';
+                const brand = item.brand || item.manufacturer || '';
+                return `${brand} ${name}`.trim();
+            }).join(', ');
+        }
 
         const moreItems = template.items.length > 3 ? ` +${template.items.length - 3} more` : '';
 
+        // Show delete button only for user templates
+        const deleteButton = template.isDefault
+            ? ''
+            : `<button class="btn-delete-template" onclick="deleteTemplate('${template.id}')">Delete</button>`;
+
         return `
-            <div class="template-card" data-category="${category}">
+            <div class="template-card ${template.isDefault ? 'default-template' : ''}" data-category="${category}">
                 <div class="template-card-header">
-                    <div class="template-name">${template.name}</div>
+                    <div class="template-name">${template.name}${template.isDefault ? ' <span style="color: #8b5cf6; font-size: 12px;">★</span>' : ''}</div>
                     <div class="template-category-badge ${category}">${categoryLabels[category]}</div>
-                    <div class="template-date">Created ${formattedDate}</div>
+                    <div class="template-date">${template.isDefault ? 'Built-in Template' : 'Created ' + formattedDate}</div>
                 </div>
                 <div class="template-items">
                     <div class="template-item-count">${template.itemCount} items</div>
@@ -1535,7 +1593,7 @@ function displayTemplates(filter = currentTemplateFilter) {
                 </div>
                 <div class="template-actions">
                     <button class="btn-load-template" onclick="loadTemplate('${template.id}')">Load Template</button>
-                    <button class="btn-delete-template" onclick="deleteTemplate('${template.id}')">Delete</button>
+                    ${deleteButton}
                 </div>
             </div>
         `;
@@ -1544,8 +1602,9 @@ function displayTemplates(filter = currentTemplateFilter) {
 
 // Load a template into current package
 function loadTemplate(templateId) {
-    const templates = JSON.parse(localStorage.getItem('equipmentTemplates') || '[]');
-    const template = templates.find(t => t.id === templateId);
+    const userTemplates = JSON.parse(localStorage.getItem('equipmentTemplates') || '[]');
+    const allTemplates = [...defaultTemplates, ...userTemplates];
+    const template = allTemplates.find(t => t.id === templateId);
 
     if (!template) {
         alert('Template not found.');
@@ -1559,7 +1618,25 @@ function loadTemplate(templateId) {
     }
 
     // Load template items into current package
-    currentPackage = JSON.parse(JSON.stringify(template.items)); // Deep copy
+    if (template.isDefault) {
+        // For default templates, look up the actual item data
+        currentPackage = template.items.map(templateItem => {
+            const itemData = allCameras.find(c => c.id === templateItem.id) ||
+                           allAccessories.find(a => a.id === templateItem.id);
+
+            if (itemData) {
+                return {
+                    ...itemData,
+                    itemType: templateItem.itemType,
+                    quantity: 1,
+                    addedAt: Date.now()
+                };
+            }
+            return null;
+        }).filter(item => item !== null);
+    } else {
+        currentPackage = JSON.parse(JSON.stringify(template.items)); // Deep copy
+    }
 
     // Load project info if it exists
     if (template.projectInfo) {
@@ -1600,6 +1677,12 @@ function loadTemplate(templateId) {
 
 // Delete a template
 function deleteTemplate(templateId) {
+    // Check if it's a default template
+    if (defaultTemplates.find(t => t.id === templateId)) {
+        alert('Built-in templates cannot be deleted.');
+        return;
+    }
+
     const templates = JSON.parse(localStorage.getItem('equipmentTemplates') || '[]');
     const template = templates.find(t => t.id === templateId);
 

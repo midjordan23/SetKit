@@ -18,7 +18,9 @@
             <div class="nav">
                 <!-- <div class="nav-item active" data-tab="home">Home</div>
                 <div class="nav-separator"></div> -->
-                <div class="nav-item active" data-tab="cameras">Cameras</div>
+                <div class="nav-item active" data-tab="templates">Templates</div>
+                <div class="nav-separator"></div>
+                <div class="nav-item" data-tab="cameras">Cameras</div>
                 <div class="nav-item" data-tab="search">Lenses</div>
                 <div class="nav-item" data-tab="accessories">Accessories</div>
                 <div class="nav-separator"></div>
@@ -29,7 +31,6 @@
                     Your List
                     <span class="package-badge" id="packageBadge" style="display: none;" onclick="openMiniCart(event)">0</span>
                 </div>
-                <div class="nav-item" data-tab="templates">Templates</div>
             </div>
         </div>
 
@@ -38,7 +39,7 @@
             <!-- HEADER -->
             <header>
                 <div class="header-content">
-                    <h1>Cameras</h1>
+                    <h1>Templates</h1>
                     <div class="global-search">
                         <div class="search-input-wrapper">
                             <input type="text" id="globalSearch" placeholder="Search cameras, lenses, accessories..." onkeyup="handleGlobalSearch(event)" onfocus="showSearchDropdown()" onblur="hideSearchDropdown()">
@@ -312,7 +313,7 @@
             </section>
 
             <!-- Templates Tab -->
-            <section id="templates" class="tab-content">
+            <section id="templates" class="tab-content active">
                 <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 24px;">Templates</h2>
                 <div class="templates-section">
                     <div class="templates-header">
@@ -393,7 +394,7 @@
             </section>
 
             <!-- Cameras Tab -->
-            <section id="cameras" class="tab-content active">
+            <section id="cameras" class="tab-content">
                 <div class="filters">
                     <h2>Find Cameras</h2>
                     <div class="filter-grid">
