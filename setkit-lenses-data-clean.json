@@ -1,0 +1,112 @@
+{
+  "lenses": [
+    {
+      "id": "L-ZEISS-S16SS-3.5",
+      "manufacturer": "Zeiss",
+      "name": "Super 16 Super Speed",
+      "focal length": "3.5mm",
+      "max aperture": "T1.3",
+      "original mount": "ARRI PL",
+      "mount": "ARRI PL",
+      "category": "Prime",
+      "coverage": "Super 16",
+      "notes": "Ultra-wide lens for Super 16mm film cameras"
+    },
+    {
+      "id": "L-ZEISS-S16SS-6",
+      "manufacturer": "Zeiss",
+      "name": "Super 16 Super Speed",
+      "focal length": "6mm",
+      "max aperture": "T1.3",
+      "original mount": "ARRI PL",
+      "mount": "ARRI PL",
+      "category": "Prime",
+      "coverage": "Super 16",
+      "notes": "Wide angle lens for Super 16mm film cameras"
+    },
+    {
+      "id": "L-ZEISS-S16SS-9.5",
+      "manufacturer": "Zeiss",
+      "name": "Super 16 Super Speed",
+      "focal length": "9.5mm",
+      "max aperture": "T1.3",
+      "original mount": "ARRI PL",
+      "mount": "ARRI PL",
+      "category": "Prime",
+      "coverage": "Super 16",
+      "notes": "Wide angle lens for Super 16mm film cameras"
+    },
+    {
+      "id": "L-ZEISS-S16SS-12",
+      "manufacturer": "Zeiss",
+      "name": "Super 16 Super Speed",
+      "focal length": "12mm",
+      "max aperture": "T1.3",
+      "original mount": "ARRI PL",
+      "mount": "ARRI PL",
+      "category": "Prime",
+      "coverage": "Super 16",
+      "notes": "Wide angle lens for Super 16mm film cameras"
+    },
+    {
+      "id": "L-ZEISS-S16SS-14",
+      "manufacturer": "Zeiss",
+      "name": "Super 16 Super Speed",
+      "focal length": "14mm",
+      "max aperture": "T1.3",
+      "original mount": "ARRI PL",
+      "mount": "ARRI PL",
+      "category": "Prime",
+      "coverage": "Super 16",
+      "notes": "Standard wide lens for Super 16mm film cameras"
+    },
+    {
+      "id": "L-ZEISS-S16SS-35",
+      "manufacturer": "Zeiss",
+      "name": "Super 16 Super Speed",
+      "focal length": "35mm",
+      "max aperture": "T1.3",
+      "original mount": "ARRI PL",
+      "mount": "ARRI PL",
+      "category": "Prime",
+      "coverage": "Super 16",
+      "notes": "Standard lens for Super 16mm film cameras"
+    },
+    {
+      "id": "L-ZEISS-S16SS-50",
+      "manufacturer": "Zeiss",
+      "name": "Super 16 Super Speed",
+      "focal length": "50mm",
+      "max aperture": "T1.3",
+      "original mount": "ARRI PL",
+      "mount": "ARRI PL",
+      "category": "Prime",
+      "coverage": "Super 16",
+      "notes": "Portrait lens for Super 16mm film cameras"
+    },
+    {
+      "id": "L-ZEISS-S16SS-85",
+      "manufacturer": "Zeiss",
+      "name": "Super 16 Super Speed",
+      "focal length": "85mm",
+      "max aperture": "T1.3",
+      "original mount": "ARRI PL",
+      "mount": "ARRI PL",
+      "category": "Prime",
+      "coverage": "Super 16",
+      "notes": "Telephoto lens for Super 16mm film cameras"
+    },
+    {
+      "id": "L-ZEISS-S16SS-100",
+      "manufacturer": "Zeiss",
+      "name": "Super 16 Super Speed",
+      "focal length": "100mm",
+      "max aperture": "T1.3",
+      "original mount": "ARRI PL",
+      "mount": "ARRI PL",
+      "category": "Prime",
+      "coverage": "Super 16",
+      "notes": "Long telephoto lens for Super 16mm film cameras"
+    }
+  ]
+}

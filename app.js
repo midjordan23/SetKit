@@ -113,6 +113,17 @@ async function loadAllData() {
         populateCompareSelects();
         searchLenses();
 
+        // Also load lens JSON data (for Super 16 lenses, etc.)
+        try {
+            const lensJsonResponse = await fetch('setkit-lenses-data-clean.json');
+            const lensJsonData = await lensJsonResponse.json();
+            if (lensJsonData.lenses) {
+                allLenses = [...allLenses, ...lensJsonData.lenses];
+            }
+        } catch (err) {
+            console.log('No additional lens JSON data found');
+        }
+
         document.getElementById('resultCount').textContent = `(${allLenses.length} total lenses)`;
 
         // Load cameras and accessories after lenses
@@ -1477,30 +1488,62 @@ const defaultTemplates = [
         id: 'default-sam-16mm',
         name: "Sam's 16mm Film Package",
         category: 'single-cam',
-        itemCount: 20,
+        itemCount: 41,
         isDefault: true,
         createdAt: new Date('2025-01-01').getTime(),
         items: [
+            // Camera
             { id: 'C-ARRI-416PLUS', itemType: 'camera' },
+            // Film Magazines
+            { id: 'A-FILM-MAG-400FT', itemType: 'accessory' },
+            { id: 'A-FILM-MAG-200FT', itemType: 'accessory' },
+            // Lenses - Zeiss Super 16 Super Speed Set
+            { id: 'L-ZEISS-S16SS-3.5', itemType: 'lens' },
+            { id: 'L-ZEISS-S16SS-6', itemType: 'lens' },
+            { id: 'L-ZEISS-S16SS-9.5', itemType: 'lens' },
+            { id: 'L-ZEISS-S16SS-12', itemType: 'lens' },
+            { id: 'L-ZEISS-S16SS-14', itemType: 'lens' },
+            { id: 'L-ZEISS-S16SS-35', itemType: 'lens' },
+            { id: 'L-ZEISS-S16SS-50', itemType: 'lens' },
+            { id: 'L-ZEISS-S16SS-85', itemType: 'lens' },
+            { id: 'L-ZEISS-S16SS-100', itemType: 'lens' },
+            // Filters
             { id: 'A-FILTER-ND-SET', itemType: 'accessory' },
-            { id: 'A-FILTER-DIOPTERS', itemType: 'accessory' },
+            { id: 'A-FILTER-DIOPTER-SET', itemType: 'accessory' },
             { id: 'A-FILTER-POLARIZER', itemType: 'accessory' },
             { id: 'A-FILTER-ULTRA-CONTRAST', itemType: 'accessory' },
             { id: 'A-FILTER-BLACK-MAGIC', itemType: 'accessory' },
-            { id: 'A-FILTER-85-80A', itemType: 'accessory' },
+            { id: 'A-FILTER-85', itemType: 'accessory' },
+            { id: 'A-FILTER-80A', itemType: 'accessory' },
             { id: 'A-FILTER-OPTICAL-FLAT', itemType: 'accessory' },
-            { id: 'A-FOLLOWFOCUS-ARRI-WCU4', itemType: 'accessory' },
-            { id: 'A-FOLLOWFOCUS-ARRI-CFORCE-MINI', itemType: 'accessory' },
+            // Camera Control
+            { id: 'A-FOCUS-WCU4', itemType: 'accessory' },
+            { id: 'A-MOTOR-CFORCE-MINI', itemType: 'accessory' },
+            // Film Equipment
             { id: 'A-FILM-CHANGING-TENT', itemType: 'accessory' },
+            // Monitors
             { id: 'A-MONITOR-SMALLHD-703', itemType: 'accessory' },
-            { id: 'A-MONITOR-SMALLHD-1303', itemType: 'accessory' },
+            { id: 'A-MONITOR-SMALLHD-13', itemType: 'accessory' },
             { id: 'A-MONITOR-PANASONIC-17', itemType: 'accessory' },
-            { id: 'A-WIRELESS-TERADEK-BOLT3000', itemType: 'accessory' },
+            // Wireless Video
+            { id: 'A-WIRELESS-TERADEK-3000', itemType: 'accessory' },
+            // Support
             { id: 'A-SUPPORT-SPIDER-GRIP', itemType: 'accessory' },
             { id: 'A-SUPPORT-HI-HAT', itemType: 'accessory' },
-            { id: 'A-SUPPORT-CART', itemType: 'accessory' },
-            { id: 'A-POWER-GOLD-MOUNT', itemType: 'accessory' },
-            { id: 'A-COMM-EARTEC', itemType: 'accessory' }
+            { id: 'A-SUPPORT-CAMERA-CART', itemType: 'accessory' },
+            // Rigging
+            { id: 'A-RIG-ARRI-BP8', itemType: 'accessory' },
+            { id: 'A-RIG-19MM-RODS', itemType: 'accessory' },
+            { id: 'A-RIG-ARRI-TOPHANDLE', itemType: 'accessory' },
+            { id: 'A-RIG-CARDELLINI', itemType: 'accessory' },
+            { id: 'A-RIG-MAGIC-ARM', itemType: 'accessory' },
+            // Power
+            { id: 'A-BATTERY-GOLD-MOUNT', itemType: 'accessory' },
+            { id: 'A-POWER-AB-QUAD', itemType: 'accessory' },
+            { id: 'A-POWER-DTAP-SPLITTER', itemType: 'accessory' },
+            { id: 'A-POWER-DTAP-ANGLE', itemType: 'accessory' },
+            // Communication
+            { id: 'A-COMMS-EARTEC', itemType: 'accessory' }
         ]
     }
 ];
@@ -1622,7 +1665,8 @@ function loadTemplate(templateId) {
         // For default templates, look up the actual item data
         currentPackage = template.items.map(templateItem => {
             const itemData = allCameras.find(c => c.id === templateItem.id) ||
-                           allAccessories.find(a => a.id === templateItem.id);
+                           allAccessories.find(a => a.id === templateItem.id) ||
+                           allLenses.find(l => l.id === templateItem.id);
 
             if (itemData) {
                 return {
@@ -2442,9 +2486,9 @@ function initializeCamerasAndAccessories() {
 }
 
 // Custom Item Modal Functions
-function openCustomItemModal() {
-    document.getElementById('customItemModalOverlay').style.display = 'block';
-    document.getElementById('customItemModal').style.display = 'block';
+window.openCustomItemModal = function() {
+    document.getElementById('customItemModalOverlay').classList.add('active');
+    document.getElementById('customItemModal').classList.add('active');
 
     // Clear previous inputs
     document.getElementById('customItemName').value = '';
@@ -2458,12 +2502,12 @@ function openCustomItemModal() {
     }, 100);
 }
 
-function closeCustomItemModal() {
-    document.getElementById('customItemModalOverlay').style.display = 'none';
-    document.getElementById('customItemModal').style.display = 'none';
+window.closeCustomItemModal = function() {
+    document.getElementById('customItemModalOverlay').classList.remove('active');
+    document.getElementById('customItemModal').classList.remove('active');
 }
 
-function confirmAddCustomItem() {
+window.confirmAddCustomItem = function() {
     const name = document.getElementById('customItemName').value.trim();
     const brand = document.getElementById('customItemBrand').value.trim();
     const category = document.getElementById('customItemCategory').value;

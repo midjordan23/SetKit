@@ -1386,5 +1386,31 @@
     },
     "compatible_with": "Eartec HUB base station",
     "notes": "Wireless communication headset for crew"
+  },
+  {
+    "id": "A-FILM-MAG-400FT",
+    "brand": "ARRI",
+    "model": "416 Film Magazine 400ft",
+    "category": "Film Equipment",
+    "subtype": "Film Magazine",
+    "specs": {
+      "capacity": "400ft",
+      "compatible_cameras": "ARRIFLEX 416 Plus"
+    },
+    "compatible_with": "ARRIFLEX 416 Plus",
+    "notes": "Standard 400ft film magazine for 16mm production"
+  },
+  {
+    "id": "A-FILM-MAG-200FT",
+    "brand": "ARRI",
+    "model": "416 Film Magazine 200ft",
+    "category": "Film Equipment",
+    "subtype": "Film Magazine",
+    "specs": {
+      "capacity": "200ft",
+      "compatible_cameras": "ARRIFLEX 416 Plus"
+    },
+    "compatible_with": "ARRIFLEX 416 Plus",
+    "notes": "Lightweight 200ft magazine for handheld work"
   }
 ]
